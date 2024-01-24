@@ -1,0 +1,259 @@
+/*************** Single Page Form Start *************/
+/******** Cover Area *********/
+.new-border{border-bottom:1px solid #D7DCE3;float:left; position: relative;width:100%;margin-bottom:5px;}
+.banner-1{width:100%;position: relative;background-color:#eff8f8;padding:10px;float:right;}
+.checked{color:orangered;}
+.banner-1 img{width:100%;position: relative;height:150px;object-fit: cover;object-position: top;}
+.banner-1 p{font-size:24px;margin-bottom: 0;margin-top:4px;}
+.banner-1 .place{font-size:16px;}
+.banner-1 h4{color:rgb(13, 3, 51) !important;font-size:14px;}
+.banner-1 .btn{padding:10px 10px;}
+.text-section-1{width:68%;float:left; position: relative;}
+.text-section-11{width:50%;float:left; position: relative;font-size:20px;color:rgb(138, 138, 138);margin-top:6px;}
+.text-section-11 span{font-size:14px;}
+.text-section-2{width:32%;float:right; position: relative;margin-top:11px;text-align:right;font-size:13px;}
+.text-section-22{width:50%;float:left; position: relative;text-align:right;}
+.logo-area img{padding-top: 9px;}
+#slider-area{float: left;width: 100%;position: relative;}
+#slider-area #banner .item{min-height: 670px;-webkit-background-size:cover;-moz-background-size:cover;background-size:cover;background-position:left top;background-repeat:no-repeat;}
+#slider-area #banner .item::before{width:100%;float:left;height:100%;position:absolute;top:0;left:0;content:'';background:rgba(0,0,0,0.2);}
+#slider-area .carousel-fade .carousel-inner .item {-webkit-transition-property: opacity;transition-property: opacity;}
+#slider-area .carousel-fade .carousel-inner .item,
+#slider-area .carousel-fade .carousel-inner .active.left,
+#slider-area .carousel-fade .carousel-inner .active.right {opacity: 0;}
+#slider-area .carousel-fade .carousel-inner .active,
+#slider-area .carousel-fade .carousel-inner .next.left,
+#slider-area .carousel-fade .carousel-inner .prev.right {opacity: 1;}
+#slider-area .carousel-fade .carousel-inner .next,
+#slider-area .carousel-fade .carousel-inner .prev,
+#slider-area .carousel-fade .carousel-inner .active.left,
+#slider-area .carousel-fade .carousel-inner .active.right {left: 0;-webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);}
+#cover-area{position:absolute; width: 100%; float: left;top: 0;left: 0;}
+#cover-area .content{float: left;width: 100%;position: relative;text-align:center;margin-bottom: 30px;}
+#cover-area .content h2{color: #ffffff !important;font-size: 30px;margin-top: 85px;}
+#cover-area .content h1{color: #ffffff !important;font-family: "Poppins", sans-serif;font-size: 60px;margin-top: 20px;line-height: 90%;margin-bottom: 0;}
+#cover-area .content h5{color: #ffffff !important;font-family: "Poppins", sans-serif;font-size: 40px;letter-spacing: 1px;}
+#cover-area .content h4{color: #ffffff !important;margin-top: 25px;font-size: 25px;}
+#cover-area .content h3{color: #ffffff !important;margin-top: 30px;}
+#cover-area .content span{color: #ffffff !important;margin-top: 20px;font-size: 15px;font-family: "Roboto", sans-serif;}
+@media(max-width:767px){
+    #slider-area #banner .item{min-height: 600px;}
+    #cover-area .content{top: 120px;}
+    #cover-area .content h2{font-size: 22px;}
+    #cover-area .content h1{font-size: 40px;margin-top: 0;margin-bottom: 0;}
+    #cover-area .content h4{margin-top: 25px;}
+    #cover-area .content h5{font-size: 30px;}
+}
+@media screen and (max-width: 991px) {
+    .banner-1 { display: none; }   /* hide it elsewhere */
+  }
+/******** Cover Area End *********/
+
+.single-page-form-area{position:relative; width:100%; float:left; 
+background: transparent url(../images/2unsplash.jpg) no-repeat center bottom;background-size:cover;}
+.single-page-form-area .layer{ position: relative;width: 100%;background:rgba(0,0,0,0.3);float:left;padding:70px 0 200px;}
+.form-center-area{width:100%;}
+@media (min-width:992px) {
+.form-center-area{max-width:600px; margin:0 auto;}
+}
+.single-page-form-area label {color: #000000;font-weight: 500;text-transform: capitalize;opacity: .7;font-size: 14px;font-weight: 400;margin-bottom: 5px;}
+.single-page-form-area .form-group input[type="checkbox"] {position: relative;top: 2px;margin-right: 4px;}
+.single-page-form-area .form-group a {color: #ec6334;font-weight: 500;text-transform: capitalize;text-align: right;display: block;}
+.single-page-form-area h2 {font-size: 36px;letter-spacing: 0;text-align: left;margin: 0;position: relative;font-weight: 600;color: #1a2b48;}
+.single-page-form-area h5 { text-transform: capitalize;font-weight: 300;font-size: 20px;color: #0aabd0;}
+.single-page-form-area h4 {font-weight: 100!important;font-size: 30px!important;line-height:35px!important; margin-bottom:20px!important;}
+.single-page-form-area small{font-size:11px; line-height:16px; display:block; margin-bottom:5px;}
+@media only screen and (max-width: 1023px) {
+.single-page-form-area h2 {font-size:22px!important; line-height:26px!important;}	
+.single-page-form-area h6{font-size:14px!important;}
+.single-page-form-area h4 {font-size: 22px!important;line-height:26px!important;}
+}
+@media only screen and (max-width: 1110px) {
+.single-page-form-area{background: transparent url(../images/2unsplash.jpg) no-repeat center bottom; padding:70px 0 100px; background-size:contain;}	
+}
+.single-page-form-area form{position:relative; width:100%; float:left; margin:20px 0;}
+.single-page-form-area .form-group{margin-bottom:0;}
+.single-page-form-area .form-control{border-radius:3px; height:50px; width:100%; float:left;border:1px solid #DAE1E7;}
+.single-page-form-area input[type="text"]{margin-bottom:15px;}
+.single-page-form-area input[type="email"]{margin-bottom:15px;}
+.single-page-form-area input[type="password"]{margin-bottom:15px;}
+.single-page-form-area input[type="tel"]{margin-bottom:2px;}
+.single-page-form-area textarea{margin-bottom:2px; min-height:50px; height:auto!important; padding-left:20px!important; font-size:16px;
+border: 1px solid #dcdbdb;}
+.map-bg{background:url(../images/address-img.png) no-repeat bottom right; background-size:contain; min-height:493px;}
+
+@media (max-width:1199px) {
+.map-bg{min-height:300px;background-position:bottom right 10%;}	
+} 
+@media (min-width:768px) and (max-width:991px) {
+.single-page-form-area .form-control{width:49%; float:left; margin-right:2px;}
+.single-page-form-area .btn{width:49%;}
+.single-page-form-area small{margin-bottom:10px;}
+.single-page-form-area textarea{margin-bottom:2px; height:50px!important; padding-left:20px!important; font-size:16px;
+border: 1px solid #dcdbdb;}
+}
+
+/*************** Single Page Form End *************/
+
+/******** why us starts *********/
+/******** Our Hotel Start *******/
+.tip-ryde-area img{width:100%;}
+.tip-ryde-area p{font-size:16px;}
+.tip-ryde-area{position:relative; width:100%; float:left; background-color:#eff8f8; padding:70px 0;}
+.tip-ryde-area .container{background-color:#fff;}
+.tip-ryde-area .col-md-8{padding-left:0; padding-right:0;}
+.tip-ryde-area .col-md-4{padding-top:55px; padding-left:55px;}
+.tip-ryde-area h2 {font-family: "ff-clan-web-pro" !important;font-weight: 400!important;font-size: 35px!important;text-transform: capitalize; line-height:40px!important; margin-bottom:20px!important;}
+.tip-ryde-area h5 { text-transform: capitalize;font-weight: 600;font-size: 30px;color: #1A2B48;}
+.tip-ryde-area h6{font-size:16px!important; text-transform:uppercase; margin-bottom:20px;}
+.tip-ryde-area a{color:#000;}
+.tip-ryde-area i{position:relative; margin-left:8px; font-size:14px;}
+@media only screen and (max-width: 1023px) {
+.tip-ryde-area{background-color:#fff;}
+.tip-ryde-area h2 {font-size:22px!important; line-height:26px!important;}	
+.tip-ryde-area h6{font-size:14px!important;}
+.tip-ryde-area {padding: 70px 0 30px;}
+}
+/********* Our Hotel End *********/
+#why-us{position: relative; float: left; padding: 50px 0 100px; width: 100%;}
+#why-us .heading h2 {font-size: 36px;letter-spacing: 0;text-align: left;margin: 0;position: relative;font-weight: 600;color: #1a2b48; text-align: center;}
+#why-us .content{float: left;width: 100%;}
+#why-us .content ul li{float: left;width: calc(100% / 5);padding: 0 15px;min-height: 140px;text-align: center;margin-bottom: 15px; list-style-type: none;}
+#why-us .content ul li .icon{width: 85px;height: 85px;line-height: 85px;background-color: #ffffff;margin: 0 auto 20px;border-radius: 75px 75px 0; box-shadow: 0 4px 24px 0 rgba(103,151,255,.1),0 12px 64px 0 rgba(103,151,255,.1);}
+
+#why-us .content ul li .icon img{height: 45px; vertical-align: middle; display: initial;}
+#why-us .content ul li h4{font-weight: 500;font-size: 16px; color:#ffffff!important;}
+.card {
+    border-radius: 8px;
+    background: -webkit-radial-gradient(top left,circle,#4a42ec 0%,#521d91 100%);
+    background: radial-gradient(circle at top left,#4a42ec 0%,#521d91 100%);
+    background-color: rgba(0, 0, 0, 0);
+    background-color: #521d91;
+    box-shadow: 0 48px 48px -32px rgba(23,16,159,.2),0 96px 96px -64px rgba(23,16,159,.4);
+    padding-top: 32px; padding-bottom: 32px; 
+    -webkit-transition: 300ms all cubic-bezier(.4,0,.2,1);
+    transition: 300ms all cubic-bezier(.4,0,.2,1);
+    margin-top: 24px;
+    width:100%; float: left; position: relative;
+}
+.card::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 300px;
+    height: 300px;
+    border-radius: 2000px;
+    background: #fa5636;
+    right: -100px;
+    bottom: -80px;
+}
+.card::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 50px;
+    height: 50px;
+    border-radius: 2000px;
+    background: #5cb85c;
+    top: -25px;
+    left: 64px;
+}
+@media(max-width:767px){
+    #why-us .content ul li{width: calc(100% / 3);}
+}
+@media(max-width:480px){
+    #why-us .content ul li{width: calc(100% / 2);min-height: 140px;}
+}
+/******** why us ends *********/
+
+/*************** City Transfer Area Start **********/
+.city-transfer-area{position:relative; width:100%;padding:70px 0 150px;  background: #fff url(../images/city-img-bg.png) no-repeat center bottom; text-align:center;}
+.city-transfer-area h2 {font-size: 36px;letter-spacing: 0;text-align: left;margin: 0;position: relative;font-weight: 600;color: #1a2b48; text-align: center; margin-bottom: 30px;}
+.city-transfer-area h5 {text-transform: capitalize;font-weight:300;font-size: 20px; color:#0aabd0;}
+@media only screen and (max-width: 1023px) {
+.city-transfer-area h2 {font-size:22px!important; line-height:26px!important;}
+.city-transfer-area{background-size:contain;}
+}
+.city-transfer-area img{width:100%;}
+.city-transfer-area .col-md-3{padding-left:0; padding-right:0;}
+.city-transfer-area .col-md-3::before {
+    background: transparent none repeat scroll 0 0;
+    background-image: linear-gradient(to top right,rgba(0, 0, 0, 0.4) 30%,transparent);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.on-image-overlay-area{
+    position: absolute;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	color: #fff;
+	text-shadow: 2px 3px 6px rgba(0,0,0,0.5);
+	z-index: 2;
+	font-size:25px;
+	text-transform:uppercase;
+}
+.on-image-overlay-area p{color:#fff; margin-top:5px!important; font-size: 14px;}
+/*************** City Transfer Area End **********/
+
+/***************  Why Choose Us Start  *****************/
+.why-choose {position: relative; width: 100%; float:left; padding:100px 0 10px; background:url(../images/footer-city-img.png) no-repeat left bottom;}
+.why-choose h2 {font-size: 36px;letter-spacing: 0;text-align: left;margin: 0;position: relative;font-weight: 600;color: #1a2b48; text-align: center; margin-bottom: 30px;}
+.why-choose .why-choose-block {text-align: center; padding: 60px 0px;}
+.why-choose .why-choose-block i {font-size: 45px; background-image: linear-gradient(to bottom right, #5cb85c, #1d9d3a ); color: #fff; border-radius: 75px 75px 0; padding: 28px;}
+.why-choose .why-choose-block h4 {margin: 60px 20px 0; color: #000; font-size: 23px;  line-height: 30px;}
+.why-choose .why-choose-block h6 {font-size: 16px; line-height: 27px; margin: 60px 20px 20px; font-weight: 400; color: #1c1c1c; }
+.why-choose .why-choose-block a:hover i { background: #fff; color: #0fd2fe; border: 2px dashed #0fd2fe;}
+@media (max-width: 1023px){
+    .why-choose h2 { font-size: 22px!important; line-height: 26px!important; }
+    .why-choose .why-choose-block h4 { margin: 34px 20px 0; font-size: 18px; line-height: 24px;
+    }
+}
+@media (max-width: 991px) {
+    .why-choose .why-choose-block {padding: 20px 20px 2px;}
+    .why-choose .why-choose-block i {font-size: 34px; padding: 19px;}
+    .why-choose .why-choose-block h6 {font-size: 14px; margin: 16px 20px 28px;}
+}
+@media (min-width: 992px) and (max-width: 1199px){
+    .why-choose .why-choose-block {padding: 20px 20px 2px;}
+    .why-choose .why-choose-block i {font-size: 37px; padding: 25px;}
+    .why-choose .why-choose-block h6 {font-size: 17px; margin: 40px 20px;}
+}
+@media (max-width: 767px) {
+    .why-choose {padding: 55px 0 10px;}
+}
+
+/***************  Why Choose Us End  *****************/
+.login-page-popup{padding-top:0 !important; padding-bottom:0 !important;}
+
+/******** Agent Login Start ********/
+.btn1{background-color: #5cb85c;font-size:16px; padding:12px 45px;font-weight:500;border:none; border-radius:25px;color:#ffffff;}
+.btn1:hover{background-color: #5cb86f;}
+.border-bottom{border-bottom:1px solid #D7DCE3;margin-right:5px;}
+.btn2{background-color: #ec6334;font-size:16px; padding:12px 45px;font-weight:500;border:none; border-radius:25px;color:#ffffff;}
+.btn2:hover{background-color: #fa5636;}
+/******** Agent Login End ********/

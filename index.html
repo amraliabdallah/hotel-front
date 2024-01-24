@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=2, minimum-scale=1">
+    <title>:: Cheval Traveller ::</title>
+    <!-- bootstrap css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- font awesome css -->
+    <link href="css/all.min.css" rel="stylesheet">
+    <link href="css/fontawesome.min.css" rel="stylesheet">
+    <link href="support/linearicon/style.css" rel="stylesheet">
+    <link href="support/themify/themify-icons.css" rel="stylesheet">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Material+Icons|Poppins:400,600,700" rel="stylesheet">
+    <!-- custom style css -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/helpers.css" rel="stylesheet">
+    <link href="css/search-result.css" rel="stylesheet">
+    <link href="css/daterangepicker.css" rel="stylesheet">
+    <link href="css/fotorama.css" rel="stylesheet">
+    <!-- End Custom CSS -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body> 
+
+<!--Navigation Start-->
+<div id="top-header-menu-area">
+  <div class="menu-area menu-sticky">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3" >
+          <div class="logo-area"> <a class="main--logo" href="#"><img src="images/logo.png" alt="logo"></a> </div>
+        </div>
+        <div class="col-sm-9" >
+          <div id="main-nav" class="stellarnav">
+            <ul>
+              <li><a href="#">Search</a></li>
+              <li><a href="#">Manage Orders</a></li>
+              <li>
+                <a href="#!" data-toggle="modal" data-target="#st-modal-show-statements">Reporting</a>
+            </li>
+            </ul>
+
+            <ul class="list-right">
+                <li>
+                    <a href="#"><i class="fas fa-language"></i> Eng</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-dollar-sign"></i> Usd</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-headset"></i> Support</a>
+                </li>
+                <li class="line-en">
+                    <a href="#">Hi, Agent Name</a>
+                </li>
+                <li>
+                    <a href="#"> Agent Profile</a>
+                </li>
+                <li>
+                    <a href="#" class="btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Navigation End-->
+<!-- Popup Statements-->
+<div class="modal fade modal-map show-statements-modal-pop-box" id="st-modal-show-statements" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i
+                        class="input-icon field-icon page-small-icon"><img src="images/close-icon.svg"
+                            alt=""></i></button>
+                <h4 class="modal-title">Download Historical Statement</h4>
+            </div>
+            <div class="modal-body">
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group form-extra-field dropdown clearfix field-detination">
+                            <div class="dropdown">
+                                <label>Type</label>
+                                <select name="" id="" class="inputg" required="">
+                                    <option value="">Select Type</option>
+                                    <option value="Booking">Booking</option>
+                                    <option value="Transaction">Transaction</option>
+                                </select>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 border-right">
+                        <div class="form-group form-extra-field dropdown clearfix field-detination">
+                            <div class="dropdown">
+                                <label>Agent</label>
+                                <input type="text" id="" name="" value="" class="inputg" placeholder="Code"
+                                    autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="clearfix"></div>
+                    <div class="col-md-12 mobile-hide-hr"><hr></div>
+                    <div class="clearfix"></div>
+                    <div class="col-md-6 border-right">
+                        <div class="search-form-wrapper mobile-form-gap">
+                        <div class="search-form horizontal-search-area">
+                                <div class="form-group form-date-field form-date-search clearfix  has-icon " data-format="DD/MM/YYYY">
+                                    <i class="input-icon field-icon"><img src="hotel-support/images/calandar-icon.png" alt=""></i>
+                                    <div class="date-wrapper clearfix">
+                                        <div class="check-in-wrapper">
+                        
+                                            <label>Specific Date</label>
+                                            <div class="inputg check-in-render">Place Specific Date</div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" class="check-in-input" value="01/07/2019" name="start">
+                                    <input type="text" class="check-in-out" value="01/07/2019 10:11 am-02/07/2019 10:11 am" name="date">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6"><h5 class="sp-mar-20">OR</h5></div>
+                    <div class="clearfix"></div>
+                    <div class="col-md-12 mobile-hide-hr"><hr></div>
+                    <div class="clearfix"></div>
+                    <div class="col-md-6 border-right">
+                        <div class="search-form-wrapper mobile-form-gap">
+                            <div class="search-form horizontal-search-area">
+                                <div class="form-group form-date-field form-date-search clearfix  has-icon " data-format="DD/MM/YYYY">
+                                    <i class="input-icon field-icon"><img src="hotel-support/images/calandar-icon.png" alt=""></i>
+                                    <div class="date-wrapper clearfix">
+                                        <div class="check-in-wrapper">
+                    
+                                            <label>Date Range From</label>
+                                            <div class="inputg check-in-render">Place Date Range From</div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" class="check-in-input" value="01/07/2019" name="start">
+                                    <input type="text" class="check-in-out" value="01/07/2019 10:11 am-02/07/2019 10:11 am" name="date">
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="search-form-wrapper mobile-form-gap">
+                            <div class="search-form horizontal-search-area">
+                                <div class="form-group form-date-field form-date-search clearfix  has-icon " data-format="DD/MM/YYYY">
+                                    <i class="input-icon field-icon"><img src="hotel-support/images/calandar-icon.png" alt=""></i>
+                                    <div class="date-wrapper clearfix">
+                                        <div class="check-in-wrapper">
+                                
+                                            <label>Date Range To</label>
+                                            <div class="inputg check-in-render">Place Date Range To</div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" class="check-in-input" value="01/07/2019" name="start">
+                                    <input type="text" class="check-in-out" value="01/07/2019 10:11 am-02/07/2019 10:11 am" name="date">
+                                </div>
+                                </div>
+                                </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-md-12 mobile-hide-hr"><hr></div>
+                    <div class="clearfix"></div>
+
+                    <div class="col-md-4 border-right">
+                        <div class="form-group form-extra-field dropdown clearfix field-detination">
+                            <div class="dropdown">
+                                <label>Download Format</label>
+                                <select name="" id="" class="inputg" required="">
+                                    <option value="PDF">PDF</option>
+                                    <option value="Print">Print</option>
+                                    <option value="Excel">Excel</option>
+                                </select>
+                    
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="col-md-4 border-right">
+                        <button class="btn btn-success btn-search full-width-btn mt20" type="submit">Fetch Statement</button>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-danger btn-search full-width-btn mt20" type="submit">Cancel</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Popup Statements End-->
+<div class="hero-section">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-md-12"  >
+                <div class="booking-filter">
+                    <div class="tabs">
+                        <div class="tab1">Hotels</div>
+                    </div>
+                     <!-- form complex example -->
+                        <div class=" row form-row mt-4">
+                            <!-- Account section -->
+                            <div class="col-sm-6 pb-3">
+                                <label for="name_hotel">Destination / Hotel Name*</label>
+                                <input type="text" class="form-control" id="name_hotel" placeholder="Enter City Destination / Hotel name">
+                            </div>
+                          
+                            <div class="col-sm-5 pb-3">
+                                <div class="d-flex container-chek">
+                                    <div>
+                                        <label for="exampleCtrl">Check In</label>
+                                        <input type="date" class="form-control" id="check_in" placeholder="Check In">
+                                    </div>
+                                    <div>
+                                        <label for="check_out">Check Out</label>
+                                        <input type="date" class="form-control" id="check_out" placeholder="Check Out">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-1 pb-3">
+                                <label for="">Nights</label>
+                                <input type="text" class="form-control" id="" placeholder="Nights">
+                            </div>
+                            <div class="col-sm-6 pb-3" style="position: relative;">
+                                <label for="">Room & Guests</label>
+                                <div id="output" class="output-room"></div>
+                                <div class="filter-booking">
+                                    <div id="rooms-container">
+                                        <!-- Room template that will be cloned for each new room -->
+                                        <div class="room" id="room-template">
+                                            <div class="room-header">
+                                                <span class="room-title">Room 1</span>
+                                                <button class="remove-room"  style="display: none;">Remove</button>
+                                            </div>
+                                            <div class="guests">
+                                                <div class="adults">
+                                                    <label>Adults</label>
+                                                    <div class="d-flex">
+                                                        <button class="minus">-</button>
+                                                        <input type="text" value="2" readonly class="form-control">
+                                                        <button class="plus">+</button>
+                                                    </div>
+                                                </div>
+                                                <div class="children">
+                                                    <label>Children</label>
+                                                    <div class="children-ages"></div>
+                                                    <button class="add-child">Add a child</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End of Room template -->
+                                        <button id="add-room">+ Add a room</button>
+                                    </div>     
+                                    <button id="done">Done</button>
+
+                                </div>      
+                                
+                     
+                            </div>
+                            <div class="col-sm-3 pb-3">
+                                <label for="nationality">Nationality</label>
+                                <select name="nationality" id="nationality">
+                                    <option value="egypt">Egypt</option>
+                                    <option value="italy">Italy</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-3 pb-3">
+                                <label for="hotel_name">Hotel Name <span>(Optional)</span></label>
+                                <input type="text" class="form-control" id="hotel_name" placeholder="Place Hotel Name">
+                            </div>
+                            <div class="col-sm-12 pb-3">
+                                <button class="btn btn-primary"><i class="fas fa-search"></i> Search Hotel</button>
+
+                            </div>    
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <section class="account">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h2 class="card-title"><i class="fas fa-user"></i> Account Details</h2>
+                                </div>
+                                <div class="card-body body-en">
+                                    <div class="card bg-primary text-white">
+                                        <div class="card-body ">
+                                            <i class="fas fa-wallet fa-2x"></i>
+                                            <h5 class="card-title">Balance Available</h5>
+                                            <h2 class="card-text">1000 USD</h2>
+                                        </div>
+                                    </div>
+                                    <div class="card bg-success text-white">
+                                        <div class="card-body">
+                                            <i class="fas fa-dollar-sign fa-2x"></i>
+                                            <h5 class="card-title">Total paid</h5>
+                                            <h2 class="card-text">500 USD</h2>
+                                        </div>
+                                    </div>
+                                    <div class="card bg-warning text-white">
+                                        <div class="card-body">
+                                            <i class="fa-regular fa-clock fa-2x"></i>
+                                            <h5 class="card-title">Unpaid Orders</h5>
+                                            <h2 class="card-text">400 USD</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h2 class="card-title"><i class="fa-solid fa-list"></i> Orders</h2>
+                                </div>
+                                <div class="card-body body-en">
+                                    <div class="card bg-success text-white">
+                                        <div class="card-body">
+                                            <i class="fa-solid fa-check fa-2x"></i>
+                                            <h5 class="card-title">Complete Booking</h5>
+                                            <h2 class="card-text">1000</h2>
+                                        </div>
+                                    </div>
+                                    <div class="card bg-danger text-white">
+                                        <div class="card-body">
+                                            <i class="fa-solid fa-xmark fa-2x"></i>
+                                            <h5 class="card-title">Cancel Booking</h5>
+                                            <h2 class="card-text">500</h2>
+                                        </div>
+                                    </div>
+                                    <div class="card bg-warning text-white">
+                                        <div class="card-body">
+                                            <i class="fa-regular fa-clock fa-2x"></i>
+                                            <h5 class="card-title">Unpaid Booking</h5>
+                                            <h2 class="card-text">400</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+            </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="clearfix"></div>
+
+<!-- Start Account By En -->
+
+<!-- End Account By En -->
+
+<div class="clearfix"></div>
+<!-- Start slider offer By En -->
+<section class="offers">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-box">
+                    
+                    <h2 class="title">Offers & News</h2>
+                </div>
+                <!-- Place somewhere in the <body> of your page -->
+                <div id="offers" class="flexslider carousel">
+                    <ul class="slides">
+                        <li>
+                            <div class="card" >
+                                <img src="images/slider/slide-1.jpg" class="card-img-top" loading="lazy" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Offer Discounted Hotel Prices with RateHawk’s Limited Edition Campaign</h5>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card" >
+                                <img src="images/slider/slide-2.jpg" class="card-img-top" loading="lazy" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Offer Discounted Hotel Prices with RateHawk’s Limited Edition Campaign</h5>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card" >
+                                <img src="images/slider/slide-3.jpg" class="card-img-top" loading="lazy" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Offer Discounted Hotel Prices with RateHawk’s Limited Edition Campaign</h5>
+                                </div>
+                            </div>
+                        </li>
+                         <li>
+                            <div class="card" >
+                                <img src="images/slider/slide-3.jpg" class="card-img-top" loading="lazy" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Offer Discounted Hotel Prices with RateHawk’s Limited Edition Campaign</h5>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card" >
+                                <img src="images/slider/slide-3.jpg" class="card-img-top" loading="lazy" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Offer Discounted Hotel Prices with RateHawk’s Limited Edition Campaign</h5>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- End slider By En -->
+
+<div class="clearfix"></div>
+<!-- 
+<div class="mailchimp">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-lg-10 col-lg-offset-1">
+                <div class="row">
+                    <div class="col-xs-12  col-md-7 col-lg-6">
+                        <div class="media ">
+                            <div class="media-left pr30 hidden-xs">
+                                <img class="media-object" src="images/news-letter-icon.svg" loading="lazy" alt="news letter">
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading st-heading-section f24">Get Updates &amp; More</h4>
+                                <p class="f16 c-grey">Through our newsletter</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-5 col-lg-6">
+                        <form action="" class="subcribe-form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Your Email">
+                                <input type="submit" name="submit" value="Sign up">
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+<footer id="main-footer">
+    <div class="container ">
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="logo">
+                    <img src="images/logo.png" alt="">
+                </div>
+                <p>
+                    Hotelsxml is a modern system for travel agents that is flexible to book your hotels online easily. The system creates and filters over 500000 hotels with the best prices and availability from a wide range of distributors And bedbanks worldwide.
+                </p>
+                
+                <p>Follow Us :</p>
+                <p>
+                  
+                    <a style="margin-right: 10px;" href="#">
+                        <i class="fa-brands fa-twitter fa-lg"></i>
+
+                    </a>
+                    <a style="margin-right: 10px;" href="#">
+                        <i class="fa-brands fa-linkedin fa-lg"></i>
+                    </a>
+                </p>
+            </div>
+    
+            <div class="col-sm-3 offset-sm-1">
+                <h4>NEED HELP?</h4>
+                <div class="seperate-line"></div>
+                <ul class="menu">
+                    <li><a href="#!">Blog</a></li>
+                    <li><a href="#!">Support</a></li>
+                    <li><a href="#!">Contact Us</a></li>
+                </ul>
+            </div>
+    
+            <div class="col-sm-3 ">
+                <h4>LEGAL</h4>
+                <div class="seperate-line"></div>
+                <ul class="menu">
+                    <li><a href="#!">Terms and Conditions</a></li>
+                    <li><a href="#!">Privacy Policy</a></li>
+                    <li><a href="#!">Legal Notice</a></li>
+                    
+                    
+                </ul>
+            </div>
+    
+        </div>
+        
+    </div>
+    
+</footer>
+<div class="clearfix"></div>
+<div class="container main-footer-sub">
+    <div class="st-flex space-between">
+        <div class="left ">
+            <div class="f14">© 2023 Hotelsxml / All Rights Reserved.</div>
+        </div>
+        <div class="right " style="display: flex; align-items: center;">
+            <img src="images/save.png" alt="" class="img-responsive"  style=" height: 40px !important;">
+            <img src="images/secure.png" alt="" class="img-responsive" style=" height: 40px !important;">
+            <img src="images/payment.png" alt="" class="img-responsive" >
+            
+
+        </div>
+    </div>
+</div>
+
+
+<!-- jquery -->
+<script src="js/jquery.js"></script>
+<!-- bootstrap js -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/fontawesome.min.js"></script>
+
+<link href="menu/stellarnav.min.css" rel="stylesheet">
+<script src="menu/stellarnav.min.js"></script>
+<!-- gallery js -->
+<script type='text/javascript' src='js/jquery.matchHeight.js'></script>
+<script type='text/javascript' src='js/fotorama.js'></script>
+<!-- date picker js -->
+<script type='text/javascript' src='js/moment.min.js'></script>
+<script src="js/daterangepicker.js"></script>
+<!-- flex slider js -->
+<link href="flex-slider/flexslider.css" rel="stylesheet">
+<script type="text/javascript" src="flex-slider/jquery.flexslider-min.js"></script>
+<!-- main js -->
+<script src="js/main.js"></script>
+
+</body>
+</html>

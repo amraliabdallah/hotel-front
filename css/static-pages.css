@@ -1,0 +1,123 @@
+/* CSS For Static Pages - Cheval Traveller */
+.margin-top-nil{margin-top: 0!important;}
+.padding-nil-bottom{padding-bottom: 0!important;}
+.about-bg {background-image: url(../images/about-us-headline-bg.jpg);}
+.privacy-bg {background-image: url(../images/privacy-headline-bg.jpg)!important;}
+.contact-bg {background-image: url(../images/contact-us-headline-bg.jpg)!important;}
+.why-us-bg {background-image: url(../images/why-us-headline-bg.jpg)!important;}
+.hotel-booking-engine-bg {background-image: url(../images/hotel-booking-engine-headline-bg.jpg)!important;}
+
+.about-bg:after {position: absolute;top: 0;left: 0;width: 100%;height: 100%; content:"";
+background: rgb(236,99,52);
+background: linear-gradient(90deg, rgba(236,99,52,1) 0%, rgba(98,184,92,0.3701681356136205) 100%);
+}
+.about-bg h1{z-index: 9; position: relative; font-weight: 600; color:#1a2b48;
+text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+-webkit-text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+-moz-text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+-ms-text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.img-content-area{position: relative; width: 100%; float: left; padding: 50px 0;}
+.img-content-area h3{margin-top: 0; margin-bottom: 20px;}
+.img-content-area p{font-size: 16px;color: #5E6D77;line-height: 24px; font-weight: 400;}
+.img-content-area img{width: 100%; border-radius: 5px;}
+.post-photo{position: relative; width: 100%; float: left;}
+.post-photo:before {
+    content: "";
+    background: -webkit-linear-gradient(top, transparent 0%, rgba(0,0,0,0.4) 100%);
+    background: linear-gradient(top, transparent 0%, rgba(0,0,0,0.4) 100%);
+    position: absolute;
+    display: block;
+    width: 100%;
+    bottom: 0;
+    top: 0;
+    opacity: 1;
+    z-index: 1;
+}
+.post-text{position: absolute; bottom:20px; left: 15px; color:#ffffff!important; z-index: 1;}
+.img-content-area .inner-padding-area{padding: 35px 25px; background-color: #ffffff;}
+
+.pad-r-nil{padding-right: 0;}
+.pad-l-nil{padding-left: 0;}
+
+.sme-cut-bg-area {
+    background-image: -o-linear-gradient(316deg,#f4fffd 0,#009f89 47%,#009f89 100%);
+    background-image: linear-gradient(134deg,#01c7ac 0,#009f89 47%,#009f89 100%);
+    position: relative !important;
+    padding: 50px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+.sme-cut-bg-area p{font-size: 16px;color: #ffffff;line-height: 24px; font-weight: 400;}
+
+@media screen and (max-width: 991px) {
+.img-content-area{padding: 30px 0;}
+.img-content-area .inner-padding-area{padding: 30px 0;}
+.img-content-area p{font-size: 14px;}
+.sme-cut-bg-area{padding: 30px 15px; margin-bottom: 30px;}
+.sme-cut-bg-area p{font-size: 14px;}
+.post-photo{float: inherit;}
+}
+
+.privacy-box {width: 100%; border-radius: 2px; border: solid 1px #d6d6d6; margin:50px 0; float: left; position: relative; padding: 25px 25px;box-shadow: 2px 4px 8px 0 rgba(0,0,0,0.1);}
+.privacy-box  p{font-size: 16px;color: #5E6D77;line-height: 24px;font-weight: 400; margin-bottom: 0;}
+.policy-devide {padding-top: 30px;border-top: 1px solid lightgray;color: #212b36;margin-top: 30px;font-size: 18px;font-weight: bold;}
+.privacy-box span{color:#ff5700;}
+.privacy-box .total-list-area{position: relative; width: 100%; float: left;}
+.privacy-box .list-icon-area{width: 26px; margin-right: 8px; float: left; position: relative;}
+.privacy-box .list-icon-area img{width: 20px; position: relative; top:4px;}
+.privacy-box .list-text-area{float: right; position: relative;width: calc(100% - 34px);}
+
+@media screen and (max-width: 991px) {
+ .privacy-box {padding: 25px 15px;}
+ .privacy-box  p{font-size: 14px; }  
+ .st-contact-info .info-content h3{font-size: 18px!important;}
+ .st-contact-info .info-content .sub p{font-size: 14px!important;}
+}
+
+/* Start our technologies-area */
+
+.our-technologies-area{padding-top: 50px;padding-bottom: 50px;text-align: center;background-color: #F2F2F2;}
+.our-technologies-area{background: url("../images/technologies-bg.svg");background-size: 60%;background-repeat: no-repeat; background-position: top 50px left;}
+.appza_buy h1{padding-bottom: 100px;font-weight: 400;color: #141212;font-size: 36px;text-transform: capitalize;line-height: 42px;} 
+.appza_buy .clear{width: 100%;clear: both;}
+.appza_buy .col_inside{background-color: #ffffff;text-align: center;padding: 20px 15px;height: 211px;border-radius: 5px; border:1px solid #eaedf5;}
+.appza_buy .col_inside img{width: auto;margin: auto;}
+.appza_buy .col_inside h3{font-weight: 600;color: #4d5069;font-size: 15px;line-height: 1.7em; padding-top: 20px;}
+.appza_buy .col-md-4{margin-bottom: 30px;}
+.btn_buy{width: 100%;padding-top: 100px;text-align: center;}
+.btn_buy a{
+  padding: 20px 36px;
+  text-align: center;
+  background-color: #141212;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0 8px;
+}
+.col_inside:hover{
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=13, Direction=98, Color=#4F5052)";/*IE 8*/
+-moz-box-shadow: 1px 7px 13px -1px rgba(79,80,82,0.4);/*FF 3.5+*/
+-webkit-box-shadow: 1px 7px 13px -1px rgba(79,80,82,0.4);/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+box-shadow: 1px 7px 13px -1px rgba(79,80,82,0.4);/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=13, Direction=135, Color=#4F5052); /*IE 5.5-7*/
+}
+.col_inside{
+  -webkit-transition: 0.5s all ease-in;
+  -moz-transition: 0.5s all ease-in;
+  transition: 0.5s all ease-in;
+}
+
+.special-blue-box{background-color: #ebeef8; float: left; position: relative;padding: 35px 25px; border-radius: 5px; margin: 30px 0; text-align: center;}
+.special-blue-box span{color:#ff5700;}
+.hbe-bottom-box{position: relative; width:100%; float: left; margin-bottom: 50px;}
+.hbe-bottom-box p{font-size: 16px;color: #5E6D77;line-height: 24px;font-weight: 400;}
+.hbe-bottom-box span{color:#ff5700;}
+
+@media screen and (max-width: 991px) {
+.hbe-bottom-box{margin-bottom: 10px;}
+.hbe-bottom-box p{font-size: 14px;}
+}
+
