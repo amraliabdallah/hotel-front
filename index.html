@@ -19,8 +19,12 @@
     <link href="css/responsive.css" rel="stylesheet">
     <link href="css/helpers.css" rel="stylesheet">
     <link href="css/search-result.css" rel="stylesheet">
-    <link href="css/daterangepicker.css" rel="stylesheet">
+    <!-- <link href="css/daterangepicker.css" rel="stylesheet"> -->
     <link href="css/fotorama.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script> -->
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <!-- End Custom CSS -->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -227,14 +231,16 @@
                           
                             <div class="col-sm-5 pb-3">
                                 <div class="d-flex container-chek">
-                                    <div>
-                                        <label for="exampleCtrl">Check In</label>
-                                        <input type="date" class="form-control" id="check_in" placeholder="Check In">
+                                    <div class="w-100 col-2">
+                                        <label for="exampleCtrl">Check In -Check Out</label>
+                                        <!-- Hidden input to store the selected date range -->
+                                        <input type="hidden" name="hiddendaterange" id="hiddendaterange">
+                                        <input type="text" class="form-control" name="daterange" value="01/01/2025 - 01/15/2025" />
                                     </div>
-                                    <div>
+                                    <!-- <div>
                                         <label for="check_out">Check Out</label>
                                         <input type="date" class="form-control" id="check_out" placeholder="Check Out">
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <div class="col-sm-1 pb-3">
@@ -279,7 +285,7 @@
                             </div>
                             <div class="col-sm-3 pb-3">
                                 <label for="nationality">Nationality</label>
-                                <select name="nationality" id="nationality">
+                                <select name="nationality "  id="select">
                                     <option value="egypt">Egypt</option>
                                     <option value="italy">Italy</option>
                                 </select>
@@ -536,7 +542,9 @@
         </div>
     </div>
 </div>
+<script>
 
+</script>
 
 <!-- jquery -->
 <script src="js/jquery.js"></script>
@@ -550,13 +558,15 @@
 <script type='text/javascript' src='js/jquery.matchHeight.js'></script>
 <script type='text/javascript' src='js/fotorama.js'></script>
 <!-- date picker js -->
-<script type='text/javascript' src='js/moment.min.js'></script>
-<script src="js/daterangepicker.js"></script>
+<!-- <script type='text/javascript' src='js/moment.min.js'></script> -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<!-- <script src="js/daterangepicker.js"></script> -->
 <!-- flex slider js -->
 <link href="flex-slider/flexslider.css" rel="stylesheet">
 <script type="text/javascript" src="flex-slider/jquery.flexslider-min.js"></script>
 <!-- main js -->
 <script src="js/main.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </body>
 </html>

@@ -7910,7 +7910,31 @@ select.segmented_btn {
   width: 600px;
   height: 450px;
 }
+#st-modal-show-map2 {
+  width: 600px;
+  height: 450px;
+}
+.select2-container{
+  width: 100% !important;
+}
+.selection{
+  height: 100%;
+  display: inline-block;
+  width: 100% !important;
+  text-align: start !important;
+}
+.select2-container--default .select2-selection--single{
+  /* height: 46px !important; */
+  height: auto !important;
+  font-size: 14px;
+  padding: 8px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+right: 8px !important;
+top: 10px !important;
 
+
+}
 #room-availability-tab {
   padding: 10px;
 }
@@ -8897,7 +8921,7 @@ textarea:focus {
 /* body */
 #login-tab .login-body {
   background-color: var(--white-color);
-  min-height: 90%;
+
   min-width: 58%;
   width: 320px;
   padding: 30px 0;
@@ -8908,8 +8932,45 @@ textarea:focus {
   border: 1px solid #e9e9e9;
   border-top: none;
   border-radius: 0 0 10px;
+  margin: 0 auto;
 }
+@media screen and (max-width: 1023px) {
+  #login-tab {
+    display: none;
+    position: fixed;
 
+
+    inset: 0;
+    z-index: 9;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    transform-origin: top right;
+    transform: scaleY(0);
+    transform-origin: top right;
+
+  }
+  #login-tab .login-body {
+    background-color: var(--white-color);
+    width: 320px;
+    height: fit-content;
+    padding: 30px 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e9e9e9;
+    border-top: none;
+    border-radius: 10px;
+    
+  }
+  .show:has(.login-body) {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(55, 65, 81, .6) !important;
+  }
+  
+}
 #login-tab .login-form {
   text-align: center;
 }
@@ -12024,6 +12085,7 @@ button.close:hover {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  /* width: 80px; */
 }
 
 #rooms-container .children-ages span {
@@ -12034,6 +12096,7 @@ button.close:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
+    width: 70px;
 }
 
 #rooms-container #add-room {
@@ -12072,12 +12135,12 @@ button.close:hover {
   display: block;
 }
 
-.container-chek {
+/* .container-chek {
   display: grid !important;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2px;
 
-}
+} */
 
 .account>.row>.col-md-6>.card {
 

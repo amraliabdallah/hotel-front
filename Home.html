@@ -25,6 +25,7 @@
     <link href="css/search-result.css" rel="stylesheet">
     <link href="css/daterangepicker.css" rel="stylesheet">
     <link href="css/fotorama.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <!-- End Custom CSS -->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -315,12 +316,15 @@
 </div>
 
   <div id="login-tab" class="hidden">
-          <div class="login-body">
+          <div class="login-body" id="login-body">
             <div class="row align-items-center justify-content-center">
               
               <div class="col-md-12">
                 <div class="login-form">
-                  <h3>SIGN IN</h3>
+                    <div class="d-flex justify-content-between mb-4 align-items-center">
+                        <h3 class="m-0">SIGN IN</h3>
+                        <button type="button" class="close" id="close-log-in">×</button>
+                    </div>
                   <form action="">
                     <div class="mail-input">
                       <div class="input-group flex-nowrap">
@@ -359,7 +363,7 @@
                       Login
                     </a>
                   </form>
-                  <a href="#">To work with us ? Register here </a>
+                  <a href="#"> Register here </a>
                   <!-- Add Forgot Password link below the login form -->
                     <div class="forgot-password-link">
                         <a href="#">Forgot Password?</a>
@@ -721,15 +725,7 @@
         <h1 class="mb-5 title-new">Explore our amazing top destinations</h1>
     </div>
     
-    <div class="country-buttons">
-     
-       <!--  <button class="country-button" data-country="all">All Continents</button>-->
-        <button class="country-button" data-country="Europe">Europe</button>
-        <button class="country-button" data-country="Asia">Asia </button>
-        <button class="country-button" data-country="Mena Region">Mena Region </button>
-        <button class="country-button" data-country="North America">North America</button>
-        <button class="country-button" data-country="South America">South America</button>
-      </div>
+
 
  <div class="container-en-des">
     <div class="card-en" data-country="Europe">
@@ -915,6 +911,15 @@
                     <a style="margin-right: 10px;" href="#">
                         <i class="fa-brands fa-linkedin fa-lg"></i>
                     </a>
+                    <a style="margin-right: 10px;" href="#">
+                        <i class="fa-brands fa-facebook fa-lg"></i>
+                    </a>
+                    <a style="margin-right: 10px;" href="#">
+                        <i class="fa-brands fa-instagram fa-lg"></i>
+                    </a>
+                    <a style="margin-right: 10px;" href="#">
+                        <i class="fa-brands fa-whatsapp fa-lg"></i>
+                    </a>
                 </p>
             </div>
     
@@ -979,7 +984,7 @@
 <script src="js/daterangepicker.js"></script>
 <script src="js/jquery.singlePageNav.min.js"></script>
 
-
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script type="text/javascript" src="flex-slider/jquery.flexslider-min.js"></script>
 <!-- main js -->
 <script src="js/main.js"></script>

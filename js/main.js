@@ -1266,7 +1266,67 @@ $(document).ready(function () {
   }
 
   $(document).ready(function () {
-    $("#login-button").click(function (event) {
+    $('#select').select2();
+    // $("#login-button").click(function (event) {
+    //   $(this).toggleClass("active");
+    //   event.preventDefault();
+    //   $("#login-tab").toggleClass("show");
+    // });
+      var $loginButton = $("#login-button");
+      var $loginTab = $("#login-tab");
+      var $loginBody = $("#login-body");
+    
+      $loginButton.click(function(event) {
+        $(this).toggleClass("active");
+        event.preventDefault();
+        $loginTab.toggleClass("show");
+      });
+    
+      $(document).on('click', function(event) {
+        // Check if the login tab has the "show" class
+        if ($loginTab.hasClass("show")) {
+          // Check if the click is outside both the login button and login tab
+          if (!$loginButton.is(event.target) && !$loginButton.has(event.target).length &&
+              !$loginBody.is(event.target) && !$loginBody.has(event.target).length) {
+            // If the click is outside, toggle the classes accordingly
+            $loginButton.removeClass("active");
+            $loginTab.removeClass("show");
+          }
+        }
+      });
+
+
+        $(function() {
+          function initializeDateRangePicker(inputName) {
+            var hiddenInput = $(`input[name="hidden${inputName}"]`);
+            $(`input[name="${inputName}"]`).daterangepicker({
+              timePicker: false,
+              singleDatePicker: false,
+              // autoApply: true,
+              disabledPast: true,
+              dateFormat: "DD/MM/YYYY",
+              customClass: "",
+              widthSingle: 500,
+              onlyShowCurrentMonth: true,
+              minDate: moment(),
+            }, function(start, end, label) {
+              var selectedRange = start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD');
+              // Assign the selected range to the hidden input
+              hiddenInput.val(selectedRange);
+
+            });
+          }
+    
+          // Call the function for each date range picker input
+          initializeDateRangePicker("daterange");
+          initializeDateRangePicker("daterange1");
+          initializeDateRangePicker("daterange-2");
+          initializeDateRangePicker("daterange-3");
+      });
+
+
+
+    $("#close-log-in").click(function (event) {
       $(this).toggleClass("active");
       event.preventDefault();
       $("#login-tab").toggleClass("show");
@@ -1357,4 +1417,3 @@ $(document).ready(function () {
   });
 
 })(jQuery);
-
