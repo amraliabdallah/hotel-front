@@ -1275,13 +1275,16 @@ $(document).ready(function () {
       var $loginButton = $("#login-button");
       var $loginTab = $("#login-tab");
       var $loginBody = $("#login-body");
+
     
       $loginButton.click(function(event) {
         $(this).toggleClass("active");
         event.preventDefault();
         $loginTab.toggleClass("show");
       });
-    
+
+      var $filterBook=$('.filter-booking');
+      var $filterButton=$('#output');
       $(document).on('click', function(event) {
         // Check if the login tab has the "show" class
         if ($loginTab.hasClass("show")) {
@@ -1293,6 +1296,17 @@ $(document).ready(function () {
             $loginTab.removeClass("show");
           }
         }
+
+        if ($filterBook.css("display") === "block") {
+          // Check if the click is outside both the filter-booking element and the filterButton
+          if (
+              !$filterBook.is(event.target) && $filterBook.has(event.target).length === 0 &&
+              !$filterButton.is(event.target) && $filterButton.has(event.target).length === 0
+          ) {
+              $filterBook.hide();
+          }
+      }
+
       });
 
 
@@ -1310,7 +1324,26 @@ $(document).ready(function () {
               onlyShowCurrentMonth: true,
               minDate: moment(),
             }, function(start, end, label) {
-              var selectedRange = start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD');
+              var selectedRange = start.format('YYYY-MM-DD') + ' - ' + end.format('YYYY-MM-DD');
+              // Assign the selected range to the hidden input
+              hiddenInput.val(selectedRange);
+
+            });
+          }
+          function initializeDateRangePicker1(inputName) {
+            var hiddenInput = $(`input[name="hidden${inputName}"]`);
+            $(`input[name="${inputName}"]`).daterangepicker({
+              timePicker: false,
+              singleDatePicker: true,
+              // autoApply: true,
+              disabledPast: true,
+              dateFormat: "DD/MM/YYYY",
+              customClass: "",
+              widthSingle: 500,
+              onlyShowCurrentMonth: true,
+              minDate: moment(),
+            }, function(start, end, label) {
+              var selectedRange = start.format('YYYY-MM-DD') + ' - ' + end.format('YYYY-MM-DD');
               // Assign the selected range to the hidden input
               hiddenInput.val(selectedRange);
 
@@ -1320,8 +1353,9 @@ $(document).ready(function () {
           // Call the function for each date range picker input
           initializeDateRangePicker("daterange");
           initializeDateRangePicker("daterange1");
-          initializeDateRangePicker("daterange-2");
-          initializeDateRangePicker("daterange-3");
+          initializeDateRangePicker("daterange2");
+          initializeDateRangePicker("daterange3");
+          initializeDateRangePicker1("daterange5");
       });
 
 

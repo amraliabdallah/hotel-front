@@ -19,10 +19,13 @@
     <link href="css/responsive.css" rel="stylesheet">
     <link href="css/helpers.css" rel="stylesheet">
     <link href="css/search-result.css" rel="stylesheet">
-    <link href="css/daterangepicker.css" rel="stylesheet">
+    <!-- <link href="css/daterangepicker.css" rel="stylesheet"> -->
     <link href="css/fotorama.css" rel="stylesheet">
     <link href="css/calendar.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script> -->
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <!-- End Custom CSS -->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -222,19 +225,20 @@
                             <div class="col-md-12">
                                 <div class="box-checked-in d-flex align-items-center justify-content-between">
                                     <div class="d-flex gap-5">
-                                        <div class="form-group form-date-field form-date-search clearfix  has-icon d-flex align-items-center  gap-1"
-                                            data-format="DD/MM/YYYY">
+                                        <div class="w-100 form-group form-date-field form-date-search clearfix  has-icon d-flex align-items-center  gap-1"
+                                            data-format="DD/MM/YYYY" style="width: 100%;">
                                             <i class="far fa-calendar-alt input-icon field-icon"></i>
                                             <div class="date-wrapper clearfix">
                                                 <div class="check-in-wrapper d-flex align-items-center gap-1 ">
-                                                    <label>Check In</label>
-                                                    <div class="inputg check-in-render">01/07/2019</div>
+                                                    <label style="min-width: max-content;">Check In - Check Out</label>
+                                                    <!-- <div class="inputg check-in-render">01/07/2019</div> -->
+                                                    <input type="text" id="daterange1" class="form-control" style="border: 0;background-color: #f7f7f7;" name="daterange1" value="" />
                                                 </div>
                                             </div>
-                                            <input type="hidden" class="check-in-input" value="01/07/2019" name="start">
-                                            <input type="text" class="check-in-out" value="01/07/2019 10:11 am-02/07/2019 10:11 am" name="date">
+                                            <input type="hidden" class="check-in-input" value="" name="hiddendaterange1">
+                                            <!-- <input type="text" class="check-in-out" value="01/07/2019 10:11 am-02/07/2019 10:11 am" name="date"> -->
                                         </div>
-                                        <div class="form-group form-date-field form-date-search clearfix  has-icon d-flex align-items-center gap-1 " data-format="DD/MM/YYYY">
+                                        <!-- <div class="form-group form-date-field form-date-search clearfix  has-icon d-flex align-items-center gap-1 " data-format="DD/MM/YYYY">
                                             <i class="fas fa-calendar-check input-icon field-icon"></i>
                                             <div class="date-wrapper clearfix">
                                                 <div class="check-in-wrapper d-flex align-items-center gap-1">
@@ -244,7 +248,7 @@
                                             </div>
                                             <input type="hidden" class="check-out-input" value="02/07/2019" name="end">
                                             <input type="text" class="check-in-out" value="01/07/2019 10:11 am-02/07/2019 10:11 am" name="date">
-                                        </div>
+                                        </div> -->
                                     </div>
 
                                     <button class="btn btn-primary change">Change</button>
@@ -406,12 +410,15 @@
 <script type='text/javascript' src='js/fotorama.js'></script>
 <!-- date picker js -->
 <script type='text/javascript' src='js/moment.min.js'></script>
-<script src="js/daterangepicker.js"></script>
+<!-- <script src="js/daterangepicker.js"></script> -->
+<script src="js/datepick.js"></script>
+<!-- price range slider -->
+<script src="ion-range-slider/ion.rangeSlider.min.js"></script>
 <!-- flex slider js -->
-<link href="flex-slider/flexslider.css" rel="stylesheet">
 <script type="text/javascript" src="flex-slider/jquery.flexslider-min.js"></script>
 <!-- main js -->
 <script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 </body>
 </html>

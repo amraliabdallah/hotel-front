@@ -10,6 +10,7 @@
     left: 20px;
     display: none;
     /* Calendars */
+    z-index: 9999999 !important;
 }
 
 .daterangepicker:before, .daterangepicker:after {

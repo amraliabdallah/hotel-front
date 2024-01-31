@@ -8,14 +8,35 @@
     <!-- bootstrap css -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- font awesome css -->
-    <link href="css/all.min.css" rel="stylesheet">
-    <link href="css/fontawesome.min.css" rel="stylesheet">  
+    
+      
     <link href="flex-slider/flexslider.css" rel="stylesheet">
 
+    
+    
+    
+    
+    
+    <!-- google font -->
+    
+    <!-- custom style css -->
+    
+    
+    
+    
+    
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=2, minimum-scale=1">
+    <title>:: Cheval Traveller ::</title>
+    <!-- bootstrap css -->
+    
+    <!-- font awesome css -->
+    <link href="css/all.min.css" rel="stylesheet">
+    <link href="css/fontawesome.min.css" rel="stylesheet">
     <link href="support/linearicon/style.css" rel="stylesheet">
     <link href="support/themify/themify-icons.css" rel="stylesheet">
-    <link href="ion-range-slider/ion.rangeSlider.css" rel="stylesheet">
-    <link href="ion-range-slider/ion.rangeSlider.skinHTML5.css" rel="stylesheet">
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Material+Icons|Poppins:400,600,700" rel="stylesheet">
     <!-- custom style css -->
@@ -23,8 +44,12 @@
     <link href="css/responsive.css" rel="stylesheet">
     <link href="css/helpers.css" rel="stylesheet">
     <link href="css/search-result.css" rel="stylesheet">
-    <link href="css/daterangepicker.css" rel="stylesheet">
+    <!-- <link href="css/daterangepicker.css" rel="stylesheet"> -->
     <link href="css/fotorama.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script> -->
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <!-- End Custom CSS -->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -80,10 +105,62 @@
 <!--Navigation End-->
 <div class="clearfix"></div>
 <div id="st-content-wrapper" class="search-result-page">
+
     <div class="container-lg">
         <!--Top Horizontal Search-->
-       
-        <div class=" row change-search-goggle-area">
+               <div class=" row change-search-goggle-area">
+            <div class="col-md-12">
+                <div class="d-flex box-content">
+                    <div class="d-flex">
+                        <div class="form-group form-extra-field dropdown clearfix field-detination has-icon">
+                            <i class="fas fa-map-marker-alt input-icon field-icon" ></i>
+                            <div class="dropdown">
+                                <label>Destination / Property Name</label>
+                                <div class="inputg check-in-render">Cairo</div>
+
+                            </div>
+                        </div>
+                        <div class="form-group form-date-field form-date-search clearfix  has-icon " data-format="DD/MM/YYYY">
+                            <i class="far fa-calendar-alt input-icon field-icon"></i>
+                            <div class="date-wrapper clearfix">
+                                <div class="check-in-wrapper">
+                                    <label>Stay Dates</label>
+                                    <div class="inputg check-in-render">Sep 13 2023 - Sep 19 2023</div>
+                                </div>
+                            </div>
+                         
+                        </div>
+                        <div class="form-group form-date-field form-date-search clearfix  has-icon " data-format="DD/MM/YYYY">
+                            <i class="fa-solid fa-people-group"></i>
+                            <div class="date-wrapper clearfix">
+                                <div class="check-in-wrapper">
+                                    <label>Guests</label>
+                                    <div class="inputg check-in-render"> 2 Adults - 0 Child -  1 Room</div>
+                                </div>
+                            </div>
+                         
+                        </div>
+                        <div class="form-group form-date-field form-date-search clearfix  has-icon " data-format="DD/MM/YYYY">
+                            <i class="fa-regular fa-flag"></i>
+                            <div class="date-wrapper clearfix">
+                                <div class="check-in-wrapper">
+                                    <label>Nationality </label>
+                                    <div class="inputg check-in-render">Egypt</div>
+                                </div>
+                            </div>
+                         
+                        </div>
+                    </div>
+                        <button type="button" class="btn-show-price btn btn-secondary uppe" data-toggle="modal" data-target="#openFilter">
+                        Change Search
+                      </button>
+                </div>
+            </div>
+            <div class="col-md-2">
+           
+            </div>
+        </div>
+        <!-- <div class=" row change-search-goggle-area">
             <div class="col-md-12">
                 <div class="d-flex box-content">
                     <div class="d-flex">
@@ -137,22 +214,104 @@
             <div class="col-md-2">
            
             </div>
-        </div>
+        </div> -->
     </div>
     <div class="container">
         <div class="clearfix"></div>
         
         <div class="clearfix"></div>
         <!-- Modal -->
-        <div id="openFilter" class="modal fade" role="dialog">
+        <div id="openFilter" class="modal fade hotel-popUp" role="dialog3">
             <div class="modal-dialog">
               <div class="modal-content">
               
                 <div class="modal-footer form-en-modal" style="border: none;">
-                    <div class="search-result-page">
+
+<div class="">
+                         <!-- form complex example -->
+                         <div class=" row form-row mt-4">
+                            <!-- Account section -->
+                            <div class="col-sm-6 pb-3">
+                                <label for="name_hotel">Destination / Hotel Name*</label>
+                                <input type="text" class="form-control" id="name_hotel" placeholder="Enter City Destination / Hotel name">
+                            </div>
+                          
+                            <div class="col-sm-5 pb-3">
+                                <div class="d-flex container-chek">
+                                    <div class="w-100 col-2">
+                                        <label for="exampleCtrl">Check In -Check Out</label>
+                                        <!-- Hidden input to store the selected date range -->
+                                        <input type="hidden" name="hiddendaterange" id="hiddendaterange">
+                                        <input type="text" id="daterange1" class="form-control" name="daterange" value="" />
+                                    </div>
+                                    <!-- <div>
+                                        <label for="check_out">Check Out</label>
+                                        <input type="date" class="form-control" id="check_out" placeholder="Check Out">
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="col-sm-1 pb-3">
+                                <label for="">Nights</label>
+                                <input type="text" class="form-control" id="" placeholder="Nights">
+                            </div>
+                            <div class="col-sm-6 pb-3" style="position: relative;">
+                                <label for="">Room & Guests</label>
+                                <div id="output" class="output-room"></div>
+                                <div class="filter-booking">
+                                    <div id="rooms-container">
+                                        <!-- Room template that will be cloned for each new room -->
+                                        <div class="room" id="room-template">
+                                            <div class="room-header">
+                                                <span class="room-title">Room 1</span>
+                                                <button class="remove-room"  style="display: none;">Remove</button>
+                                            </div>
+                                            <div class="guests">
+                                                <div class="adults">
+                                                    <label>Adults</label>
+                                                    <div class="d-flex">
+                                                        <button class="minus">-</button>
+                                                        <input type="text" value="2" readonly class="form-control">
+                                                        <button class="plus">+</button>
+                                                    </div>
+                                                </div>
+                                                <div class="children">
+                                                    <label>Children</label>
+                                                    <div class="children-ages"></div>
+                                                    <button class="add-child">Add a child</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End of Room template -->
+                                        <button id="add-room">+ Add a room</button>
+                                    </div>     
+                                    <button id="done">Done</button>
+
+                                </div>      
+                                
+                     
+                            </div>
+                            <div class="col-sm-3 pb-3">
+                                <label for="nationality">Nationality</label>
+                                <select name="nationality "  id="select">
+                                    <option value="egypt">Egypt</option>
+                                    <option value="italy">Italy</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-3 pb-3">
+                                <label for="hotel_name">Hotel Name <span>(Optional)</span></label>
+                                <input type="text" class="form-control" id="hotel_name" placeholder="Place Hotel Name">
+                            </div>
+                            <div class="col-sm-12 pb-3">
+                                <button class="btn btn-primary"><i class="fas fa-search"></i> Search Hotel</button>
+
+                            </div>    
+                        </div>
+                        </div>
+
+                    <!-- <div class="search-result-page">
                         <div class="search-form-wrapper index-slider-form horizontal-search-area ">
              <div class="search-form hotel-service">
-                 <!--Address-->
+                
                  <form action="" class="form" method="">
 
                  <div class="row">
@@ -298,7 +457,7 @@
 
              </div>
          </div>
-                     </div>
+                     </div> -->
                 </div>
               </div>
             </div>
@@ -468,7 +627,8 @@
                    <!--Map view btn-->
                    <div class="sidebar-item map-view-wrapper hidden-xs hidden-sm mt20">
                     <div class="map-view"> 
-                        <a href="#!" class="st-link font-medium btn btn-secondary" style="color: #fff;"  data-toggle="modal" data-target="#st-modal-show-map" role="button"><i class="fas fa-map-marker-alt " ></i> <span>MAPS VIEW </span></a>
+                        
+                        <a href="#!" class="st-link font-medium btn btn-secondary" style="color: #fff;"  data-toggle="modal" data-target="#st2" role="button"><i class="fas fa-map-marker-alt " ></i> <span>MAPS VIEW </span></a>
                     </div>
                 </div>
 
@@ -793,6 +953,27 @@
     </div>
 </div>
 
+<!--Location Popup-->
+<div  class="modal fade modal-map st-modal-show-map2 "  id="st2"  role="dialog1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Hotel Name</h4>
+                <button type="button" class="btn-close close "  data-dismiss="modal" style="padding: 0;margin: 0;display: flex;justify-content: center;align-items: center;">
+                    <span>x</span></button>
+
+                
+            </div>
+            <div class="modal-body">
+                <div class="st-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3473006.9447390377!2d-9.393883143804752!3d31.78116652402345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b88619651c58d%3A0xd9d39381c42cffc3!2sMorocco!5e0!3m2!1sen!2sin!4v1561371930612!5m2!1sen!2sin"
+                        width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!--Location Popup-->
 <div  class="modal fade modal-map"  id="st-modal-show-map"  role="dialog">
@@ -800,9 +981,8 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title">Hotel Name</h4>
-                <button type="button" class="btn-close close"  data-dismiss="modal" style="padding: 0;margin: 0;"></button>
-
-                
+                <button type="button" class="btn-close close "  data-dismiss="modal" style="padding: 0;margin: 0;display: flex;justify-content: center;align-items: center;">
+                    <span>x</span></button>
             </div>
             <div class="modal-body">
                 <div class="st-map">
@@ -815,26 +995,6 @@
     </div>
 </div>
 
-<!--Location Popup-->
-<div  class="modal fade modal-map"  id="st-modal-show-map2"  role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">Hotel Name</h4>
-                <button type="button" class="btn-close close"  data-dismiss="modal" style="padding: 0;margin: 0;"></button>
-
-                
-            </div>
-            <div class="modal-body">
-                <div class="st-map">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3473006.9447390377!2d-9.393883143804752!3d31.78116652402345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b88619651c58d%3A0xd9d39381c42cffc3!2sMorocco!5e0!3m2!1sen!2sin!4v1561371930612!5m2!1sen!2sin"
-                        width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <!-- jquery -->
 <script src="js/jquery.js"></script>
 <!-- bootstrap js -->
@@ -846,13 +1006,14 @@
 <script src="menu/stellarnav.min.js"></script>
 <!-- date picker js -->
 <script type='text/javascript' src='js/moment.min.js'></script>
-<script src="js/daterangepicker.js"></script>
+<!-- <script src="js/daterangepicker.js"></script> -->
+<script src="js/datepick.js"></script>
 <!-- price range slider -->
 <script src="ion-range-slider/ion.rangeSlider.min.js"></script>
 <!-- flex slider js -->
 <script type="text/javascript" src="flex-slider/jquery.flexslider-min.js"></script>
 <!-- main js -->
 <script src="js/main.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </body>
 </html>
