@@ -10,7 +10,7 @@
     <title>:: Cheval Traveller ::</title>
     <!-- bootstrap css -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <!-- font awesome css -->
+
     <link href="css/all.min.css" rel="stylesheet" />
     <link href="css/fontawesome.min.css" rel="stylesheet" />
     <link href="support/linearicon/style.css" rel="stylesheet" />
@@ -20,6 +20,208 @@
       href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Material+Icons|Poppins:400,600,700"
       rel="stylesheet"
     />
+    <style>
+      .cent{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+      .card.box1 {
+          width: 350px;
+          height: 500px;
+          background-color: #3ecc6d;
+          color: #baf0c3;
+          border-radius: 0
+      }
+
+      .card.box2 {
+          width: 450px;
+          height: 580px;
+          background-color: #ffffff;
+          border-radius: 0
+      }
+
+      .text {
+          font-size: 13px
+      }
+
+      .box2 .btn.btn-primary.bar {
+          width: 20px;
+          background-color: transparent;
+          border: none;
+          color: #3ecc6d
+      }
+
+      /* .box2 .btn.btn-primary.bar:hover {
+          color: #baf0c3
+      } */
+
+      .box1 .btn.btn-primary {
+          background-color: #57c97d;
+          width: 45px;
+          height: 45px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid #ddd
+      }
+/* 
+      .box1 .btn.btn-primary:hover {
+          background-color: #f6f8f7;
+          color: #57c97d
+      } */
+
+      .btn.btn-success {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: #ddd;
+          color: black;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: none
+      }
+
+      .nav.nav-tabs {
+          border: none;
+          border-bottom: 2px solid #ddd
+      }
+
+      .nav.nav-tabs .nav-item .nav-link {
+          border: none;
+          color: black;
+          border-bottom: 2px solid transparent;
+          font-size: 14px
+      }
+
+      /* .nav.nav-tabs .nav-item .nav-link:hover {
+          border-bottom: 2px solid #3ecc6d;
+          color: #05cf48
+      } */
+
+      /* .nav.nav-tabs .nav-item .nav-link.active {
+          border: none;
+          border-bottom: 2px solid #3ecc6d
+      } */
+
+      .form-control {
+          border: none;
+          border-bottom: 1px solid #ddd;
+          box-shadow: none;
+          height: 20px;
+          font-weight: 600;
+          font-size: 14px;
+          padding: 15px 0px;
+          letter-spacing: 1.5px;
+          border-radius: 0
+      }
+
+      .inputWithIcon {
+          position: relative
+      }
+
+      img {
+          width: 50px;
+          height: 20px;
+          object-fit: cover
+      }
+
+      .inputWithIcon span {
+          position: absolute;
+          right: 0px;
+          bottom: 9px;
+          color: #57c97d;
+          cursor: pointer;
+          transition: 0.3s;
+          font-size: 14px
+      }
+/* 
+      .form-control:focus {
+          box-shadow: none;
+          border-bottom: 1px solid #ddd
+      } */
+
+      .btn-outline-primary {
+          color: black;
+          background-color: #ddd;
+          border: 1px solid #ddd
+      }
+
+      /* .btn-outline-primary:hover {
+          background-color: #05cf48;
+          border: 1px solid #ddd
+      } */
+
+      /* .btn-check:active+.btn-outline-primary,
+      .btn-check:checked+.btn-outline-primary,
+      .btn-outline-primary.active,
+      .btn-outline-primary.dropdown-toggle.show,
+      .btn-outline-primary:active {
+          color: #baf0c3;
+          background-color: #3ecc6d;
+          box-shadow: none;
+          border: 1px solid #ddd
+      } */
+
+      /* .btn-group>.btn-group:not(:last-child)>.btn,
+      .btn-group>.btn:not(:last-child):not(.dropdown-toggle),
+      .btn-group>.btn-group:not(:first-child)>.btn,
+      .btn-group>.btn:nth-child(n+3),
+      .btn-group>:not(.btn-check)+.btn {
+          border-radius: 50px;
+          margin-right: 20px
+      } */
+
+      form {
+          font-size: 14px
+      }
+
+      form .btn.btn-primary {
+          width: 100%;
+          height: 45px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background-color: #3ecc6d;
+          border: 1px solid #ddd
+      }
+
+      form .btn.btn-primary:hover {
+          background-color: #05cf48
+      }
+
+      @media (max-width:750px) {
+          .container {
+              padding: 10px;
+              width: 100%
+          }
+
+          .text-green {
+              font-size: 14px
+          }
+
+          .card.box1,
+          .card.box2 {
+              width: 100%
+          }
+
+          .nav.nav-tabs .nav-item .nav-link {
+              font-size: 12px
+          }
+      }
+      .popUp-input:focus{
+         
+          box-shadow: 0 0 0 !important;
+          padding: 5px 0 !important;
+          height: 100% !important;
+      }
+      .popUp-input{
+          padding: 5px 0 !important;
+          height: auto !important;
+      }
+  </style>
     <!-- custom style css -->
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/responsive.css" rel="stylesheet" />
@@ -267,7 +469,78 @@
               </div>
               <div class="form-area d-flex align-items-center gap-1 mb-4">
                 <div id="visaCardInput2" style="display: none">
-                  <div class="container-form">
+                  <div class="modal-header " style="flex-flow: column; gap: 8px;display: flex;font-weight: 700;">
+
+
+
+                    <h4 class="modal-title " style="font-weight: 700;text-transform: capitalize;">pay amount by credit card</h4>
+
+                    </div>
+               
+                <div class="modal-body" style="margin-top: 30px;">
+                  <div class="row">
+
+
+                    
+
+                   
+
+                   
+                    <div class="col-12">
+                        <div class="d-flex flex-column px-md-5 px-4 mb-4">
+                            <span>Credit Card</span>
+                            <div class="inputWithIcon"> <input
+                                    class="form-control popUp-input" type="text"
+                                     id="cr_no" placeholder="&#9679;&#9679;&#9679;&#9679; &#9679;&#9679;&#9679;&#9679; &#9679;&#9679;&#9679;&#9679; 7327" minlength="19" maxlength="19">
+                                <span class=""> <img
+                                        src="https://www.freepnglogos.com/uploads/mastercard-png/mastercard-logo-logok-15.png"
+                                        alt=""></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                  
+                    <div class="col-md-6">
+                        <div
+                            class="d-flex flex-column ps-md-5 px-md-0 px-4 mb-4">
+                            <span>Expiration<span
+                                    class="ps-1">Date</span></span>
+                            <div class="inputWithIcon"> <input type="text"
+                                    class="form-control popUp-input"  name="exp" id="exp" placeholder="12/28" minlength="5" maxlength="5">
+                                <span class="fas fa-calendar-alt"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div
+                            class="d-flex flex-column pe-md-5 px-md-0 px-4 mb-4">
+                            <span>Code CVV</span>
+                            <div class="inputWithIcon"> <input type="text"
+                                    class="form-control popUp-input"  name="cvcpwd" placeholder="&#9679;&#9679;&#9679;" class="placeicon" minlength="3" maxlength="3"> <span
+                                    class="fas fa-lock"></span> </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex flex-column px-md-5 px-4 mb-4">
+                            <span>Name</span>
+                            <div class="inputWithIcon"> <input
+                                    class="form-control text-uppercase popUp-input"
+                                    type="text" value="valdimir berezovkiy">
+                                <span class="far fa-user"></span> </div>
+                        </div>
+                    </div>
+                    <div class="col-12 px-md-5 px-4 mt-3">
+                        <div class="btn  w-100" style="background-color: #05cf48;color: #ffffff;font-weight: 700;">Pay $1000.00</div>
+                    </div>
+                    <!-- <div  style="width: 100%;display: flex; align-items: center;justify-content: center ; margin-top: 20px;">
+                        <img src="images/save.png" alt="" class="img-responsive"  style="height: 40px;min-width: max-content !important;">
+                        <img src="images/secure.png" alt="" class="img-responsive" style="height: 40px;min-width: max-content !important;">
+                        <img src="images/payment.png" alt="" class="img-responsive" style="height: 40px;min-width: max-content !important;">
+                    </div> -->
+                </div>
+                </div>
+                  <!-- <div class="container-form">
                     <div class="form-area" style="    grid-column: 4/1;">
                         <label for="">Name </label>
                         <input
@@ -302,7 +575,7 @@
                         class="form-control inputg"
                       />
                     </div>
-                  </div>
+                  </div> -->
                   <script>
                     document
                       .getElementById("credit_card_checkbox")
