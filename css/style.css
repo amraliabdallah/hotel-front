@@ -111,7 +111,7 @@
   content: "\e64b";
 }
 
-#top-header-menu-area .menu-area #main-nav ul li.has-sub a:before {
+/* #top-header-menu-area .menu-area #main-nav ul li.has-sub a:before {
   content: "\e64b";
   font-family: 'themify';
   display: block;
@@ -119,7 +119,7 @@
   font-size: 12px;
   right: -2px;
   top: 10px;
-}
+} */
 
 @media (max-width: 1023px) {
   #top-header-menu-area .menu-area #main-nav ul li.has-sub a:before {
