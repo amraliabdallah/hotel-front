@@ -1,0 +1,448 @@
+<!DOCTYPE>
+<html dir="ltr" lang="en" style="padding: 0; margin: 0">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>verify email address</title>
+    <style type="text/css">
+        .link{
+             color: #352578 !important;
+        }
+        .flex{
+            display: flex;
+            gap: 8px;
+            align-items: center;
+           
+        }
+        .icon{
+            width:20px;
+            aspect-ratio: 1;
+
+        }
+        .date {
+            margin: 10px 0;
+        }
+
+        .confirm {
+            color: #fe6601;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .complete {
+            color: #09bd3c;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .cancel {
+            color: #bd1509;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .secondHeader {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .checkIn {
+            display: grid;
+            padding: 16px;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            padding: 20px 0;
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .logo {
+            height: 90px;
+            background-repeat: no-repeat;
+        }
+
+        .before-main {
+            width: 90%;
+        }
+
+        .after-main-container {
+            padding: 3% 5%;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 1px 10px 6px #2cb1ea1a;
+        }
+
+        .after-main {
+            width: 100%;
+            display: grid;
+            gap: 10%;
+            grid-template-columns: 7fr 1fr;
+            align-content: space-evenly;
+        }
+
+        .greeting {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .greeting span {
+            font-weight: 700;
+            color: #0974BD;
+
+        }
+
+        .main {
+            padding: 3% 5%;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 1px 10px 6px #2cb1ea1a;
+        }
+
+        .content {
+            font-size: 18px;
+            margin-top: 40px;
+
+            text-align: center;
+        }
+
+        .main-button {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .mail-button {
+            background-color: #0974bd;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 50px;
+            font-weight: 700;
+            width: 120px;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .name {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 18px;
+            text-align: start;
+        }
+
+        .copy-right {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .image-container {
+            max-width: 200px;
+            aspect-ratio: 1;
+        }
+
+        .icon-container {
+            width: 24px;
+            aspect-ratio: 1;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            min-width: 50%;
+        }
+
+        td,
+        th {
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        @media only screen and (max-width: 900px) {
+            table {
+                margin: 20px auto;
+                border-collapse: collapse;
+                min-width: 50%;
+                font-size: 12px;
+            }
+
+            td,
+            th {
+                padding: 5px;
+            }
+
+            .greeting {
+                font-size: 18px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            .logo {
+                height: 60px;
+            }
+
+            .name {
+                font-weight: bold;
+                margin-top: 10px;
+                font-size: 12px;
+                text-align: start;
+            }
+
+            .copy-right {
+                font-size: 12px;
+            }
+
+            .container {
+                padding-top: 20px;
+                width: 100%;
+                gap: 40px;
+            }
+
+            .main-button {
+                margin-top: 10px;
+                display: flex;
+                justify-content: center;
+            }
+
+            .mail-button {
+                font-size: 12px;
+            }
+
+            .content {
+                width: 90%;
+                margin: 15px auto;
+                margin-top: 4px;
+            }
+
+            .main {
+                width: 80%;
+                margin: 0 auto;
+                padding: 6% 3%;
+            }
+
+            .after-main-container {
+                width: 80%;
+                margin: 0 auto;
+                padding: 6% 3%;
+            }
+        }
+
+        @media screen and (max-width: 684px) {
+            .checkIn {
+                display: grid;
+                padding: 10px;
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
+            .icon{
+            width:14px;
+            aspect-ratio: 1;
+
+        }
+        }
+
+    </style>
+</head>
+
+<body style="
+      width: 100%;
+      font-family: 'Inter', sans-serif;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      padding: 0;
+      margin: 0;
+    ">
+    <section class="container">
+        <div class="before-main">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="./images/hotel.png" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main-content">
+                <div style="
+              display: flex;
+              justify-content: space-between;
+            ">
+                    <div>
+                        <div class="secondHeader" style="font-weight: 700; margin-bottom: 2px">
+                            Booking confirm Reservations ID / HXM0001
+                        </div>
+
+                        <div class="secondHeader">booked on: 20 Jan 2024</div>
+                        <div class="secondHeader">
+                            booking Status: <span class="confirm">confirm-unPaid</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="
+              border: 2px solid rgb(129, 205, 237);
+              margin: 20px 0;
+              border-radius: 10px;
+            ">
+                    <div class="checkIn">
+                        <div>
+                            <span class="header"><strong>Check-in</strong></span>
+                            <br />
+                            <div class="date">
+                                <strong>21.01.2024</strong> ,from 14:00:00
+                            </div>
+                        </div>
+                        <div>
+                            <span class="header"><strong> Check-out</strong></span>
+                            <br />
+                            <div class="date">
+                                <span class="bold">28.09.2022</span> until 11:00:00 Am
+                            </div>
+                        </div>
+                        <div>
+                            <div style="font-weight: 700">Nights</div>
+
+                            <div class="date">3</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="secondHeader" style="
+              border: 2px solid rgb(129, 205, 237);
+              margin: 20px 0;
+              border-radius: 10px;
+              padding: 16px;
+            ">
+                    <div style="">
+                        <div style="font-weight: 700">
+                            1 Room, for 2 adults and 2 children
+                        </div>
+
+                        <div style="margin-top: 20px">
+                            <strong>Room Type:</strong> deluxe studio sea view apartment
+                        </div>
+
+                        <div style="margin-top: 20px">
+                            <strong>Meal Type:</strong> Bed and Breakfast
+                        </div>
+
+                        <div style="margin-top: 20px">
+                            <strong>Guests name:</strong> Khaled Alqahatani, Abdullah
+                            Alsalelah
+                        </div>
+                        <div style="margin-top: 20px">
+                            <strong>Total price:</strong> 1000$
+                        </div>
+                        <div style="margin-top: 20px">
+                            <strong>Cancellation Policy:</strong>
+                        </div>
+                    </div>
+                </div>
+                <div style="
+              display: flex;
+              gap: 30px;
+              align-items: center;
+              padding: 20px 0;
+              border-top: 2px solid rgb(129, 205, 237);
+              margin: 50px 0;
+            ">
+                    <div>
+                        <div style="font-size: 14; margin: 10px 0">
+                            <strong>Important notices to guests:</strong>
+                        </div>
+                        <div style="margin: 10px 0; font-size: 11px">
+                            <div style="margin: 10px 0">
+                                The Hotel may charge additional fees to be paid by the Guest
+                                Directly when using additional services, for example, Resort
+                                fees, Facilities fees, city tax, and foreigner's accommodation
+                                fees, if applicable.
+                            </div>
+
+                            <div style="margin: 10px 0">
+                                The agency is not responsible for any issues with the quality
+                                of services provided by the hotel. The Client may contact the
+                                hotel management directly to claim the existence and quality
+                                of the services provided. In case of any issues during
+                                check-in or check-out, please contact the agency.
+                            </div>
+                            <div style="margin: 10px 0">
+                                You must report all complaints you may have to the hotel
+                                immediately during your stay, as soon as they arise. We will
+                                not be liable for any Compensation for any issue that could
+                                have been corrected during the customer's stay had the hotel
+                                been aware of it.
+                            </div>
+                        </div>
+                        <div style="font-size: 14; margin: 10px 0">
+                            <strong>Cancellation & Amendment Policy</strong>
+                        </div>
+                        <div style="font-size: 10px">
+                            <div style="margin: 10px 0">
+                                Modification or cancellation in the booking policy through the
+                                guest. a fee or the full amount will be charged in case of
+                                non-refund, According to the terms of the contract and the
+                                price before booking through the agency.
+                            </div>
+
+                            <div style="margin: 10px 0">
+                                Cancellation of reservation or no-show may result in
+                                penalties, According to rate and contract terms. Please notify
+                                us or the hotel in advance if you expect to check in after 6
+                                pm. The hotel Cancel the reservation and charges the no-show
+                                fee in case you don’t Show up by that time.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="after-main-container">
+            <div class="after-main">
+                <div style="width: 100%">
+                    <div class="name">Need some help?</div>
+                    <div class="name flex">
+                        <div class="icon">
+                        <img src="./images/mail.png" alt="" /></div>
+                        <a class="link" href="support@hotelxml.com">support@hotelxml.com</a>
+                    </div>
+                    <div class="name flex">
+                        <div class="icon">
+                        <img src="./images/call.png" alt="" /> </div>
+                        <a class="link"  href="tel:+447450004522">+447450004522</a>
+                    </div>
+                </div>
+
+                <div class="image-container" style="width: 100%">
+                    <img src="./images/head.png" alt="" />
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
