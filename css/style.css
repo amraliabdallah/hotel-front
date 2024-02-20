@@ -3164,7 +3164,20 @@ ul.st-list {
 #st-content-wrapper .st-map .google-map {
   height: 450px;
 }
+.forget-password-modal .modal-dialog {
+display: flex;
+justify-content: center;
+align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.forget-password-modal {
+  margin: 0 !important;
+  padding: 0 !important;
+  --bs-modal-padding:0 !important;
+  --bs-modal-margin:0 !important;
 
+}
 #st-content-wrapper .st-hotel-map-area {
   position: relative;
 }
@@ -9231,6 +9244,7 @@ textarea:focus {
   position: unset;
 
 }
+
 
 .modal-form-home .modal-content {
   width: 80%;

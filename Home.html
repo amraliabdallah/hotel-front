@@ -371,14 +371,54 @@
                   <a href="#"> Register here </a>
                   <!-- Add Forgot Password link below the login form -->
                     <div class="forgot-password-link">
-                        <a href="#">Forgot Password?</a>
+                        <a href="javascript:void(0);" id="resetPasssword-button" data-toggle="modal" data-target="#modalForgetPassword">Forgot Password?</a>
                     </div>
                 </div>
               </div>
             </div>
           </div>
   </div>
-  
+  <!-- Modal Sginup -->
+<div class="modal fade forget-password-modal" id="modalForgetPassword" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">forget password</h4>
+
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <form class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5 class="mb-0" style="font-size: 16px ;">please put down the email you wish to receive the forget password code on</h5>
+                    </div>
+
+                    <div class="col-md-12 ">
+                        <div class="form-group">
+                            <label for="managementEmail">Email Address</label>
+                            <input style="margin: 10px 0;" type="text" id="managementEmail" name="forgetPasswordEmail" class="form-control inputg" placeholder="Email" autocomplete="off" required>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="row">
+                    
+                    <div class="col-md-12 ">
+                        <div class="form-group profile-userbuttons" >
+                            <button type="submit" class="btn btn-primary btn_1" style="margin: 0 auto;width:100%">confirm</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+       
+        </div>
+    </div>
+</div>
   
   
 <div class="clearfix"></div>
