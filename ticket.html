@@ -1,281 +1,406 @@
-<!DOCTYPE>
-<html dir="ltr" lang="en" style="padding:0;Margin:0">
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Simple Call To Action</title>
+    <style>
+      /* -------------------------------------
+          GLOBAL RESETS
+      ------------------------------------- */
+      
+      /*All the styling goes here*/
+      
+      img {
+        border: none;
+        -ms-interpolation-mode: bicubic;
+        max-width: 100%; 
+      }
 
-<head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta name="x-apple-disable-message-reformatting">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta content="telephone=no" name="format-detection">
-    <title>verify email address</title>
-    <style type="text/css">
-        .link{
-             color: #352578 !important;
+      body {
+        background-color: #eaebed;
+        font-family: sans-serif;
+        -webkit-font-smoothing: antialiased;
+        font-size: 14px;
+        line-height: 1.4;
+        margin: 0;
+        padding: 0;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%; 
+      }
+
+      table {
+        border-collapse: separate;
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+        min-width: 100%;
+        width: 100%; }
+        table td {
+          font-family: sans-serif;
+          font-size: 14px;
+          vertical-align: top; 
+      }
+
+      /* -------------------------------------
+          BODY & CONTAINER
+      ------------------------------------- */
+
+      .body {
+        background-color: #eaebed;
+        width: 100%; 
+      }
+
+      /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+      .container {
+        display: block;
+        Margin: 0 auto !important;
+        /* makes it centered */
+        max-width: 580px;
+        padding: 10px;
+        width: 580px; 
+      }
+
+      /* This should also be a block element, so that it will fill 100% of the .container */
+      .content {
+        box-sizing: border-box;
+        display: block;
+        Margin: 0 auto;
+        max-width: 580px;
+        padding: 10px; 
+      }
+
+      /* -------------------------------------
+          HEADER, FOOTER, MAIN
+      ------------------------------------- */
+      .main {
+        background: #ffffff;
+        border-radius: 3px;
+        width: 100%; 
+      }
+
+      .header {
+        padding: 20px 0;
+      }
+
+      .wrapper {
+        box-sizing: border-box;
+        padding: 20px; 
+      }
+
+      .content-block {
+        padding-bottom: 5px;
+        padding-top: 5px;
+      }
+
+      .footer {
+        clear: both;
+        Margin-top: 10px;
+        text-align: center;
+        width: 100%; 
+      }
+        .footer td,
+        .footer p,
+        .footer span,
+        .footer a {
+          color: #9a9ea6;
+          font-size: 12px;
+          text-align: center; 
+      }
+
+      /* -------------------------------------
+          TYPOGRAPHY
+      ------------------------------------- */
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: #06090f;
+        font-family: sans-serif;
+        font-weight: 400;
+        line-height: 1.4;
+        margin: 0;
+        margin-bottom: 30px; 
+      }
+
+      h1 {
+        font-size: 35px;
+        font-weight: 300;
+        text-align: center;
+        text-transform: capitalize; 
+      }
+
+      p,
+      ul,
+      ol {
+        font-family: sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0;
+        margin-bottom: 15px; 
+      }
+        p li,
+        ul li,
+        ol li {
+          list-style-position: inside;
+          margin-left: 5px; 
+      }
+
+      a {
+        color: #0974BD;
+        text-decoration: underline; 
+      }
+
+      /* -------------------------------------
+          BUTTONS
+      ------------------------------------- */
+      .btn {
+        box-sizing: border-box;
+        min-width: 100%;
+        width: 100%; }
+        .btn > tbody > tr > td {
+          padding-bottom: 15px; }
+        .btn table {
+          min-width: auto;
+          width: auto; 
+      }
+        .btn table td {
+          background-color: #ffffff;
+          border-radius: 5px;
+          text-align: center; 
+      }
+        .btn a {
+          background-color: #ffffff;
+          border: solid 1px #0974BD;
+          border-radius: 5px;
+          box-sizing: border-box;
+          color: #0974BD;
+          cursor: pointer;
+          display: inline-block;
+          font-size: 14px;
+          font-weight: bold;
+          margin: 0;
+          padding: 12px 25px;
+          text-decoration: none;
+          text-transform: capitalize; 
+      }
+
+      .btn-primary table td {
+        background-color: #0974BD; 
+      }
+
+      .btn-primary a {
+        background-color: #0974BD;
+        border-color: #0974BD;
+        color: #ffffff; 
+      }
+
+      /* -------------------------------------
+          OTHER STYLES THAT MIGHT BE USEFUL
+      ------------------------------------- */
+      .last {
+        margin-bottom: 0; 
+      }
+
+      .first {
+        margin-top: 0; 
+      }
+
+      .align-center {
+        text-align: center; 
+      }
+
+      .align-right {
+        text-align: right; 
+      }
+
+      .align-left {
+        text-align: left; 
+      }
+
+      .clear {
+        clear: both; 
+      }
+
+      .mt0 {
+        margin-top: 0; 
+      }
+
+      .mb0 {
+        margin-bottom: 0; 
+      }
+
+      .preheader {
+        color: transparent;
+        display: none;
+        height: 0;
+        max-height: 0;
+        max-width: 0;
+        opacity: 0;
+        overflow: hidden;
+        mso-hide: all;
+        visibility: hidden;
+        width: 0; 
+      }
+
+      .powered-by a {
+        text-decoration: none; 
+      }
+
+      hr {
+        border: 0;
+        border-bottom: 1px solid #f6f6f6;
+        Margin: 20px 0; 
+      }
+
+      /* -------------------------------------
+          RESPONSIVE AND MOBILE FRIENDLY STYLES
+      ------------------------------------- */
+      @media only screen and (max-width: 620px) {
+        table[class=body] h1 {
+          font-size: 28px !important;
+          margin-bottom: 10px !important; 
         }
-        .flex{
-            display: flex;
-            gap: 8px;
-            align-items: center;
-           
+        table[class=body] p,
+        table[class=body] ul,
+        table[class=body] ol,
+        table[class=body] td,
+        table[class=body] span,
+        table[class=body] a {
+          font-size: 16px !important; 
         }
-        .icon{
-            width:20px;
-            aspect-ratio: 1;
-
+        table[class=body] .wrapper,
+        table[class=body] .article {
+          padding: 10px !important; 
         }
-        body{
-            text-align: center;
+        table[class=body] .content {
+          padding: 0 !important; 
         }
-        a {
-            text-decoration: none;
+        table[class=body] .container {
+          padding: 0 !important;
+          width: 100% !important; 
         }
-
-        .container {
-            display: flex;
-            flex-flow: column;
-            justify-content: center;
-            align-items: center;
-            gap: 30px;
-            padding: 20px 0;
-            width: 800px;
-            margin: 0 auto;
+        table[class=body] .main {
+          border-left-width: 0 !important;
+          border-radius: 0 !important;
+          border-right-width: 0 !important; 
         }
-
-        .logo-container {
-            display: flex;
-            justify-content: center;
+        table[class=body] .btn table {
+          width: 100% !important; 
         }
-
-        .logo {
-            height: 90px;
-            background-repeat: no-repeat;
+        table[class=body] .btn a {
+          width: 100% !important; 
         }
-
-        .before-main {
-            width: 90%;
+        table[class=body] .img-responsive {
+          height: auto !important;
+          max-width: 100% !important;
+          width: auto !important; 
         }
+      }
 
-        .after-main-container {
-            padding: 3% ;
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 1px 10px 6px #2cb1ea1a;
+      /* -------------------------------------
+          PRESERVE THESE STYLES IN THE HEAD
+      ------------------------------------- */
+      @media all {
+        .ExternalClass {
+          width: 100%; 
         }
-
-        .after-main {
-            width: 100%;
-            display: grid;
-            gap: 10%;
-            grid-template-columns: 7fr 1fr;
-            align-content: space-evenly;
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+          line-height: 100%; 
         }
-
-        .greeting {
-            margin-top: 40px;
-            margin-bottom: 40px;
-            font-size: 24px;
-            
+        .apple-link a {
+          color: inherit !important;
+          font-family: inherit !important;
+          font-size: inherit !important;
+          font-weight: inherit !important;
+          line-height: inherit !important;
+          text-decoration: none !important; 
         }
-
-        .greeting span {
-            font-weight: 700;
-            color: #0974BD;
-
+        .btn-primary table td:hover {
+          background-color: #0974BD !important; 
         }
-
-        .main {
-            padding: 3% 8%;
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 1px 10px 6px #2cb1ea1a;
-        }
-
-        .content {
-            font-size: 20px;
-            margin: 60px 0;
-            
-        }
-
-        .main-button {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .mail-button {
-            background-color: #0974BD;
-            color: white;
-            padding: 10px;
-            border-radius: 50px;
-            font-weight: 700;
-            width: 120px;
-        }
-
-        .name {
-            font-weight: bold;
-            margin-bottom: 10px;
-            font-size: 18px;
-            text-align: start;
-        }
-
-        .copy-right {
-            margin-top: 10px;
-            font-size: 16px;
-        }
-
-        img {
-            width: 100%;
-            height: 100%;
-        }
-
-        .image-container {
-            max-width: 200px;
-            aspect-ratio: 1;
-        }
-
-        .icon-container {
-            width: 24px;
-            aspect-ratio: 1;
-        }
-
-        table {
-            margin: 20px auto;
-            border-collapse: collapse;
-            min-width: 50%;
-        }
-
-        td,
-        th {
-            padding: 10px;
-            border: 1px solid black;
-        }
-
-        @media only screen and (max-width:900px) {
-            table {
-                margin: 20px auto;
-                border-collapse: collapse;
-                min-width: 50%;
-                font-size: 12px;
-            }
-
-            td,
-            th {
-                padding: 5px;
-
-            }
-
-            .greeting {
-                font-size: 18px;
-                margin-top: 20px;
-                margin-bottom: 20px;
-            }
-
-            .logo {
-                height: 60px;
-            }
-
-            .name {
-                font-weight: bold;
-                margin-top: 10px;
-                font-size: 12px;
-                text-align: start;
-            }
-
-            .copy-right {
-                font-size: 12px;
-            }
-
-            .container {
-                padding-top: 20px;
-                width: 100%;
-                gap: 40px;
-            }
-
-            .main-button {
-                margin-top: 10px;
-                display: flex;
-                justify-content: center;
-            }
-
-            .mail-button {
-                font-size: 12px;
-            }
-
-            .content {
-                width: 90%;
-                margin: 15px auto;
-                font-size: 14px;
-
-            }
-
-            .main {
-                width: 80%;
-                margin: 0 auto;
-                padding: 6% ;
-            }
-
-            .after-main-container {
-                width: 80%;
-                margin: 0 auto;
-                padding: 6% ;
-            }
-
-
-        }
-
-        @media screen and (max-width:684px) {
-            .icon{
-            width:14px;
-            aspect-ratio: 1;
-
-        }
-        }
+        .btn-primary a:hover {
+          background-color: #0974BD !important;
+          border-color: #0974BD !important; 
+        } 
+      }
     </style>
-</head>
+  </head>
+  <body class="">
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
+      <tr>
+        <td>&nbsp;</td>
+        <td class="container">
+          <div class="header">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td class="align-center">
+                  <a href="https://postdrop.io"><img src="https://hotelsxml.com/website/images/hotel.png" height="60" alt="hotelxml"></a>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="content">
 
-<body style="width:100%;font-family: 'Inter', sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0">
+            <!-- START CENTERED WHITE CONTAINER -->
+            <span class="preheader">This is preheader text. Some clients will show this text as a preview.</span>
+            <table role="presentation" class="main">
 
-    <section class="container">
-        <div class="before-main">
-            <div class="logo-container">
-                <div class="logo">
-                    <img src="./images/hotel.png" alt="">
-                </div>
+              <!-- START MAIN CONTENT AREA -->
+              <tr>
+                <td class="wrapper">
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td>
+                        <p>Hi <span>Abdullah,</span> Greetings from Hotelsxml,</p>
+                        <p>Thank you for choosing us.</p>
+
+
+
+                                              
+          <p>We will review your support ticket
+                    #id and get back to you as soon as possible</p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+            <!-- END MAIN CONTENT AREA -->
+            </table>
+
+            <!-- START FOOTER -->
+            <div class="footer">
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td class="content-block">
+                    <span class="apple-link">Need some help?</span>
+                    <br> 
+                  </td>
+                </tr>
+                <tr>
+                  <td class="content-block powered-by">
+                     mail:<a href="support@hotelxml.com">support@hotelxml.com</a>.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="content-block powered-by">
+                     call:<a href="support@hotelxml.com"><a href="tel:+447450004522">+447450004522</a>.</a>.
+                  </td>
+                </tr>
+              </table>
             </div>
+            <!-- END FOOTER -->
 
-
-        </div>
-        <div class="main">
-            <div class="main-content">
-                <div class="greeting">Hi <span>ABDULLAH,</span> Greetings from Hotelsxml </div>
-                
-                <div class="content">Thank you for contacting our support team</div> 
-                <div class="content" >  We will review your support ticket
-                    #id and get back to you as soon as possible</div>
-            </div>
-        </div>
-        <div class="after-main-container">
-            <div class="after-main">
-                <div style="width: 100%">
-                    <div class="name">Need some help?</div>
-                    <div class="name flex">
-                        <div class="icon">
-                        <img src="./images/mail.png" alt="" /></div>
-                        <a class="link" href="support@hotelxml.com">support@hotelxml.com</a>
-                    </div>
-                    <div class="name flex">
-                        <div class="icon">
-                        <img src="./images/call.png" alt="" /> </div>
-                        <a class="link"  href="tel:+447450004522">+447450004522</a>
-                    </div>
-                </div>
-
-                <div class="image-container" style="width: 100%">
-                    <img src="./images/head.png" alt="" />
-                </div>
-            </div>
-        </div>
-    </section>
-</body>
-
+          <!-- END CENTERED WHITE CONTAINER -->
+          </div>
+        </td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+  </body>
 </html>
