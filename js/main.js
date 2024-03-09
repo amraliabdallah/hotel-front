@@ -51,6 +51,18 @@
       var removeChildButton = $('<button class="remove-child">x</button>');
       childrenDiv.append($('<span>').append(childAgeInput).append(removeChildButton));
   });
+//   $(document).on('change', '.add-child', function () {
+//     var childrenDiv = $(this).siblings('.children-ages');
+//     var selectedValue = $(this).val(); // Get the value of the selected option
+//     if (selectedValue !== '') {
+//         var newDiv = $('<div>').text(selectedValue); // Create a new div with the selected value
+//         var childAgeInput = $('<input type="text" placeholder="Age">');
+//         var removeChildButton = $('<button class="remove-child">x</button>');
+//         newDiv.append(childAgeInput).append(removeChildButton); // Append input and button to the new div
+//         childrenDiv.append(newDiv); // Append the new div to the children-ages container
+//     }
+// });
+
 
   $(document).on('click', '.remove-child', function () {
       $(this).parent('span').remove();

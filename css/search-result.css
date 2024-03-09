@@ -590,11 +590,13 @@
 .search-result-page .st-hotel-result h3.sidebar-title,
 .search-result-page .st-rental-result h3.sidebar-title {
   font-size: 16px;
-  color: #1A2B48;
-  margin-bottom: 20px;
+  color: #939393;
+  margin-top: 24px;
+  margin-bottom: 12px;
+font-weight: 700;
 }
 
-.search-result-page .st-hotel-result h3.sidebar-title:before,
+/* .search-result-page .st-hotel-result h3.sidebar-title:before,
 .search-result-page .st-rental-result h3.sidebar-title:before {
   content: '';
   width: 3px;
@@ -604,7 +606,7 @@
   float: left;
   position: relative;
   top: -1px;
-}
+} */
 
 .search-result-page .st-hotel-result .sidebar-item,
 .search-result-page .st-rental-result .sidebar-item {
@@ -1581,7 +1583,7 @@
   float: left;
   list-style: none;
   margin-right: 7px;
-  color: #5E6D77;
+  /* color: #5E6D77; */
 }
 
 .search-result-page .st-hotel-result .style-list .item-service .item-content .facilities li:before,
@@ -5463,6 +5465,8 @@
 
 .search-result-page.st-tours .sidebar-filter .sidebar-item-wrapper .sidebar-item.range-slider {
   border-top: none !important;
+
+  
 }
 
 .search-result-page.st-tours .sidebar-filter .sidebar-item-wrapper .sidebar-item.review-score ul li.st-icheck-item label span {

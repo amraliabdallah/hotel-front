@@ -216,7 +216,7 @@
             </div>
         </div> -->
     </div>
-    <div class="container">
+    <div class="container-lg">
         <div class="clearfix"></div>
         
         <div class="clearfix"></div>
@@ -632,7 +632,7 @@
                     </div>
                 </div>
 
-                    <div class="sidebar-item pag st-icheck">
+                    <!-- <div class="sidebar-item pag st-icheck">
                         <a  class="item-title" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                             <h4>Search by hotel name</h4>
                             <i class="fas fa-angle-up" aria-hidden="true"></i>
@@ -642,26 +642,32 @@
                         <div class="hotel-search-input"><input type="text" placeholder="Search by hotel"></div>
                         </div>
                         <div class="clearfix"></div>
-                    </div>
+                    </div> -->
                     <div class="clearfix"></div>
                     <h3 class="sidebar-title">FILTER BY </h3>
                     <!--Filter on Mobile Close btn-->
                     <span class="hidden-lg hidden-md close-filter"><i class="input-icon field-icon"><img src="hotel-support/images/close-icon-dark.png" alt=""></i></span>
                     <!--Filter on Mobile Close btn end-->
                     <!--Filter on Mobile-->
-                    <div class="sidebar-item range-slider">
-                    <div class="item-title"><h4>Filter Price</h4><i class="fas fa-angle-up" aria-hidden="true"></i></div>
-                    <div class="item-content">
+                    <div class="sidebar-item range-slider" style="  box-shadow: 0px 4px 4px 0px #00000040 !important;
+                    background-color: #F7F7F7 !important;border-radius: 17.76px;">
+                    <div class="item-title"><h4>Filter Price</h4></div>
+                    <div class="item-content" style="display: flex ; gap:10px;justify-content: space-between;">
                         <!--Price Range Slider-->
-                        <div class="item-content range-slider">
+                        <!-- <div class="item-content range-slider">
                             <input type="text" class="price_range" name="price_range" value="171;499" data-symbol="$" data-min="171" data-max="499" data-step="0" />
+                                                    </div> -->
+                        <div class="item-content ">
+                            <!-- <input type="text" class="price_range" name="price_range" value="171;499" data-symbol="$" data-min="171" data-max="499" data-step="0" /> -->
+                            <input type="text" name="price_range"   />
                         </div>
                         <button class="btn btn-link btn-apply-price-range">APPLY</button>
                     </div>
                     </div>
                     <div class="clearfix"></div>
-                    <div class="sidebar-item st-icheck">
-                        <div class="item-title"><h4>Hotel Star</h4><i class="fas fa-angle-up" aria-hidden="true"></i></div>
+                    <div class="sidebar-item st-icheck" style="  box-shadow: 0px 4px 4px 0px #00000040 !important;
+                    background-color: #F7F7F7 !important;border-radius: 17.76px;">
+                        <div class="item-title"><h4>Hotel Star</h4></div>
                         <div class="item-content">
                             <ul>
                                 <li class="st-icheck-item"><label><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <input type="checkbox" name="review_score" data-type="hotel_rate" value="5" class="filter-item"><span class="checkmark fcheckbox"></span></label></li>
@@ -673,8 +679,9 @@
                         </div>
                     </div>
                     <div class="clearfix"></div>
-                    <div class="sidebar-item st-icheck">
-                        <div class="item-title"><h4>Board Type</h4><i class="fas fa-angle-up" aria-hidden="true"></i></div>
+                    <div class="sidebar-item st-icheck" style="  box-shadow: 0px 4px 4px 0px #00000040 !important;
+                    background-color: #F7F7F7 !important;border-radius: 17.76px;">
+                        <div class="item-title"><h4>Board Type</h4></div>
                         <div class="item-content">
                             <ul>
                                 <li class="st-icheck-item"><label>Room Only<input type="checkbox" name="board_type" value="4" class="filter-item" data-type="star_rate"><span class="checkmark fcheckbox"></span></label></li>
@@ -686,7 +693,8 @@
                         </div>
                     </div>
                     <div class="clearfix"></div>
-                    <div class="sidebar-item pag st-icheck">
+                    <div class="sidebar-item pag st-icheck" style="  box-shadow: 0px 4px 4px 0px #00000040 !important;
+                    background-color: #F7F7F7 !important;border-radius: 17.76px;">
                         <div class="item-title"><h4>Location</h4><i class="fas fa-angle-up" aria-hidden="true"></i></div>
                         <div class="item-content">
                             <ul>
@@ -696,8 +704,9 @@
                         </div>
                     </div>
                     <div class="clearfix"></div>
-                    <div class="sidebar-item pag st-icheck">
-                        <div class="item-title"><h4>Facilities</h4><i class="fas fa-angle-up" aria-hidden="true"></i></div>
+                    <div class="sidebar-item pag st-icheck" style="  box-shadow: 0px 4px 4px 0px #00000040 !important;
+                    background-color: #F7F7F7 !important;border-radius: 17.76px;">
+                        <div class="item-title"><h4>Facilities</h4></div>
                         <div class="item-content">
                             <ul>
                                 <li class=" st-icheck-item" style="margin-left: 0px"><label>Air Conditioning<input data-tax="taxonomy" data-type="hotel_facilities" value="80" type="checkbox" name="taxonomy" class="filter-tax"><span class="checkmark fcheckbox"></span></label></li>
@@ -713,25 +722,42 @@
                                 <li class="hidden st-icheck-item" style="margin-left: 0px"><label>Spa &amp; Sauna<input data-tax="taxonomy" data-type="hotel_facilities" value="90" type="checkbox" name="taxonomy" class="filter-tax"><span class="checkmark fcheckbox"></span></label></li>
                                 <li class="hidden st-icheck-item" style="margin-left: 0px"><label>Washer &amp; Dryer<input data-tax="taxonomy" data-type="hotel_facilities" value="91" type="checkbox" name="taxonomy" class="filter-tax"><span class="checkmark fcheckbox"></span></label></li>
                             </ul>
-                        <button class="btn btn-link btn-more-item" style="display: inline-block;">More <i class="fas fa-caret-down"></i></button>
+                        <button class="btn btn-link btn-more-item" style="display: inline-block;background-color: #D9D9D9;padding: 0 3px;color: #3A5495;">More <i class="fas fa-caret-down"></i></button>
                         </div>
                     </div>
                     <div class="clearfix"></div>
                     
                 </div><!--col-3 end-->
 
-                <div class="col-lg-9 col-md-9">
-                    <div class="d-flex align-items-center justify-content-between mb-4 header-title ">
+                <div class="col-lg-9 col-md-9" style="    border-radius: 17.5px;
+                background-color: #F7F7F7;
+                padding: 20px;">
+                    <div class="d-flex align-items-center justify-content-between mb-4 header-title flex-wrap"
+                     style="font-weight: 500;font-size: 24px;">
                         <h3>Result Found: 15 Hotels</h3>
+                        <div>
+                        <div class="input-group flex-nowrap" style="border-radius: 50px;">
+                            <span class="input-group-text " style="border-radius:50px 0 0 50px;border: none !important;background-color: #fff;" id="addon-wrapping"
+                              >
+                            <i class="fa-solid fa-magnifying-glass" style="color:#777777"></i></span>
+                            <input
+                               style="border: none !important;border-radius: 0 50px 50px 0"
+                              type="text"
+                              class="form-control"
+                              placeholder="Search by hotel name"
+                              aria-label="Username"
+                              aria-describedby="addon-wrapping"
+                            />
+                          </div></div>
                         <!--- Sort by area -->
                         <div class="custom-dropdown">
                             <div class="segmented_btn custom-dropdown-toggle">Sort <i class="fas fa-caret-down"></i></div>
                             <div class="custom-dropdown-options">
-                                <div class="custom-dropdown-option" data-value="featured">Featured <i class="fas fa-star"></i></div>
-                                <div class="custom-dropdown-option" data-value="A-to-Z">A to Z <i class="fas fa-sort-alpha-up"></i></div>
-                                <div class="custom-dropdown-option" data-value="z-to-A">Z to A <i class="fas fa-sort-amount-down"></i></div>
-                                <div class="custom-dropdown-option" data-value="price-low">Price Low To High <i class="fas fa-sort-amount-up"></i></div>
-                                <div class="custom-dropdown-option" data-value="price-high">Price High To Low <i class="fas fa-sort-amount-down-alt"></i></div>
+                                <div class="custom-dropdown-option" data-value="featured"><i class="fas fa-star"></i> Featured </div>
+                                <div class="custom-dropdown-option" data-value="A-to-Z"><i class="fas fa-sort-alpha-up"></i> A to Z </div>
+                                <div class="custom-dropdown-option" data-value="z-to-A"> <i class="fas fa-sort-amount-down"></i> Z to A</div>
+                                <div class="custom-dropdown-option" data-value="price-low"> <i class="fas fa-sort-amount-up"></i> Price Low To High</div>
+                                <div class="custom-dropdown-option" data-value="price-high"><i class="fas fa-sort-amount-down-alt"></i> Price High To Low </div>
                             </div>
                         </div>
                     </div>
@@ -741,7 +767,7 @@
                     <div class="style-list custom-style-list">
                        
                         <!--- single hotel data -->
-                        <div class="item-service rectangle-hotel-list-area">
+                        <div class="item-service rectangle-hotel-list-area" style="background-color:#EDEDED ;border-radius: 17px;box-shadow: 0px 4px 4px 0px #00000040;                        ">
                             <div class="row item-service-wrapper matchHeight">
                                 <div class="col-sm-4 thumb-wrapper">
                                     <div class="thumb">
@@ -767,34 +793,40 @@
                                     <div class="item-content-w">
                                         <!--- hotel stars-->
                                         <ul class="icon-list icon-group booking-item-rating-stars">
-                                            <li><i class="fas  fa-star"></i></li>
-                                            <li><i class="fas  fa-star"></i></li>
-                                            <li><i class="fas  fa-star"></i></li>
-                                            <li><i class="fas  fa-star"></i></li>
-                                            <li><i class="fas  fa-star"></i></li>
+                                            <li><i class="fas  fa-star" style="color: #FF9C08 !important;"></i></li>
+                                            <li><i class="fas  fa-star" style="color: #FF9C08 !important;"></i></li>
+                                            <li><i class="fas  fa-star" style="color: #FF9C08 !important;"></i></li>
+                                            <li><i class="fas  fa-star" style="color: #FF9C08 !important;"></i></li>
+                                            <li><i class="fas  fa-star" style="color: #FF9C08 !important;"></i></li>
                                         </ul>
-                                        <h4 class="service-title"><a href="#!">Hyatt Centric Times Square</a></h4>
+                                        <h4 class="service-title" style="font-weight: 600;"><a href="#!">Hyatt Centric Times Square</a></h4>
                                         <p class="service-location">
-                                            <a href="#!" class="st-link font-medium" >123 Main Street City, State ZIP</a>
-                                            <a href="#!" class="st-link font-medium"   data-toggle="modal" data-target="#st-modal-show-map" role="button"><i class="fa-solid fa-location-dot"></i> view map</a>
+                                            <a href="#!" class="st-link font-medium" style="color: #3A5495;">123 Main Street City, State ZIP</a>
+                                            
                                         </p>  
                                         <!--- facilities-->
-                                        <div class="d-flex container-facilities">
-                                            <ul class="facilities list-left-room">
-                                                <li>Deluxe</li>
-                                                <li>Quadruple room</li>
-                                                <li></li>
+                                        <div class="d-flex container-facilities" >
+                                            <ul class="facilities list-left-room" >
+                                                <li><i class="fa-solid fa-bed"></i> Deluxe Quadruple room</li>
+                                                <li><i class="fa-solid fa-utensils"></i> No meals
+                                                    </li>
+                                                <li style="color:#17884B"><i class="fa-regular fa-circle-check"></i> Free cancellation ,20 sep
+                                                   </li>
+                                                <li><i class="fa-solid fa-credit-card"></i> pay later</li>
+                                                
+                                               
                                             </ul> 
-                                            <ul class="facilities list-left-room">
+                                            <!-- <ul class="facilities list-left-room">
                                                 <li>Room only </li>
                                                 <li>Free cancellation, 20 Sep</li>
                                                 <li>Pay Later</li>
-                                            </ul> 
+                                            </ul>  -->
                                         </div>
                                                                            
                                     </div>
                                 </div>
-                                <div class="col-sm-3 section-footer">
+                                <div class="col-sm-3 section-footer " >
+                                    <a href="#!" class="st-link font-medium"   data-toggle="modal" data-target="#st-modal-show-map" role="button"><i class="fa-solid fa-location-dot"></i> view map</a>
                                     <div class="service-star-text-review hidden-xs"><p><span class="bold-text">Total Starts</span></p></div>
                                     <div class="service-price"><span class="price bold-text"> 150 <span class="usd">USD</span></span></div>
                                     <div class="select-room-area"><a class="btn-show-price btn btn-primary upper mt5" data-toggle="collapse" href="#select-room-table-1" role="button" aria-expanded="false" aria-controls="select-room-table-1">Show More Rooms</a></div>
@@ -829,12 +861,12 @@
                                     <div class="col-sm-5 item-content">
                                         <div class="item-content-w">
                                             <!--- hotel stars-->
-                                            <ul class="icon-list icon-group booking-item-rating-stars">
-                                                <li><i class="fas  fa-star"></i></li>
-                                                <li><i class="fas  fa-star"></i></li>
-                                                <li><i class="fas  fa-star"></i></li>
-                                                <li><i class="fas  fa-star"></i></li>
-                                                <li><i class="fas  fa-star"></i></li>
+                                            <ul class="icon-list icon-group booking-item-rating-stars" style="color: #FF9C08 !important;">
+                                                <li><i class="fas  fa-star" style="color: #FF9C08 !important;"></i></li>
+                                                <li><i class="fas  fa-star" style="color: #FF9C08 !important;"></i></li>
+                                                <li><i class="fas  fa-star" style="color: #FF9C08 !important;"></i></li>
+                                                <li><i class="fas  fa-star" style="color: #FF9C08 !important;"></i></li>
+                                                <li><i class="fas  fa-star" style="color: #FF9C08 !important;"></i></li>
                                             </ul>
                                             <h4 class="service-title"><a href="#!">The May Fair Hotel</a></h4>
                                             <p class="service-location">
