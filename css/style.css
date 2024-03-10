@@ -6578,10 +6578,15 @@ color: #A7A7A7 !important;
     color: #3A5495 !important;
 
   }
-
+.hidden{
+  display: none !important;
+}
   .flex-direction-nav a:hover {
 
-    background: rgb(231, 172, 18, 0.9) !important;
+    /* background: rgb(231, 172, 18, 0.9) !important;
+     */
+    background-color: #0031F2 ;
+    color: #fff ;
   }
 
   .featured-overlay .featured-overlay-inner {

@@ -1461,5 +1461,45 @@ $(document).ready(function () {
       }
     });
   });
+  $(document).ready(function() {
+    // Initially, show all images
+    // $('.card-en').show();
+    $('.map-show').addClass('hidden');
+    var hai=true;
+    // When a country button is clicked
+    $('#map_button').click(function() {
+      
+if(hai==true) {
+      // Remove active class from all buttons
+      $('.map-show').removeClass('hidden');
+
+      // Add active class to the clicked button
+      // $(this).addClass('active');
+
+      // Hide all images
+      $('.card-lg').addClass('hidden');
+      $('.card-md').removeClass('d-lg-none');
+      $('.custom-style-list').addClass('col-lg-4');
+      hai=false
+}else{
+  $('.map-show').addClass('hidden');
+
+  // Add active class to the clicked button
+  // $(this).addClass('active');
+
+  // Hide all images
+  // $('.custom-style-list').removeClass('col-lg-4');
+  // $('.custom-style-list').addClass('col-lg-8');
+  $('.card-lg').removeClass('hidden');
+  $('.card-md').addClass('d-lg-none');
+  $('.custom-style-list').removeClass('col-lg-4');
+  hai=true
+}
+
+
+      // If "All" is clicked, show all images
+
+    });
+  });
 
 })(jQuery);
