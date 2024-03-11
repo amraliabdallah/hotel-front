@@ -114,12 +114,12 @@
   var itemPosNewAnimTop = activeItemNewAnim.position();
   var itemPosNewAnimLeft = activeItemNewAnim.position();
   
-  $(".hori-selector").css({
-    top: itemPosNewAnimTop.top + "px",
-    left: itemPosNewAnimLeft.left + "px",
-    height: activeWidthNewAnimHeight + "px",
-    width: activeWidthNewAnimWidth + "px",
-  });
+  // $(".hori-selector").css({
+  //   top: itemPosNewAnimTop.top + "px",
+  //   left: itemPosNewAnimLeft.left + "px",
+  //   height: activeWidthNewAnimHeight + "px",
+  //   width: activeWidthNewAnimWidth + "px",
+  // });
   
   $("#navbarSupportedContent").on("click", "li", function (e) {
     $("#navbarSupportedContent ul li").removeClass("active");
@@ -1009,152 +1009,152 @@ $(document).ready(function () {
   
  
 
-  $(document).ready(function () {
-    // Initialize the main slider
-    var mainSlider = $(".main-slider");
-    mainSlider.owlCarousel({
-      items: 1,
-      loop: true,
-      margin: 10,
-      dots: true,
-      nav: false,
-    });
+  // $(document).ready(function () {
+  //   // Initialize the main slider
+  //   var mainSlider = $(".main-slider");
+  //   mainSlider.owlCarousel({
+  //     items: 1,
+  //     loop: true,
+  //     margin: 10,
+  //     dots: true,
+  //     nav: false,
+  //   });
   
-    // Initialize other Owl Carousel sliders
-    function initOwlCarousel($element, options) {
-      $element.each(function () {
-        $(this).owlCarousel(options);
-      });
-    }
+  //   // Initialize other Owl Carousel sliders
+  //   function initOwlCarousel($element, options) {
+  //     $element.each(function () {
+  //       $(this).owlCarousel(options);
+  //     });
+  //   }
   
-    initOwlCarousel($(".st-service-slider"), {
-      loop: false,
-      items: 4,
-      margin: 20,
-      responsiveClass: true,
-      dots: false,
-      responsive: {
-        0: {
-          items: 2,
-          nav: false,
-          margin: 15,
-        },
-        992: {
-          items: 3,
-          nav: true,
-        },
-        1200: {
-          items: 4,
-          nav: true,
-        },
-      },
-    });
+  //   initOwlCarousel($(".st-service-slider"), {
+  //     loop: false,
+  //     items: 4,
+  //     margin: 20,
+  //     responsiveClass: true,
+  //     dots: false,
+  //     responsive: {
+  //       0: {
+  //         items: 2,
+  //         nav: false,
+  //         margin: 15,
+  //       },
+  //       992: {
+  //         items: 3,
+  //         nav: true,
+  //       },
+  //       1200: {
+  //         items: 4,
+  //         nav: true,
+  //       },
+  //     },
+  //   });
   
-    initOwlCarousel($(".st-service-rental-slider"), {
-      loop: false,
-      items: 3,
-      margin: 20,
-      responsiveClass: true,
-      dots: true,
-      responsive: {
-        0: {
-          items: 2,
-          nav: false,
-          margin: 15,
-        },
-        992: {
-          items: 3,
-          nav: true,
-        },
-      },
-    });
+  //   initOwlCarousel($(".st-service-rental-slider"), {
+  //     loop: false,
+  //     items: 3,
+  //     margin: 20,
+  //     responsiveClass: true,
+  //     dots: true,
+  //     responsive: {
+  //       0: {
+  //         items: 2,
+  //         nav: false,
+  //         margin: 15,
+  //       },
+  //       992: {
+  //         items: 3,
+  //         nav: true,
+  //       },
+  //     },
+  //   });
   
-    initOwlCarousel($(".st-testimonial-slider"), {
-      loop: false,
-      items: 4,
-      margin: 30,
-      responsiveClass: true,
-      dots: true,
-      nav: false,
-      responsive: {
-        0: {
-          items: 1,
-          margin: 15,
-        },
-        575: {
-          items: 2,
-          margin: 15,
-        },
-        992: {
-          items: 3,
-        },
-        1200: {
-          items: 3,
-        },
-      },
-    });
+  //   initOwlCarousel($(".st-testimonial-slider"), {
+  //     loop: false,
+  //     items: 4,
+  //     margin: 30,
+  //     responsiveClass: true,
+  //     dots: true,
+  //     nav: false,
+  //     responsive: {
+  //       0: {
+  //         items: 1,
+  //         margin: 15,
+  //       },
+  //       575: {
+  //         items: 2,
+  //         margin: 15,
+  //       },
+  //       992: {
+  //         items: 3,
+  //       },
+  //       1200: {
+  //         items: 3,
+  //       },
+  //     },
+  //   });
   
-    // Initialize Owl Tour Program sliders with custom navigation
-    $(".owl-tour-program").each(function () {
-      var parent = $(this);
-      var owl = parent.owlCarousel({
-        loop: false,
-        items: 3,
-        margin: 20,
-        responsiveClass: true,
-        dots: false,
-        nav: false,
-        responsive: {
-          0: {
-            items: 1,
-            margin: 15,
-          },
-          992: {
-            items: 2,
-          },
-          1200: {
-            items: 3,
-          },
-        },
-      });
+  //   // Initialize Owl Tour Program sliders with custom navigation
+  //   $(".owl-tour-program").each(function () {
+  //     var parent = $(this);
+  //     var owl = parent.owlCarousel({
+  //       loop: false,
+  //       items: 3,
+  //       margin: 20,
+  //       responsiveClass: true,
+  //       dots: false,
+  //       nav: false,
+  //       responsive: {
+  //         0: {
+  //           items: 1,
+  //           margin: 15,
+  //         },
+  //         992: {
+  //           items: 2,
+  //         },
+  //         1200: {
+  //           items: 3,
+  //         },
+  //       },
+  //     });
   
-      // Custom navigation for Owl Tour Program sliders
-      $(".next", parent).click(function (ev) {
-        ev.preventDefault();
-        owl.trigger("next.owl.carousel");
-      });
+  //     // Custom navigation for Owl Tour Program sliders
+  //     $(".next", parent).click(function (ev) {
+  //       ev.preventDefault();
+  //       owl.trigger("next.owl.carousel");
+  //     });
   
-      $(".prev", parent).click(function (ev) {
-        ev.preventDefault();
-        owl.trigger("prev.owl.carousel");
-      });
+  //     $(".prev", parent).click(function (ev) {
+  //       ev.preventDefault();
+  //       owl.trigger("prev.owl.carousel");
+  //     });
   
-      owl.on("resized.owl.carousel", function () {
-        setTimeout(function () {
-          if ($(".ovscroll").length) {
-            $(".ovscroll").getNiceScroll().resize();
-          }
-        }, 1000);
-      });
-    });
+  //     owl.on("resized.owl.carousel", function () {
+  //       setTimeout(function () {
+  //         if ($(".ovscroll").length) {
+  //           $(".ovscroll").getNiceScroll().resize();
+  //         }
+  //       }, 1000);
+  //     });
+  //   });
   
-    // Initialize Fotorama background slider
-    function initBgSlider() {
-      if ($(".search-form-wrapper.slider").length) {
-        var heightSlider = $(".search-form-wrapper.slider").outerHeight();
-        $(".st-bg-slider").fotorama({
-          height: heightSlider,
-        });
-      }
-    }
+  //   // Initialize Fotorama background slider
+  //   function initBgSlider() {
+  //     if ($(".search-form-wrapper.slider").length) {
+  //       var heightSlider = $(".search-form-wrapper.slider").outerHeight();
+  //       $(".st-bg-slider").fotorama({
+  //         height: heightSlider,
+  //       });
+  //     }
+  //   }
   
-    // Call the initBgSlider function on document ready and window resize
-    initBgSlider();
+  //   // Call the initBgSlider function on document ready and window resize
+  //   initBgSlider();
   
-    $(window).resize(function () {
-      initBgSlider();
-    });
-  });
+  //   $(window).resize(function () {
+  //     initBgSlider();
+  //   });
+  // });
   
 
   var iex = 0;
@@ -1461,45 +1461,69 @@ $(document).ready(function () {
       }
     });
   });
+
   $(document).ready(function() {
-    // Initially, show all images
-    // $('.card-en').show();
+
     $('.map-show').addClass('hidden');
-    var hai=true;
+
     // When a country button is clicked
     $('#map_button').click(function() {
       
-if(hai==true) {
-      // Remove active class from all buttons
-      $('.map-show').removeClass('hidden');
+
+          // Remove active class from all buttons
+          $('.map-show').removeClass('hidden');
+          $('.side-map').addClass('hidden');
+
+          // Add active class to the clicked button
+          // $(this).addClass('active');
+
+          // Hide all images
+          $('.card-lg').addClass('hidden');
+          $('.close-btn-map ').removeClass('hidden');
+          $('.top-filter-head-search').addClass('rounded-sections');
+          $('.bottom-filter-head-search').addClass('rounded-sections');
+          $('.container-filter').removeClass('rounded-sections');
+          $('.card-md').removeClass('d-sm-none');
+          $('.custom-style-list').addClass('col-lg-6 col-xl-4');
+          // $('.custom-style-list').addClass('width3');
+    });
+    $('#map_button_big').click(function() {
+      $('.top-filter-head-search').removeClass('rounded-sections');
+      $('.bottom-filter-head-search').removeClass('rounded-sections');
+      $('.map-show').addClass('hidden');
+      $('.side-map').removeClass('hidden');
+      $('.container-filter').addClass('rounded-sections');
 
       // Add active class to the clicked button
       // $(this).addClass('active');
 
       // Hide all images
-      $('.card-lg').addClass('hidden');
-      $('.card-md').removeClass('d-lg-none');
-      $('.custom-style-list').addClass('col-lg-4');
-      hai=false
-}else{
-  $('.map-show').addClass('hidden');
-
-  // Add active class to the clicked button
-  // $(this).addClass('active');
-
-  // Hide all images
-  // $('.custom-style-list').removeClass('col-lg-4');
-  // $('.custom-style-list').addClass('col-lg-8');
-  $('.card-lg').removeClass('hidden');
-  $('.card-md').addClass('d-lg-none');
-  $('.custom-style-list').removeClass('col-lg-4');
-  hai=true
-}
+      // $('.custom-style-list').removeClass('col-lg-4');
+      // $('.custom-style-list').addClass('col-lg-8');
+      $('.close-btn-map ').addClass('hidden');
+      $('.card-lg').removeClass('hidden');
+      $('.card-md').addClass('d-sm-none');
+      $('.custom-style-list').removeClass('col-lg-6 col-xl-4');
+      hai=true
 
 
-      // If "All" is clicked, show all images
+
+
 
     });
   });
+
+  $(document).ready(function() {
+    $('.slider').on('input', function() {
+      var smallValue = $('#small-slider').val();
+      var bigValue = $('#big-slider').val();
+      $('#small-value').text(smallValue);
+      $('#big-value').text(bigValue);
+    });
+  });
+  
+
+    
+
 
 })(jQuery);

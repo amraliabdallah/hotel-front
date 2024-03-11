@@ -8716,7 +8716,7 @@ font-weight: 700;
 }
 
 .segmented_btn {
-  padding: 7px 8px;
+  padding: 7px 25px !important;
   margin-right: 10px;
   background: #fff;
   font-size: 12px;
