@@ -8573,7 +8573,7 @@ font-weight: 700;
     padding-right: 14px;
   }
 
-  .st-hotel-result .style-list .rectangle-hotel-list-area:nth-child(2n) {
+  .st-hotel-result .style-list .rectangle-hotel-list-area {
     padding-left: 14px;
   }
 
@@ -8588,7 +8588,7 @@ font-weight: 700;
   }
 
   .rectangle-hotel-list-area {
-    padding-bottom: 14px !important;
+    padding-bottom: 40px !important;
     padding-top: 14px !important;
   }
 

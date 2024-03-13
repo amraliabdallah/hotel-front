@@ -1465,50 +1465,53 @@ $(document).ready(function () {
   $(document).ready(function() {
 
     $('.map-show').addClass('hidden');
+    $('.main-map').addClass('hidden');
 
     // When a country button is clicked
     $('#map_button').click(function() {
+      $('.map-show').removeClass('hidden');
+      $('.close-btn-map ').removeClass('hidden');
+      $('.main-map ').removeClass('hidden');
+      $('.card-md').removeClass('d-md-none');
+      $('.main-container-lg').removeClass('container-lg');
+      $('.sidebar-filter').removeClass('col-lg-3');
+      $('.top-filter-head-search-main').removeClass('d-lg-none');
+      $('.custom-style-list').removeClass('d-md-block');
+      $('.container-filter').removeClass('rounded-sections col-lg-9');
       
+      $('.side-map').addClass('hidden');
+      $('.main-container-list').addClass('w-32');
+      $('.card-lg').addClass('hidden');
+      $('.top-filter-head-search').addClass('rounded-sections hidden');
+      $('.bottom-filter-head-search').addClass('rounded-sections');
+      $('.container-filter').addClass('col-lg-6');
+      $('.sidebar-filter').addClass('col-lg-6');
+      // $('.custom-style-list').addClass('col-lg-6 col-xl-4');
+      $('.main-container-lg').addClass('main-container-open');
 
-          // Remove active class from all buttons
-          $('.map-show').removeClass('hidden');
-          $('.side-map').addClass('hidden');
-
-          // Add active class to the clicked button
-          // $(this).addClass('active');
-
-          // Hide all images
-          $('.card-lg').addClass('hidden');
-          $('.close-btn-map ').removeClass('hidden');
-          $('.top-filter-head-search').addClass('rounded-sections');
-          $('.bottom-filter-head-search').addClass('rounded-sections');
-          $('.container-filter').removeClass('rounded-sections');
-          $('.card-md').removeClass('d-sm-none');
-          $('.custom-style-list').addClass('col-lg-6 col-xl-4');
-          // $('.custom-style-list').addClass('width3');
     });
     $('#map_button_big').click(function() {
-      $('.top-filter-head-search').removeClass('rounded-sections');
-      $('.bottom-filter-head-search').removeClass('rounded-sections');
       $('.map-show').addClass('hidden');
-      $('.side-map').removeClass('hidden');
-      $('.container-filter').addClass('rounded-sections');
-
-      // Add active class to the clicked button
-      // $(this).addClass('active');
-
-      // Hide all images
-      // $('.custom-style-list').removeClass('col-lg-4');
-      // $('.custom-style-list').addClass('col-lg-8');
       $('.close-btn-map ').addClass('hidden');
+      $('.main-map ').addClass('hidden');
+      $('.card-md').addClass('d-md-none');
+      $('.main-container-lg').addClass('container-lg');
+
+      $('.sidebar-filter').addClass('col-lg-3');
+      $('.top-filter-head-search-main').addClass('d-lg-none');
+      $('.container-filter').addClass('rounded-sections col-lg-9');
+      $('.custom-style-list').addClass('d-md-block ');
+
+
+      $('.side-map').removeClass('hidden');
       $('.card-lg').removeClass('hidden');
-      $('.card-md').addClass('d-sm-none');
-      $('.custom-style-list').removeClass('col-lg-6 col-xl-4');
-      hai=true
-
-
-
-
+       $('.main-container-list').removeClass('w-32');
+      $('.container-filter').removeClass('col-lg-6');
+      $('.sidebar-filter').removeClass('col-lg-6');
+      
+      $('.top-filter-head-search').removeClass('rounded-sections hidden');
+      $('.bottom-filter-head-search').removeClass('rounded-sections');
+      $('.main-container-lg').removeClass('main-container-open');
 
     });
   });
