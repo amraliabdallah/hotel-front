@@ -1285,7 +1285,7 @@ ul.st-list {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #FA5636;
+  background: #FF9C08;
   color: #FFF;
   text-align: center;
   line-height: 21px;
@@ -1596,7 +1596,7 @@ ul.st-list {
 }
 
 #header .header .header-right .dropdown-minicart .dropdown-menu .cart-item .cart-delete-item:hover {
-  color: #FA5636;
+  color: #FF9C08;
 }
 
 #header .header .header-right .dropdown-minicart .dropdown-menu .cart-item:hover {
@@ -1707,8 +1707,8 @@ ul.st-list {
 
 #st-content-wrapper .st-stars i {
   cursor: pointer;
-  font-size: 12px;
-  color: #FA5636;
+  font-size: 18px;
+  color: #FF9C08;
 }
 
 #st-content-wrapper .st-stars i.grey {
@@ -1735,9 +1735,9 @@ ul.st-list {
 }
 
 #st-content-wrapper .st-heading {
-  margin-top: 10px;
+  margin-top: 0px;
   color: #1A2B48;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 30px;
   line-height: 1.3;
 }
@@ -1751,7 +1751,7 @@ ul.st-list {
 }
 
 #st-content-wrapper .sub-heading {
-  color: #5E6D77;
+  color: #000;
   font-size: 14px;
 }
 
@@ -1793,7 +1793,7 @@ ul.st-list {
   height: 50px;
   width: 100%;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(1%, rgba(255, 255, 255, 0)), color-stop(80%, white));
-  background-image: linear-gradient(rgba(255, 255, 255, 0) 1%, #edecd5 80%);
+  /* background-image: linear-gradient(rgba(255, 255, 255, 0) 1%, #f7f7f7 80%); */
 }
 
 #st-content-wrapper .st-description.open .cut-gradient {
@@ -1820,6 +1820,7 @@ ul.st-list {
 
 #st-content-wrapper .st-gallery {
   position: relative;
+  padding: 0px 20px;
 }
 
 #st-content-wrapper .st-gallery .shares {
@@ -2572,7 +2573,9 @@ ul.st-list {
 #st-content-wrapper #reviews #write-review .review-form .review-items .rates .fa.selected {
   color: #5191FA;
 }
-
+#st-content-wrapper .st-tabs{
+  margin-top: 30px;
+}
 #st-content-wrapper .st-tabs .nav-tabs {
   border: none;
   display: -webkit-box;
@@ -2584,11 +2587,12 @@ ul.st-list {
   margin-bottom: 0;
   width: 100%;
   padding: 0;
-  border-radius: 10px 10px 0 0;
+  border-radius: 14px !important; 
   -webkit-border-radius: 10px 10px 0 0;
   -moz-border-radius: 10px 10px 0 0;
   -ms-border-radius: 10px 10px 0 0;
   -o-border-radius: 10px 10px 0 0;
+  background-color: #f7f7f7;
 }
 
 #st-content-wrapper .st-tabs .nav-tabs li {
@@ -2603,7 +2607,7 @@ ul.st-list {
 }
 
 .tab-content {
-  background: #edecd5 !important;
+  /* background:  !important; */
   border-radius: 0 !important;
   -webkit-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
@@ -2624,9 +2628,9 @@ ul.st-list {
 }
 
 #st-content-wrapper .st-tabs .nav-tabs .room-availability-li {
-  border-top: 8px solid #0d6efd;
-  background: #fbf9e8;
-  border-left: 1px solid #cecc8e;
+
+  background: #F7F7F7;
+/* padding: 25px 0; */
   text-transform: capitalize;
 
 }
@@ -2634,78 +2638,61 @@ ul.st-list {
 
 
 #st-content-wrapper .st-tabs .nav-tabs .description-li {
-  border-top: 8px solid #078ca7;
-  background: #fbf9e8;
-  border-left: 1px solid #cecc8e;
+
+  background: #F7F7F7;
+
   text-transform: capitalize;
 
 }
 
 #st-content-wrapper .st-tabs .nav-tabs .facilities-li {
-  border-top: 8px solid #198754;
-  background: #fbf9e8;
-  border-left: 1px solid #cecc8e;
+
+  background: #F7F7F7;
+
   text-transform: capitalize;
 
 }
 
 #st-content-wrapper .st-tabs .nav-tabs .map-display-li {
-  border-top: 8px solid #dc3545;
-  background: #fbf9e8;
-  border-left: 1px solid #cecc8e;
+
+  background: #F7F7F7;
+
   text-transform: capitalize;
 
 }
 
 #st-content-wrapper .st-tabs .nav-tabs li {
-  background: #fff;
+  background: #f7f7f7;
 }
 
 #st-content-wrapper .st-tabs .nav-tabs li a {
   font-size: 14px;
   font-weight: 600;
-  color: #5E6D77;
+  color: #000;
   text-transform: capitalize;
   background: transparent;
   border: none;
   width: 100%;
   height: 100%;
-  line-height: 3.5;
+  line-height: 2.5;
   display: flex;
   align-items: center;
   justify-content: center;
 
 }
 
-#st-content-wrapper .st-tabs .nav-tabs .room-availability-li.active a {
-  color: #0d6efd;
 
-}
-
-#st-content-wrapper .st-tabs .nav-tabs .description-li.active a {
-  color: #078ca7;
-
-}
-
-#st-content-wrapper .st-tabs .nav-tabs .facilities-li.active a {
-  color: #198754;
-
-}
-
-#st-content-wrapper .st-tabs .nav-tabs .map-display-li.active a {
-  color: #dc3545;
-
-}
 
 #st-content-wrapper .st-tabs .nav-tabs li:hover {
-  background: #d9d9d9;
+  background: #DAE9FF;
 
 }
 
 #st-content-wrapper .st-tabs .nav-tabs li.active {
   outline: 0;
-  text-shadow: 1px 1px 3px #888;
-  background: #edecd5;
+
+  background: #DAE9FF;
+  border-radius: 14px !important; 
 
 }
 
@@ -3035,6 +3022,8 @@ ul.st-list {
 
 #st-content-wrapper .st-hotel-content {
   margin-top: 40px;
+  padding: 0 !important;
+
 }
 
 #st-content-wrapper .hotel-target-book-mobile {
@@ -3042,6 +3031,7 @@ ul.st-list {
 }
 
 #st-content-wrapper .st-hotel-header {
+  margin-top: 30px;
   margin-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3052,6 +3042,7 @@ ul.st-list {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  padding: 0px 20px;
 }
 
 #st-content-wrapper .st-hotel-header .review-score .head {
@@ -3155,7 +3146,7 @@ ul.st-list {
   font-size: 14px;
   font-weight: 500;
   background: #FFF;
-  color: #FA5636;
+  color: #FF9C08;
 }
 
 #st-content-wrapper .st-map {
@@ -4138,6 +4129,7 @@ ul.st-list {
 
 #st-content-wrapper.st-single-tour .st-hotel-header .st-heading {
   margin-top: 0px !important;
+  font-weight: 600 !important;
 }
 
 #st-content-wrapper.st-single-tour .st-hotel-header .sub-heading .fa {
@@ -6334,7 +6326,7 @@ input[type="radio"] {
 
 .single-booking-hotel .booking-item-rating-stars li {
   list-style: none;
-  color: #FA5636;
+  color: #FF9C08;
   list-style: none;
   float: left;
   margin-right: 3px;
@@ -6568,11 +6560,11 @@ ul.room-meal-list li i {
 }
 
 .search-result-page .search-form-wrapper .search-form .form-group.has-icon .field-icon {
-  color: #0d6efd !important;
+  color: #2C5CD3 !important;
 }
 
 .btn.btn-primary {
-  background: #0d6efd !important;
+  background: #2C5CD3 !important;
 }
 
 .flex-direction-nav a {
@@ -8054,7 +8046,7 @@ select.segmented_btn {
 
 /* Style the "Change" button on hover */
 .change:hover {
-  background-color: #0056b3;
+  background-color: #2C5CD3;
 }
 
 /* Style the table header */
@@ -8084,12 +8076,12 @@ select.segmented_btn {
 
 /* Style the "Book Now" buttons on hover */
 .btn-show-price:hover {
-  background-color: #0056b3;
+  background-color: #2C5CD3;
 }
 
 
 .btn-primary.change {
-  background: #0d6efd !important;
+  background: #2C5CD3 !important;
 
 }
 
@@ -8097,7 +8089,12 @@ select.segmented_btn {
 .min-space p {
   font-size: 12px;
 }
-
+.min-space i {
+color:#2C5CD3;
+}
+.max-space  i {
+color:#2C5CD3;
+}
 .box-checked-in .form-date-field .check-in-out {
   position: absolute;
   left: -15px;
@@ -8122,13 +8119,13 @@ select.segmented_btn {
 /* Style the container for the filter */
 .box-filter {
   background-color: #f7f7f7;
-  border: 1px solid #ddd;
+
   padding: 15px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   border-radius: 6px;
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  /* align-items: center; */
+  gap: 8px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
@@ -8351,7 +8348,7 @@ span.bold {
 input[type="text"]:focus,
 textarea:focus {
   border-color: #2C5CD3 ;
-  box-shadow: 0 0 5px rgba(48, 77, 146, 0.5);
+  /* box-shadow: 0 0 5px rgba(48, 77, 146, 0.5); */
 }
 
 /* Checkbox styling */
@@ -8434,7 +8431,7 @@ textarea:focus {
 
 /* Add background color to the tab content */
 .tab-content {
-  background-color: #edecd5 !important;
+  /* background-color: #edecd5 !important; */
   border-radius: 0 !important;
 }
 
@@ -8590,7 +8587,7 @@ textarea:focus {
   top: 50%;
   left: -55px;
   margin-top: -1px;
-  background: #0d6efd;
+  background: #2C5CD3;
 
 }
 
@@ -8602,7 +8599,7 @@ textarea:focus {
   top: 50%;
   right: -55px;
   margin-top: -1px;
-  background: #0d6efd;
+  background: #2C5CD3;
 
 }
 
@@ -8626,7 +8623,7 @@ textarea:focus {
 }
 
 .service-item:hover {
-  background: #0d6efd;
+  background: #2C5CD3;
 
 }
 
@@ -8842,7 +8839,7 @@ textarea:focus {
   margin-top: 15px;
   width: 100%;
   height: 36px;
-  background-color: #0d6efd;
+  background-color: #2C5CD3;
   font-size: 14px;
   color: #fff;
   font-weight: 600;
@@ -8852,7 +8849,7 @@ textarea:focus {
 }
 
 .submit-form button:hover {
-  background-color: #0d6efd;
+  background-color: #2C5CD3;
   color: #fff;
 
 }
@@ -8924,7 +8921,7 @@ textarea:focus {
 }
 
 .banner .btn:hover {
-  background-color: #0056b3;
+  background-color: #2C5CD3;
   transform: scale(1.1);
   /* Add a simple scale effect on hover */
 }
@@ -9690,7 +9687,7 @@ button.close:hover {
 }
 
 .custom-box:hover .box-icon {
-  background-color: #0056b3;
+  background-color: #2C5CD3;
 }
 
 
@@ -11512,7 +11509,7 @@ button.close:hover {
   left: -3px;
   background: transparent;
   z-index: 0;
-  border: 44px solid #0d6efd;
+  border: 44px solid #2C5CD3;
 }
 
 .about-section .image-column .image-1 {
@@ -12062,7 +12059,7 @@ button.close:hover {
 }
 
 .hero-section .btn:hover {
-  background-color: #0056b3;
+  background-color: #2C5CD3;
 }
 
 /* Styling for the counters */
@@ -12147,7 +12144,7 @@ button.close:hover {
 }
 
 .hero-section .counter-btn:hover {
-  background-color: #FA5636;
+  background-color: #FF9C08;
   color: #fff;
 
 }
@@ -12185,7 +12182,7 @@ button.close:hover {
 }
 
 .hero-section .btn-primary:hover {
-  background-color: #FA5636 !important;
+  background-color: #FF9C08 !important;
   color: #fff !important;
 }
 
@@ -12288,7 +12285,7 @@ button.close:hover {
 #rooms-container .add-child,
 #rooms-container #add-room,
 .filter-booking #done {
-  background: #0056b3;
+  background: #2C5CD3;
   border: none;
   color: white;
   padding: 5px 10px;
@@ -12319,7 +12316,7 @@ button.close:hover {
 
 #rooms-container #add-room {
   background: transparent;
-  /* color: #0056b3; */
+  /* color: #2C5CD3; */
   padding: 0;
   color: #536CAB;
 }
@@ -12351,7 +12348,7 @@ button.close:hover {
 .filter-booking #done {
   width: 100%;
   padding: 6px 0;
-  /* background-color: #0056b3;
+  /* background-color: #2C5CD3;
      */
   background-color: #536CAB;
   border-radius: 20px;
@@ -12634,7 +12631,7 @@ button.close:hover {
   .st-hotel-header .right {
     text-align: center;
     margin-top: 10px;
-    flex-flow: column;
+
     grid-gap: 0;
 
   }
@@ -12674,6 +12671,9 @@ button.close:hover {
   .table-responsive {
     overflow-x: scroll;
   }
+  .table-responsive i{
+color: #2C5CD3;
+  }
 
   .st-hotel-header .st-stars {
     margin-bottom: 10px;
@@ -12704,7 +12704,7 @@ button.close:hover {
     margin: 10px 0;
     font-size: 14px;
     padding: 10px;
-    color: #0056b3 !important;
+    color: #2C5CD3 !important;
   }
 
   .account .card-body.body-en {
@@ -13538,6 +13538,12 @@ items-center {
   height: 26px;
   background-repeat: no-repeat;
 }
+.search-small-icon {
+  background-image: url('../images/search-small.svg');
+  width: 17px;
+  height: 17px;
+  background-repeat: no-repeat;
+}
 
 .width3{
   width: 300px;
@@ -13573,6 +13579,54 @@ width: 32% !important;
 .w-70{
 width: 70% !important;
 }
+
+
+
+
+/* hotel-details */
+.image-container-hotel-details{
+
+  aspect-ratio: 1/1 !important;
+
+}
+
+
+
+
+
+
+
+
+
+
+/* the hotel details  style*/
+.box-table{
+background-color: #f7f7f7;
+/* padding: 16px !important; */
+border-radius: 16px;
+}
+
+.check-in-container{
+  border: 0.54px solid #2C5CD3;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  background: #fff !important;
+}
+.li-tabs{
+  font-size: 24px !important;
+  font-weight: 600 !important;
+  line-height: 29px;
+  letter-spacing: 0em;
+
+  min-width: max-content;
+}
+.check-in-label{
+  min-width: max-content;
+  font-weight: 500 !important;
+  font-size: 20px !important;
+}
+.checkin-input{
+border: 0;font-size: 20px;
+}
 @media screen and (max-width: 1023px) {
   .card-md {
     padding-bottom: 40px !important;
@@ -13580,4 +13634,41 @@ width: 70% !important;
   .w-70{
     width: 100% !important;
     }
+    .check-in-container{
+      border: 0 !important;
+      box-shadow:0px 0px 0px 0px #00000040 !important;
+      background: transparent !important;
+    }
+    .li-tabs{
+      font-size: 10px !important;
+      font-weight: 600 !important;
+      
+      letter-spacing: 0em;
+     
+      min-width: max-content;
+    }
+    #st-content-wrapper .st-tabs .nav-tabs li a {
+      font-size: 10px;
+      font-weight: 600;
+      color: #000;
+      text-transform: capitalize;
+      background: transparent;
+      border: none;
+      width: 100%;
+      height: 100%;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    
+    }
+    .check-in-label{
+      min-width: max-content;
+      font-weight: 500 !important;
+      font-size: 14px !important;
+    }
+    .checkin-input{
+      border: 0;font-size: 14px;
+      text-align: center;
+      }
 }

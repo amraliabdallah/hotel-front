@@ -50,9 +50,17 @@
     padding-right: 30px; }
   .map-view-popup .page-half-map .col-left-map .list-style .item-service .item-service-inner .item-content {
     padding-left: 30px;
-    padding-right: 30px; } }
+    padding-right: 30px; } 
+    .summary-box li{
+
+      font-size: 14px !important;
+
+    }}
 
 @media (max-width: 991px) {
+  #st-content-wrapper .st-hotel-header  {
+    align-items: start;
+   }
   #header #topbar {
     padding-left: 35px;
     padding-right: 35px; }
@@ -590,7 +598,17 @@
     padding-right: 0; }
     .home #st-content-wrapper.search-result-page .search-form-wrapper .st-feature-items .item .title:after {
       height: 0;
-      background: transparent; } }
+      background: transparent; } 
+
+
+      .summary-box li:nth-child(1)  {
+        border-right: 0 !important;
+      }
+      .summary-box li:nth-child(2)  {
+        border-right: 0 !important;
+      }
+      
+    }
 
 @media (max-width: 767px) {
   #header #topbar {
@@ -622,7 +640,9 @@
   #st-content-wrapper .st-featured-background {
     height: 300px; }
   #st-content-wrapper .st-hotel-header .review-score {
-    display: none; }
+    display: none;
+   }
+
   #st-content-wrapper .st-tabs .nav li {
     float: none;
     display: inline-block;

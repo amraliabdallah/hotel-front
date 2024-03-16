@@ -9162,11 +9162,13 @@ select {
 
 .summary-box {
   background-color: #f7f7f7;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
 
   padding: 20px;
   border-radius: 6px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  box-shadow: 0px 2px 2px 0px #00000040;
+
   transition: all 0.3s ease-in-out;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -9177,14 +9179,14 @@ select {
 .summary-box h4 {
   margin-top: 0;
   font-size: 18px;
-  color: #304D92;
+  color: #2C5CD3;
   text-align: left;
   color: #5E6D77;
   font-weight: 600;
 }
 
 .summary-box h4 i {
-  color: #0d6efd;
+  color: #2C5CD3;
 
 }
 
@@ -9194,22 +9196,38 @@ select {
   margin: 0;
 }
 
-.summary-box li {
+.summary-box li{
   display: flex;
   align-items: center;
-  font-size: 14px;
-  padding: 10px 0;
-  color: #5E6D77;
-
+  justify-content: center;
+  font-size: 16px;
+  padding: 10px;
+  color: #000;
+  font-weight: 600;
+  width: 20%;
+  overflow-x: hidden;
+  min-width: max-content;
 }
+
 
 .summary-box li i {
   margin-right: 10px;
-  color: #0d6efd !important;
+  color: #2C5CD3 !important;
 }
 
 .summary-box li:not(:first-child) i {
   font-size: 18px;
+}
+.summary-box li:nth-child(1)  {
+  border-right: 1px solid #000 ;
+
+}
+.summary-box li:nth-child(2)  {
+  border-right: 1px solid #000 ;
+  width:25% !important;
+}
+.summary-box li:nth-child(5)  {
+  width:10% !important;
 }
 
 
@@ -9287,13 +9305,13 @@ select {
 
 /* Tab headers */
 .nav-tabs li.active a {
-  background-color: #304D92;
+  background-color: #2C5CD3;
   color: white;
 }
 
 .nav-tabs li a {
   background-color: #E7AC12;
-  color: #304D92;
+  color: #2C5CD3;
 }
 
 
@@ -9313,17 +9331,17 @@ select {
 /* Room availability table */
 /*
 .table-room-type th {
-  background-color: #304D92;
+  background-color: #2C5CD3;
   color: white;
 }
 
 .table-room-type td {
   background-color: #E7AC12;
-  color: #304D92;
+  color: #2C5CD3;
 }
 */
 .btn-show-price {
-  background-color: #304D92;
+  background-color: #2C5CD3;
   color: white;
 }
 
@@ -9338,7 +9356,8 @@ select {
 }
 
 .st-hotel-header .st-stars {
-  color: #f39c12;
+  color: #FF9C08;
+
 }
 
 .st-hotel-header .st-heading {
@@ -9358,7 +9377,7 @@ select {
 }
 
 .st-hotel-header .st-link {
-  color: #0d6efd;
+  color: #2C5CD3;
   text-decoration: none;
 }
 
@@ -9376,7 +9395,7 @@ select {
 
 /* Modal Styles */
 .st-hotel-header .modal-header {
-  background-color: #304D92;
+  background-color: #2C5CD3;
   color: #fff;
 }
 
@@ -9413,7 +9432,7 @@ select {
 }
 
 .st-hotel-header .btn-primary {
-  background: #0d6efd !important;
+  background: #2C5CD3 !important;
 
   color: #fff;
   display: flex;
@@ -9656,7 +9675,7 @@ svg {
 /* Define a style for the table header row */
 .table-room-type th,
 .custom-table-style th {
-  background-color: #0d6efd;
+  background-color: #2C5CD3;
   color: #fff;
   padding: 10px;
   text-align: left;
@@ -9667,8 +9686,12 @@ svg {
 .table-room-type td,
 .custom-table-style td {
   padding: 10px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #fff;
   font-size: 14px;
+  background-color: #f7f7f7;
+}
+.table-room-type tr {
+border: #fff;
 }
 
 .custom-table-style td,
@@ -9679,7 +9702,7 @@ svg {
 /* Define a style for alternating rows (zebra striping) */
 .table-room-type tr:nth-child(even) td,
 .custom-table-style tr:nth-child(even) td {
-  background-color: #f2f2f2;
+  background-color: #EBEBEB;
 }
 
 /* Style buttons */
@@ -9720,11 +9743,11 @@ svg {
 }
 
 /* Hover effect for the container */
-.my-custom-container:hover,
+/* .my-custom-container:hover,
 .table-responsive:hover {
   transform: scale(1.02);
-  /* Increase size on hover */
-}
+
+} */
 
 /* Style form labels */
 .my-custom-container label {
