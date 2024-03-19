@@ -84,7 +84,8 @@
         <div class="change-search-goggle-area mobile-page-special-gap">
             <div class="row">
             <div class="col-md-12">
-                <h2><span class="special-green-color">My Bookings -</span> Manage your booking with advance filters!</h2>
+                <h2 style="  font-size: 24px;
+                font-weight: bold;"><span class="special-blue-color">My Bookings -</span> Manage your booking with advance filters!</h2>
                 </div>
             </div>
         </div>
@@ -95,27 +96,27 @@
                 <form action="" class="form" method="">
         
                     <div class="row">
-                        <div class="col-md-3 border-right">
+                        <div class="col-md-3 ">
                             <div class="form-group form-extra-field dropdown clearfix field-detination">
                                 <div class="dropdown">
-                                    <label>Booking ID</label>
-                                    <input type="text" id="" name="" value="" class="inputg"
-                                           placeholder="Enter Booking ID" autocomplete="off">
+                                    <label class="lable-search-booking">Booking ID</label>
+                                    <input type="text" id="" name="" value="" 
+                                           placeholder="Your Booking ID" autocomplete="off">
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3 border-right">
+                        <div class="col-md-3 ">
                             <div class="form-group form-extra-field dropdown clearfix field-detination">
                                 <div class="dropdown">
-                                    <label>Guest Name</label>
-                                    <input type="text" id="" name="" value="" class="inputg" placeholder="Place guest name">
+                                    <label class="lable-search-booking">Guest Name</label>
+                                    <input type="text" id="" name="" value=""  placeholder="Place guest name">
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3 border-right">
+                        <div class="col-md-3 ">
                             <div class="form-group form-extra-field dropdown clearfix field-destination">
                                 <div class="dropdown">
-                                    <label for="booking-status">Booking Status</label>
+                                    <label  class="lable-search-booking" for="booking-status">Booking Status</label>
                                     <select name="booking-status" id="booking-status" class="form-control" required>
                                         <option value="all" selected>All</option>
                                         <option value="complete-paid">Complete/Paid</option>
@@ -128,7 +129,7 @@
                         <div class="col-md-3">
                             <div class="form-group form-extra-field dropdown clearfix field-destination">
                                 <div class="dropdown">
-                                    <label for="checkin-status">Check In Status</label>
+                                    <label  class="lable-search-booking" for="checkin-status">Check In Status</label>
                                     <select name="checkin-status" id="checkin-status" class="form-control" required>
                                         <option value="all" selected>All</option>
                                         <option value="past">Past Check Ins</option>
@@ -140,20 +141,21 @@
                         </div>
         
         
-                        <div class="col-md-12 mobile-hide-hr">
-                            <hr>
-                        </div>
+
                         <div class="clearfix"></div>
         
-                        <div class="col-md-3 border-right">
-                            <div class="form-group form-date-field form-date-search clearfix  has-icon "
+                        <div class="col-md-3 ">
+                            <div class="form-group relative form-date-search clearfix  has-icon "
                                  data-format="DD/MM/YYYY">
-                                <i class="input-icon field-icon fas fa-calendar"></i>
-                                <div class="date-wrapper clearfix">
+                                
+                                <div class=" clearfix">
                                     <div class="check-in-wrapper">
-                                        <label>Booking Date From - To</label>
+                                        <label  class="lable-search-booking">Booking Date From - To</label>
                                         <!-- <div class="inputg check-in-render"></div> -->
-                                        <input type="text" id="daterange1" class="form-control" style="border: 0;" name="daterange1" value="" />
+                                        <div class="d-flex gap-2  px-2 rounded-2  mb-3" style="background-color: #EFEFEF;">
+                                        <i class="new-input-icon  mt-2  far fa-calendar"></i> <input type="text" id="daterange1" class="form-control" style="border: 0;margin: 0 !important;font-size: 14px;" name="daterange1" value="" />
+                                              
+                                        </div>
                                     </div>
                                 </div>
                                 <input type="hidden" class="check-in-input" value="" name="hiddendaterange1">
@@ -174,15 +176,18 @@
                                        value="01/07/2024 10:11 am-02/07/2024 10:11 am" name="date">
                             </div> -->
                         </div>
-                        <div class="col-md-3 border-right">
-                            <div class="form-group form-date-field form-date-search clearfix  has-icon "
+                        <div class="col-md-3 ">
+                            <div class="form-group relative form-date-search clearfix  has-icon "
                                  data-format="DD/MM/YYYY">
-                                <i class="input-icon field-icon fas fa-calendar"></i>
-                                <div class="date-wrapper clearfix">
+                               
+                                <div class=" clearfix">
                                     <div class="check-in-wrapper">
-                                        <label>Check In-Check-out</label>
+                                        <label  class="lable-search-booking">Check In-Check-out</label>
                                         <!-- <div class="inputg check-out-render">02/07/2024</div> -->
-                                        <input type="text" id="daterange2" class="form-control" style="border: 0;" name="daterange2" value="" />
+                                        <div class="d-flex gap-2  px-2 rounded-2  mb-3" style="background-color: #EFEFEF;">
+                                            <i class="new-input-icon mt-2 far fa-calendar"></i>  <input type="text" id="daterange2" class="form-control" style="border: 0;margin: 0 !important;font-size: 14px; " name="daterange2" value="" />
+                                        </div>
+                                       
                                     </div>
                                 </div>
                                 <input type="hidden" class="check-out-input" value="02/07/2024" name="hiddendaterange2">
@@ -205,14 +210,18 @@
                         </div>
         
                         <div class="col-md-3">
-                            <div class="form-group form-date-field form-date-search clearfix  has-icon "
+                            <div class="form-group relative form-date-search clearfix  has-icon "
                                  data-format="DD/MM/YYYY">
-                                <i class="input-icon field-icon fas fa-calendar"></i>
-                                <div class="date-wrapper clearfix">
+                               
+                                <div class=" clearfix">
                                     <div class="check-in-wrapper">
-                                        <label>Cancellation Date From - To</label>
+                                        <label  class="lable-search-booking">Cancellation Date From - To</label>
                                         <!-- <div class="inputg check-in-render">01/07/2024</div> -->
-                                        <input type="text" id="daterange3" class="form-control" style="border: 0;" name="daterange3" value="" />
+                                        <div class="d-flex gap-2  px-2 rounded-2  mb-3" style="background-color: #EFEFEF;">
+                                        <i class=" new-input-icon mt-2  far fa-calendar"></i> <input type="text" id="daterange3" class="form-control" style="border: 0;margin: 0 !important;font-size: 14px;" name="daterange3" value="" />
+
+
+                                        </div>
                                     </div>
                                 </div>
                                 <input type="hidden" class="check-in-input" value="01/07/2024" name="hiddendaterange3">
@@ -234,13 +243,16 @@
                             </div> -->
                         </div>
         
-                        <div class="col-md-3 ">
-                            <button class="btn btn-primary btn-search full-width-btn mt20" type="submit">
-                                <i class="fas fa-search"></i> Search
+                        <div class="col-md-3 d-flex gap-4">
+                            <button class="btn btn-warning btn-search full-width-btn mt20 rounded-2 fw-bold " type="submit">
+                                <!-- <i class="fas fa-sync-alt"></i> -->
+                                 Reset
+                              </button>  
+                            <button class="btn btn-primary btn-search full-width-btn mt20 rounded-2 fw-bold " type="submit">
+                                <!-- <i class="fas fa-search"></i> -->
+                                 Search
                               </button>
-                              <button class="btn btn-warning btn-search full-width-btn mt20" type="submit">
-                                <i class="fas fa-sync-alt"></i> Reset
-                              </button>                              
+                                                   
         
                         </div>
                    

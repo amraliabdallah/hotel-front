@@ -9052,8 +9052,10 @@ select {
   color: #24874F;
 }
 
-.special-green-color {
-  color: #24874f !important;
+.special-blue-color {
+  color: #2C5CD3 !important;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .special-mar-30 {
@@ -9737,8 +9739,8 @@ border: #fff;
   background-color: #f0f0f0;
   padding: 20px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px !important;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
   transition: transform 0.2s ease-in-out;
 }
 
@@ -9755,16 +9757,7 @@ border: #fff;
   margin-bottom: 5px;
 }
 
-/* Style input fields */
-.my-custom-container input[type="text"],
-.my-custom-container select {
-  width: 100%;
-  padding: 5px 10px !important;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  height: 40px;
-}
+
 
 /* Style icons */
 .my-custom-container .input-icon {
