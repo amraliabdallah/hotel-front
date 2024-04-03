@@ -266,8 +266,15 @@
         <div class="clearfix"></div>
                 <div class="change-search-goggle-area special-mar-30">
                     <div class="row">
-                        <div class="col-md-12">
-                            <h2>Booking List</h2>
+                        <div class="col-md-12 fw-bold">
+                            <h2 class="fw-bold">Booking List</h2>
+                        </div>
+                    </div>
+                </div>       
+                         <div class="change-search-goggle-area m-0 p-4 shadow-sm   " style="background-color: #F4F4F4; border-radius: 10px;">
+                    <div class="row">
+                        <div class="col-md-12 fw-bold d-flex align-items-center gap-3" style="color: #979797;">
+                            <i class="fa-solid fa-bookmark"></i><h2 class="m-0" >17 bookings </h2>
                         </div>
                     </div>
                 </div>
@@ -277,60 +284,105 @@
                     <table class="table my-booking-list-table custom-table-style ">
                         <tbody>
                             <tr>
-                                <th><i class="fas fa-id-card"></i> Booking Id</th>
-                                <th><i class="fas fa-check-circle"></i> Status</th>
-                                <th><i class="fas fa-user"></i> Guest Name</th>
-                                <th><i class="fas fa-calendar"></i> Check-in</th>
-                                <th><i class="fas fa-map-marker-alt"></i> City</th>
-                                <th><i class="far fa-clock"></i> Cancellation Deadline</th>
-                                <th><i class="fas fa-dollar-sign"></i> Cost Total</th>
-                                <th><i class="fas fa-credit-card"></i> Payment</th>
+                                <th class="pt-4 "><i class="far fa-id-card"></i> Booking Id</th>
+                                <th class="pt-4 "><i class="far fa-check-circle"></i> Booking and payment status</th>
+                                <th class="pt-4 "><i class="far fa-user"></i> Guest Name</th>
+                                <th class="pt-4 "><i class="far fa-calendar"></i> Check in date</th>
+                                <th class="pt-4 "><i class="fas fa-map-marker-alt"></i> City</th>
+                                <th class="pt-4 "><i class="far fa-clock"></i> Cancellation Deadline</th>
+                                <th class="pt-4 " style="min-width: max-content;"><i class="fas fa-dollar-sign"></i> Total Cost </th>
+                                <!-- <th><i class="far fa-credit-card"></i> Payment</th> -->
                                 <th><i class="fas fa-cogs"></i> Action</th>
                             </tr>
                             <tr>
-                                <td class="min-space bold-text">Hxm123</td>
-                                <td class="min-space"><span class="text-success label bol">Complete</span></td>
+                                <td class="min-space fw-bold"><span style="color:#505FD4;font-size:16px">XHM1000</span>  <br> <span>28/10/2023</span></td>
+                                <td class="min-space  text-center"><span Complete class="w-100 text-center  bg-success label px-4 "  style="width:188px !important;font-size: 14px;">Complete - Paid</span></td>
                                 <td class="min-space">John Doe</td>
-                                <td class="min-space">2023-09-15</td>
+                                <td class="min-space fw-bold">2023-09-15</td>
                                 <td class="min-space">New York</td>
                                 <td class="min-space">free cancle, 20 sep</td>
-                                <td class="min-space"><b>150 <span>USD</span></b></td>
-                                <td class="min-space"><span class="text-success label">Paid</span></td>
-                                <td class="min-space">
+                                <td class="min-space"><b style="font-size:20px"> 150 </b> <br> <span>USD</span></td>
+                                
+                                <!-- <td class="min-space"><span class="text-success label">Paid</span></td> -->
+                                <td class="min-space " style="min-width:max-content">
+                                    <div class="d-flex gap-2 align-items-center  ">
+
+                                  
                                     <a href="">
                                         <i class="fa-solid fa-eye"></i>
                                     </a>
-                                </td>
-                            </tr>
+                                    <a href="">
+                                        <i class="fa-solid fa-headset"></i>
+                                    </a>
+                                    <a href="">
+                                        <i class="fa-regular fa-credit-card"></i>
+                                    </a>
+                                    <a href="">
+                                        <i class="fa-solid fa-square-xmark text-danger"></i>
+                                    </a>
+                                </div>
                             <tr>
-                                <td class="min-space bold-text">Hxm123</td>
-                                <td class="min-space"><span class="text-danger label">Cancle</span></td>
+                                <td class="min-space fw-bold"><span style="color:#505FD4;font-size:16px">XHM1000</span>  <br> <span>28/10/2023</span></td>
+                                
+                                <td class="min-space text-center "><span class="bg-danger label w-100 text-center   label px-5 " style="width:188px !important;font-size: 14px;">Cancelled</span></td>
                                 <td class="min-space">Jane Smith</td>
-                                <td class="min-space">2023-09-20</td>
+                                <td class="min-space fw-bold">2023-09-20</td>
                                 <td class="min-space">Los Angeles</td>
-                                <td class="min-space">Non-refunded</td>
-                                <td class="min-space"><b>200 <span>USD</span></b></td>
-                                <td class="min-space"><span class="text-warning label">Unpaid</span></td>
-                                <td class="min-space">
+                                <td class="min-space">non-refundable full-charged</td>
+                                <td class="min-space"><b style="font-size:20px"> 200 </b><br>  <span>USD</span></td>
+                                <!-- <td class="min-space"><span class="text-warning label">Unpaid</span></td> -->
+                                <td class="min-space " style="min-width:max-content">
+                                    <div class="d-flex gap-2 align-items-center  ">
+
+                                  
                                     <a href="">
                                         <i class="fa-solid fa-eye"></i>
                                     </a>
+                                    <a href="">
+                                        <i class="fa-solid fa-headset"></i>
+                                    </a>
+                                    <a href="">
+                                        <i class="fa-regular fa-credit-card"></i>
+                                    </a>
+                                    <a href="">
+                                        <i class="fa-solid fa-square-xmark text-danger"></i>
+                                    </a>
+                                </div>
+                              
+                                       
+                                    
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="min-space bold-text">Hxm123</td>
-                                <td class="min-space"><span class="text-warning label">Confirm</span></td>
-                                <td class="min-space">Alice Johnson</td>
-                                <td class="min-space">2023-09-25</td>
+                            <tr class="overflow-hidden">
+                                <td class="min-space fw-bold"><span style="color:#505FD4;font-size:16px">XHM1000</span>  <br> <span>28/10/2023</span></td>
+
+                                <td class="min-space text-center m-0 "><span class="w-100 text-center  bg-warning label px-4 " style="min-width:188px !important;font-size: 14px;">Confirm-Unpaid</span></td>
+                                <td class="min-space" style="width:224px">MR ABDULRAHIM ALMURASHA
+                                    MRS NORAH ALYAZIDI </td>
+                                <td class="min-space fw-bold" style="min-width:120px !important;font-size: 14px;">2023-09-25</td>
                                 <td class="min-space">San Francisco</td>
-                                <td class="min-space">free cancle, 20 sep</td>
-                                <td class="min-space"><b>180 <span>USD</span></b></td>
-                                <td class="min-space"><span class="text-warning label">Unpaid</span></td>
-                                <td class="min-space">
+                                <td class="min-space">free cancellation to <br> 
+                                    25/5/2024</td>
+                                <td class="min-space"><b style="font-size:20px"> 1800 </b><br> <span>USD</span></td>
+
+                                <!-- <td class="min-space"><span class="text-warning label">Unpaid</span></td> -->
+                                <td class="min-space " style="min-width:max-content">
+                                    <div class="d-flex gap-2 align-items-center  ">
+
+                                  
                                     <a href="">
                                         <i class="fa-solid fa-eye"></i>
                                     </a>
-                                </td>
+                                    <a href="">
+                                        <i class="fa-solid fa-headset"></i>
+                                    </a>
+                                    <a href="">
+                                        <i class="fa-regular fa-credit-card"></i>
+                                    </a>
+                                    <a href="">
+                                        <i class="fa-solid fa-square-xmark text-danger"></i>
+                                    </a>
+                                </div>
                             </tr>
                         </tbody>
                     </table>

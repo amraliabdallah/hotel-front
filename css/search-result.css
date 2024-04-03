@@ -9677,11 +9677,12 @@ svg {
 /* Define a style for the table header row */
 .table-room-type th,
 .custom-table-style th {
-  background-color: #2C5CD3;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   padding: 10px;
   text-align: left;
   font-size: 14px;
+  border-right: 1px solid #e3e3e3!important;
 }
 
 /* Define a style for the table data rows */
@@ -9690,7 +9691,8 @@ svg {
   padding: 10px;
   border-bottom: 1px solid #fff;
   font-size: 14px;
-  background-color: #f7f7f7;
+  background-color: #fff;
+    border-right: 1px solid #e3e3e3 !important;
 }
 .table-room-type tr {
 border: #fff;
@@ -9704,7 +9706,7 @@ border: #fff;
 /* Define a style for alternating rows (zebra striping) */
 .table-room-type tr:nth-child(even) td,
 .custom-table-style tr:nth-child(even) td {
-  background-color: #EBEBEB;
+  background-color: #f4f4f4;
 }
 
 /* Style buttons */

@@ -270,11 +270,55 @@
                          <!-- form complex example -->
                             <div class=" row form-row mt-4">
                                 <!-- Account section -->
-                                <div class="col-lg-5 pb-3">
-                                    <label for="name_hotel" style="margin: 0 5px;font-weight: 600;font-size: 18px; margin-bottom: 10px;"> <i class="fa-solid fa-location-dot "></i> <span style="margin: 0 5px;">Destination / Hotel Name*</span> </label>
-                                    <input type="text" class="form-control" id="name_hotel" style="background:#EBEBEB;border: 1px solid #FF5364;border-radius: 10px;" placeholder="Enter City Destination / Hotel name">
+                                <div class="col-lg-5 pb-3 position-relative">
+                                    <label for="searchHotel" style="margin: 0 5px;font-weight: 600;font-size: 18px; margin-bottom: 10px;"> <i class="fa-solid fa-location-dot "></i> <span style="margin: 0 5px;">Destination / Hotel Name*</span> </label>
+                                    <input type="text" class="form-control" id="searchHotel" style="background:#EBEBEB;border: 1px solid #FF5364;border-radius: 10px;" placeholder="Enter City Destination / Hotel name">
+                                    <div id="dropdownContainer" class="position-absolute text-black  z-3   rounded-3 p-3 " style="width: 90%;top:85px;background:#EBEBEB">
+                                        <ul id="dropdownList" class="list-unstyled">
+                                            <li class=" p-2 border-bottom  " style="cursor: pointer;"><i class="fa-solid fa-location-dot me-2"></i> hotel destination1 </li>
+                                            <li class=" p-2 border-bottom  " style="cursor: pointer;"><i class="fa-solid fa-location-dot me-2"></i> hotel destination2 </li>
+                                            <li class=" p-2 border-bottom  " style="cursor: pointer;"><i class="fa-solid fa-location-dot me-2"></i> hotel destination3 </li>
+                                            <li class=" p-2 border-bottom  " style="cursor: pointer;"><i class="fa-solid fa-location-dot me-2"></i> hotel destination4 </li>
+                                            <li class=" p-2 border-bottom  " style="cursor: pointer;"><i class="fa-solid fa-location-dot me-2"></i> hotel destination5 </li>
+
+                                        </ul>
+                                    </div>
                                 </div>
-                              
+                                <script>
+                                    document.addEventListener("DOMContentLoaded", function() {
+                                        const inputField = document.getElementById('searchHotel');
+                                        const dropdownContainer = document.getElementById('dropdownContainer');
+                                        const dropdownList = document.getElementById('dropdownList');
+                                        
+                                        // Hide dropdown initially
+                                        dropdownContainer.style.display = 'none';
+                                
+                                        // Show dropdown when user starts typing
+                                        inputField.addEventListener('input', function() {
+                                            if (inputField.value.trim() !== '') {
+                                                dropdownContainer.style.display = 'block';
+                                            } else {
+                                                dropdownContainer.style.display = 'none';
+                                            }
+                                        });
+                                
+                                        // Pass value to input field when dropdown item is clicked
+                                        dropdownList.addEventListener('click', function(e) {
+                                            if (e.target.tagName === 'LI') {
+                                                inputField.value = e.target.textContent.trim();
+                                                dropdownContainer.style.display = 'none';
+                                            }
+                                        });
+                                
+                                        // Hide dropdown when clicking outside the input and dropdown
+                                        document.addEventListener('click', function(e) {
+                                            if (!inputField.contains(e.target) && !dropdownContainer.contains(e.target)) {
+                                                dropdownContainer.style.display = 'none';
+                                            }
+                                        });
+                                    });
+                                </script>
+                                
                                 <div class="col-lg-5 pb-3">
                                     <div class="d-flex container-chek">
                                         <div class="w-100 col-2">

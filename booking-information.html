@@ -214,12 +214,14 @@
       .popUp-input:focus{
          
           box-shadow: 0 0 0 !important;
-          padding: 5px 0 !important;
+          padding: 10px  !important
           height: 100% !important;
       }
       .popUp-input{
-          padding: 5px 0 !important;
+          padding: 10px  !important;
           height: auto !important;
+          background-color: #fff;
+          border-radius:5px ;
       }
   </style>
     <!-- custom style css -->
@@ -293,7 +295,7 @@
       id="st-content-wrapper "
       class="search-result-page booking-page-bg booking-en"
     >
-      <div class="container">
+      <div class="container m-0 " style="padding: 5%;max-width: 100% !important;width: 100% !important;">
         <a href="#" class="return-page"
           ><i class="fas fa-arrow-left"></i> Return to rooms option</a
         >
@@ -306,15 +308,16 @@
           <div class="col-md-7">
             <div class="single-booking-hotel">
               <div class="informations">
-                <h4 class="title">
-                  <i class="fas fa-user"></i> Guest Information
+                <h4 class="title" >
+                  <i class="far me-2 fa-user"></i> Guest Information
                 </h4>
-                <p class="info-room">
-                  <i class="fas fa-bed"></i> Room 1: Deluxe Double Studio (full
+                <hr style="border-color:black; width: 95%;margin-left: 5% ;margin-top:1px">
+                <p class="info-room" style=" width: 95%;margin-left: 5% ;margin-top:10px">
+                   Room 1: Deluxe Double Studio <br> (full
                   double bed) for 2 adults (Breakfast included)
                 </p>
-                <div id="guestInputContainer">
-                  <div class="guest-input-row d-flex gap-2 align-items-center">
+                <div id="guestInputContainer" style=" width: 95%;margin-left: 5% ;margin-top:10px">
+                  <div class="guest-input-row d-flex gap-5 align-items-center">
                     <div class="form-area">
                       <label for="guest_name_1">Guest Name</label>
                       <input
@@ -337,21 +340,31 @@
                     </div>
                   </div>
                 </div>
+                    <div style=" width: 95%;margin-left: 5% ;">
+                        <button
+                        id="addGuestButton"
+                        class="btn "
+                        style="width: 100px;height: 29px;
+                        font-size: 13px;
+                        font-weight: 600;
+                        line-height: 17px;
+                        letter-spacing: 0em;
+                        padding:0;color: #606060;
 
-                <button
-                  id="addGuestButton"
-                  class="btn btn-primary"
-                  style="margin-bottom: 20px"
-                >
-                  Add Guest
-                </button>
+                       
+                        margin-bottom: 20px;border: 0.69px solid #606060"
+                    >
+                      <i class="fas fa-plus"></i>  Add Guest
+                    </button>
+                    </div>
+
                 <script>
                     document.getElementById("addGuestButton").addEventListener("click", function () {
                       var guestInputContainer = document.getElementById("guestInputContainer");
                       var totalGuests = guestInputContainer.getElementsByClassName("guest-input-row").length;
                   
                       var newGuestRow = document.createElement("div");
-                      newGuestRow.className = "guest-input-row d-flex gap-2 align-items-center";
+                      newGuestRow.className = "guest-input-row d-flex gap-5 align-items-center";
                   
                       newGuestRow.innerHTML = `
                         <div class="form-area">
@@ -375,25 +388,45 @@
                         var row = e.target.closest(".guest-input-row");
                         if (row) {
                           guestInputContainer.removeChild(row);
+                          console.log("Removed")
                         }
                       }
                     });
                   </script>
                   
                 </script>
-                <div class="form-area">
-                  <div class="d-flex">
+
+                <div class="form-area" style=" box-shadow: 0px 6px 10px 0px #0000001A;                ;padding: 20px 10px                ;">
+                  <div class="d-flex gap-2">
                     <input
+                    style="border: 1px solid #3152A6;border-radius:9999px;"
                       type="checkbox"
                       id="special_requests_checkbox"
-                      class="checkbox"
+                      class="checkbox mt-1"
+
                     />
-                    <label for="special_requests_checkbox">
-                      <span class="bold d-block"
-                        ><i class="fas fa-exclamation"></i> Special requests if
+                    <label for="special_requests_checkbox"
+                    style="
+
+                    
+                    
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 20px;
+                    letter-spacing: 0em;
+                   
+                    "
+                    ">
+                      <span class=" d-block"  style="margin-bottom:10px;
+                      font-size: 20px;
+                      font-weight: 600;
+                      line-height: 24px;
+                      letter-spacing: 0em;"
+                      
+                        > Special requests if
                         you have?</span
                       >
-                      Note: Special Requests are not guaranteed and are subject
+                      <strong>Note:</strong>  Special Requests are not guaranteed and are subject
                       to availability upon check-in at the hotel. Please get in
                       touch with our Customer Support if you'd like to add
                       guaranteed services.
@@ -421,235 +454,286 @@
                       }
                     });
                 </script>
-                <div class="d-flex gap-2 align-items-center">
-                  <div class="form-area">
-                    <label for="phone"> Phone Number</label>
-                    <input
-                      type="text"
-                      id="phone"
-                      name="phone"
-                      class="input-en"
-                      placeholder="Enter Phone Number"
-                    />
-                  </div>
-                  <div class="form-area"></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="single-booking-hotel">Booking Notes</div>
-
-            <div class="single-booking-hotel">
-              <p>Booking Payment method</p>
-              <div class="d-flex align-items-center gap-4 blabla">
-                <div class="form-area d-flex align-items-center gap-1">
-                  <input
-                    type="checkbox"
-                    id="balance_checkbox"
-                    name="balance_checkbox"
-                    value=""
-                    class="checkbox"
-                  />
-                  <label for="balance_checkbox" class="checkbox-label">
-                    By Balance available 1000 USD</label
-                  >
-                </div>
-                <div class="form-area d-flex align-items-center gap-1">
-                  <input
-                    type="checkbox"
-                    id="credit_card_checkbox"
-                    name="credit_card_checkbox"
-                    value=""
-                    class="checkbox"
-                  />
-                  <label for="credit_card_checkbox" class="checkbox-label">
-                    By credit card</label
-                  >
-                </div>
-              </div>
-              <div class="form-area d-flex align-items-center gap-1 mb-4">
-                <div id="visaCardInput2" style="display: none">
-                  <div class="modal-header " style="flex-flow: column; gap: 8px;display: flex;font-weight: 700;">
-
-
-
-                    <h4 class="modal-title " style="font-weight: 700;text-transform: capitalize;">pay amount by credit card</h4>
-
-                    </div>
+                <div class="single-booking-hotel rounded-0 " style="border-radius: 0 !important;background: #FAFAFA;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 24px;
+                letter-spacing: 0em;box-shadow: 0px 0px 0px 0px rgba(0, 0, 0);
                
-                <div class="modal-body" style="margin-top: 30px;">
-                  <div class="row">
-
-
-                    
-
-                   
-
-                   
-                    <div class="col-12">
-                        <div class="d-flex flex-column px-md-5 px-4 mb-4">
-                            <span>Credit Card</span>
-                            <div class="inputWithIcon"> <input
-                                    class="form-control popUp-input" type="text"
-                                     id="cr_no" placeholder="&#9679;&#9679;&#9679;&#9679; &#9679;&#9679;&#9679;&#9679; &#9679;&#9679;&#9679;&#9679; 7327" minlength="19" maxlength="19">
-                                <span class=""> <img
-                                        src="https://www.freepnglogos.com/uploads/mastercard-png/mastercard-logo-logok-15.png"
-                                        alt=""></span>
-                            </div>
-                        </div>
+                        padding:10px ;       " > 
+                               <div>Booking Notes</div></div>
+                <div class="d-flex gap-2 align-items-center" style=" width: 95%;margin-left: 5% ;">
+                    <div class="form-area">
+                      <label for="phone"> Phone Number</label>
+                      <input
+                        type="text"
+                        id="phone"
+                        name="phone"
+                        class="input-en mt-1"
+                        placeholder="Enter Phone Number"
+                      />
                     </div>
-
-
+                    <div class="form-area"></div>
+                  </div>
+                <div class="" style=" width: 95%;margin-left: 5% ;margin-top: 15px;" >
+                  <p style="
+                  font-size: 22px;
+                  font-weight: 600;
+                  line-height: 27px;
+                  letter-spacing: 0em;
                   
-                    <div class="col-md-6">
-                        <div
-                            class="d-flex flex-column ps-md-5 px-md-0 px-4 mb-4">
-                            <span>Expiration<span
-                                    class="ps-1">Date</span></span>
-                            <div class="inputWithIcon"> <input type="text"
-                                    class="form-control popUp-input"  name="exp" id="exp" placeholder="12/28" minlength="5" maxlength="5">
-                                <span class="fas fa-calendar-alt"></span>
+                  ">Booking Payment method</p>
+                  <div class="d-flex flex-column   gap-1 blabla">
+                    <div class="form-area mb-2 d-flex align-items-center gap-1">
+                      <input
+                        type="checkbox"
+                        id="balance_checkbox"
+                        name="balance_checkbox"
+                        value=""
+                        class="checkbox rounded-5 " style="border: 0.86px solid #3152A6"
+                      />
+                      <label for="balance_checkbox" class="checkbox-label" style="
+                      font-size: 16px;
+                      font-weight: 600;
+                      line-height: 26px;
+                      letter-spacing: 0em;
+                      
+                      ">
+                        By Balance available 1000 USD</label
+                      >
+                    </div>
+                    <div class="form-area mb-3 d-flex align-items-center gap-1">
+                      <input
+                        type="checkbox"
+                        id="credit_card_checkbox"
+                        name="credit_card_checkbox"
+                        value=""
+                        class="checkbox rounded-5 " style="border: 0.86px solid #3152A6"
+                      />
+                      <label for="credit_card_checkbox" class="checkbox-label" style="
+                      font-size: 16px;
+                      font-weight: 600;
+                      line-height: 26px;
+                      letter-spacing: 0em;
+                      
+                      ">
+                        By credit card</label
+                      >
+                    </div>
+                  </div>
+                  <div class="form-area d-flex align-items-center gap-1 mb-2">
+                    <div id="visaCardInput2" style="display: none">
+                      <div class="modal-header " style="flex-flow: column; gap: 8px;display: flex;font-weight: 700;">
+    
+    
+    
+                        <h4 class="modal-title " style="font-weight: 700;text-transform: capitalize;">pay amount by credit card</h4>
+    
+                        </div>
+                   
+                    <div class="modal-body" style="margin-top: 30px;">
+                      <div class="row">
+    
+    
+                        
+    
+                       
+    
+                       
+                        <div class="col-12">
+                            <div class=" d-flex flex-column px-md-5 px-4 mb-4">
+                                <span>Credit Card</span>
+                                <div class="inputWithIcon"> <input
+                                        class="form-control popUp-input" type="text"
+                                         id="cr_no" placeholder="&#9679;&#9679;&#9679;&#9679; &#9679;&#9679;&#9679;&#9679; &#9679;&#9679;&#9679;&#9679; 7327" minlength="19" maxlength="19">
+                                    <span class=""> <img
+                                            src="https://www.freepnglogos.com/uploads/mastercard-png/mastercard-logo-logok-15.png"
+                                            alt=""></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div
-                            class="d-flex flex-column pe-md-5 px-md-0 px-4 mb-4">
-                            <span>Code CVV</span>
-                            <div class="inputWithIcon"> <input type="text"
-                                    class="form-control popUp-input"  name="cvcpwd" placeholder="&#9679;&#9679;&#9679;" class="placeicon" minlength="3" maxlength="3"> <span
-                                    class="fas fa-lock"></span> </div>
+    
+    
+                      
+                        <div class="col-md-6">
+                            <div
+                                class="d-flex flex-column ps-md-5 px-md-0 px-4 mb-4">
+                                <span>Expiration<span
+                                        class="ps-1">Date</span></span>
+                                <div class="inputWithIcon"> <input type="text"
+                                        class="form-control popUp-input"  name="exp" id="exp" placeholder="12/28" minlength="5" maxlength="5">
+                                    <span class="fas fa-calendar-alt"></span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="d-flex flex-column px-md-5 px-4 mb-4">
-                            <span>Name</span>
-                            <div class="inputWithIcon"> <input
-                                    class="form-control text-uppercase popUp-input"
-                                    type="text" value="valdimir berezovkiy">
-                                <span class="far fa-user"></span> </div>
+                        <div class="col-md-6">
+                            <div
+                                class=" d-flex flex-column pe-md-5 px-md-0 px-4 mb-4">
+                                <span>Code CVV</span>
+                                <div class="inputWithIcon"> <input type="text"
+                                        class="form-control popUp-input"  name="cvcpwd" placeholder="&#9679;&#9679;&#9679;" class="placeicon" minlength="3" maxlength="3"> <span
+                                        class="fas fa-lock"></span> </div>
+                            </div>
                         </div>
+                        <div class="col-12">
+                            <div class="d-flex flex-column px-md-5 px-4 mb-4">
+                                <span>Name</span>
+                                <div class="inputWithIcon"> <input
+                                        class="form-control text-uppercase popUp-input"
+                                        type="text" value="valdimir berezovkiy">
+                                    <span class="far fa-user"></span> </div>
+                            </div>
+                        </div>
+                        <div class="col-12 px-md-5 px-4 mt-3">
+                            <div class="btn  w-100" style="background-color: #05cf48;color: #ffffff;font-weight: 700;">Pay $1000.00</div>
+                        </div>
+                        <!-- <div  style="width: 100%;display: flex; align-items: center;justify-content: center ; margin-top: 20px;">
+                            <img src="images/save.png" alt="" class="img-responsive"  style="height: 40px;min-width: max-content !important;">
+                            <img src="images/secure.png" alt="" class="img-responsive" style="height: 40px;min-width: max-content !important;">
+                            <img src="images/payment.png" alt="" class="img-responsive" style="height: 40px;min-width: max-content !important;">
+                        </div> -->
                     </div>
-                    <div class="col-12 px-md-5 px-4 mt-3">
-                        <div class="btn  w-100" style="background-color: #05cf48;color: #ffffff;font-weight: 700;">Pay $1000.00</div>
                     </div>
-                    <!-- <div  style="width: 100%;display: flex; align-items: center;justify-content: center ; margin-top: 20px;">
-                        <img src="images/save.png" alt="" class="img-responsive"  style="height: 40px;min-width: max-content !important;">
-                        <img src="images/secure.png" alt="" class="img-responsive" style="height: 40px;min-width: max-content !important;">
-                        <img src="images/payment.png" alt="" class="img-responsive" style="height: 40px;min-width: max-content !important;">
-                    </div> -->
+                      <!-- <div class="container-form">
+                        <div class="form-area" style="    grid-column: 4/1;">
+                            <label for="">Name </label>
+                            <input
+                              type="text"
+                              placeholder="Card Number"
+                              class="form-control inputg"
+                            />
+                          </div>
+                        <div class="form-area">
+                          <label for="">Card Number</label>
+                          <input
+                            type="text"
+                            placeholder="Card Number"
+                            class="form-control inputg"
+                          />
+                        </div>
+                        <div class="form-area">
+                          <label for="">Expiry Date</label>
+    
+                          <input
+                            type="text"
+                            placeholder="Expiry Date"
+                            class="form-control inputg"
+                          />
+                        </div>
+                        <div class="form-area">
+                          <label for=""> CVV</label>
+    
+                          <input
+                            type="text"
+                            placeholder="CVV"
+                            class="form-control inputg"
+                          />
+                        </div>
+                      </div> -->
+                      <script>
+                        document
+                          .getElementById("credit_card_checkbox")
+                          .addEventListener("change", function () {
+                            var visaInput =
+                              document.getElementById("visaCardInput2");
+                            if (this.checked) {
+                              visaInput.style.display = "block";
+                            } else {
+                              visaInput.style.display = "none";
+                            }
+                          });
+                      </script>
+                    </div>
+                  </div>
+                  <div class="form-area d-flex  gap-1 mb-5">
+                    <input
+                      type="checkbox"
+                      id="accept_terms_checkbox"
+                      name="accept_terms_checkbox"
+                      value=""  style="border: 0.86px solid #3152A6;width: 14px;height: 14px; "
+                      class="checkbox mt-1 "
+                    />
+                    <label for="accept_terms_checkbox" class="checkbox-label" style="color: #CD4E4E;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 22px;
+                    letter-spacing: 0em;
+                  
+                    
+                    ">
+                      Yes, I accept the cancellation policy, Booking notes, <br> and
+                      Terms & Conditions of Hotelsxml.</label
+                    >
+                  </div>
+    
+                  <button
+                    class="btn  d-flex justify-content-center align-items-center gap-3 m-auto" style="background-color: #11A05B;color:white;border-radius: 30px;
+                    font-size: 20px;
+                    font-weight: 800;
+                    line-height: 24px;
+                    letter-spacing: 0em;
+                  width: 271px;
+                    
+                    "
+                  >
+                  <i class="fa-regular fa-circle-check"></i>
+                  Complete Booking
+                  </button>
                 </div>
-                </div>
-                  <!-- <div class="container-form">
-                    <div class="form-area" style="    grid-column: 4/1;">
-                        <label for="">Name </label>
-                        <input
-                          type="text"
-                          placeholder="Card Number"
-                          class="form-control inputg"
-                        />
-                      </div>
-                    <div class="form-area">
-                      <label for="">Card Number</label>
-                      <input
-                        type="text"
-                        placeholder="Card Number"
-                        class="form-control inputg"
-                      />
-                    </div>
-                    <div class="form-area">
-                      <label for="">Expiry Date</label>
 
-                      <input
-                        type="text"
-                        placeholder="Expiry Date"
-                        class="form-control inputg"
-                      />
-                    </div>
-                    <div class="form-area">
-                      <label for=""> CVV</label>
-
-                      <input
-                        type="text"
-                        placeholder="CVV"
-                        class="form-control inputg"
-                      />
-                    </div>
-                  </div> -->
-                  <script>
-                    document
-                      .getElementById("credit_card_checkbox")
-                      .addEventListener("change", function () {
-                        var visaInput =
-                          document.getElementById("visaCardInput2");
-                        if (this.checked) {
-                          visaInput.style.display = "block";
-                        } else {
-                          visaInput.style.display = "none";
-                        }
-                      });
-                  </script>
-                </div>
               </div>
-              <div class="form-area d-flex align-items-center gap-1 mb-4">
-                <input
-                  type="checkbox"
-                  id="accept_terms_checkbox"
-                  name="accept_terms_checkbox"
-                  value=""
-                  class="checkbox"
-                />
-                <label for="accept_terms_checkbox" class="checkbox-label">
-                  Yes, I accept the cancellation policy, Booking notes, and
-                  Terms & Conditions of Hotelsxml.</label
-                >
-              </div>
-
-              <button
-                class="btn btn-primary d-flex justify-content-center m-auto"
-              >
-                Book now
-              </button>
             </div>
+
+
           </div>
           <div class="col-md-5">
-            <div class="single-booking-hotel">
+            <div class="single-booking-hotel p-0">
               <div class="item-content-w">
                 <!-- Hotel stars -->
-                <ul class="icon-list icon-group booking-item-rating-stars">
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
+                <div style="background: #E5F0FF;padding:20px 5%;border-radius: 20px;box-shadow: 0px 5px 6px 0px #00000026;">
+                <ul class="icon-list icon-group booking-item-rating-stars" >
+                  <li><i class="fas fa-star" style="color: #FF9C08;"></i></li>
+                  <li><i class="fas fa-star" style="color: #FF9C08;"></i></li>
+                  <li><i class="fas fa-star" style="color: #FF9C08;"></i></li>
+                  <li><i class="fas fa-star" style="color: #FF9C08;"></i></li>
+                  <li><i class="fas fa-star" style="color: #FF9C08;"></i></li>
                 </ul>
                 <div class="clearfix"></div>
-                <h4 class="service-title">Hyatt Centric Times Square</h4>
-                <p class="single-book-hotel-address">
-                  <i class="fas fa-map-marker-alt"></i> 401 7th Avenue, Chelsea,
+                <h4 class="service-title" style="
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 29px;
+                letter-spacing: 0em;
+       
+                ">Hyatt Centric Times Square</h4>
+                <p class="single-book-hotel-address text-black " style="">
+                  <i class="fas fa-map-marker-alt me-2" style="color: #3152A6;"></i> 401 7th Avenue, Chelsea,
                   NY 10001, UK.
                 </p>
+              </div>
                 <!-- Facilities -->
-                <ul class="facilities">
-                  <li>1 Room, 2 Adults, 1 Night</li>
-                  <li>
+                <ul class="facilities" style="padding:20px 5%;border-radius: 20px;font-size: 16px;font-weight: 500;" >
+                  <li style="font-size: 16px;font-weight: 600;"><i class="fas fa-bed me-2" style="color: #2C5CD3;"></i> 1 Room, 2 Adults, 1 Night</li>
+                  <li style="font-size: 16px;font-weight: 600;">
                     Room: Standard rooms, 2 twin beds, terrace tax recovery
                     charges and fees (2 twin beds).
                   </li>
-                  <li><i class="fa-solid fa-utensils"></i> Breakfast</li>
-                  <li>
-                    <i class="fa-regular fa-calendar-days"></i> Check-In&nbsp;:
+                  <li style="font-size: 16px;font-weight: 600;"><i class="fa-solid fa-utensils me-2" style="color: #2C5CD3;"></i> Breakfast</li>
+                  <li style="font-size: 16px;font-weight: 600;"> 
+                    <i class="fa-regular fa-calendar-days me-2" style="color: #2C5CD3;"></i> Check-In&nbsp;:
                     Jun 27, 2019
                   </li>
-                  <li>
-                    <i class="fa-regular fa-calendar-days"></i> Check-Out&nbsp;:
+                  <li style="font-size: 16px;font-weight: 600;">
+                    <i class="fa-regular fa-calendar-days me-2" style="color: #2C5CD3;"></i> Check-Out&nbsp;:
                     Jul 03, 2019
                   </li>
+                  <li style="font-size: 16px;font-weight: 600;"><i class="far fa-moon me-2" style="color: #2C5CD3;"></i> 1 Night</li>
                 </ul>
               </div>
-              <div class="policy-en">
+              <div style="padding:20px 5%;">
+              <div class="policy-en" sty>
                 <h4>
-                  <i class="fas fa-exclamation-triangle"></i> Cancellation
+                  <i class="fas fa-exclamation-triangle me-2" ></i> Cancellation
                   Policy
                 </h4>
                 <ul class="order-style">
@@ -661,15 +745,45 @@
                 </ul>
               </div>
 
-              <div class="total-price-area-en">
-                <div class="d-flex align-items-end gap-4">
+              <div class="total-price-area-en" style="box-shadow: 0px 4px 4px 0px #00000026;padding: 5%;
+              ">
+                <div class="d-flex align-items-center justify-content-between text-black ">
                   <div>
-                    <h5>Booking Price</h5>
-                    <h5>Payment Total</h5>
+                    <h5 style="
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 20px;
+                    letter-spacing: 0em;color: #000;
+                    
+                    ">Booking Price</h5>
+                    
                   </div>
-                  <h4 class="price">150 <span>USD</span></h4>
+                  <div>
+                  <h5 style="
+                  font-size: 14px;
+                  font-weight: 600;
+                  line-height: 22px;
+                  letter-spacing: 0em;
+                 color: #000;margin-bottom: 10px;
+                  ">Payment Total  Tax include</h5>
+                  <h4 class="price" style="font-size: 40px;color:#2C5CD3;font-weight: 600;">150 <span class="me-2"  style="
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 22px;
+                    letter-spacing: 0em;
+                   color: #000;
+                    ">USD</span></h4></div>
                 </div>
               </div>
+              <!-- <div class="center w-100" >
+                <div class="service-star-text-review hidden-xs">
+                    <p><span class="bold-text">Total Starts</span></p>
+                </div>
+                <div class="service-price">
+                    <span class="price bold-text" style="font-size: 40px;color:#2C5CD3">150 <span style="font-size: 12px;color: #000;">USD</span></span>
+                </div>
+            </div -->
+            </div>
             </div>
           </div>
         </div>
