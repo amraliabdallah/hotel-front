@@ -27,41 +27,107 @@
   var roomCount = $('#rooms-container .room').length; // Get the initial count of rooms
 
   $('#add-room').click(function () {
-    roomCount++;
-    var newRoom = $('#room-template').first().clone().show();
-    newRoom.find('.room-title').text('Room ' + roomCount);
-    
-    $('.remove-room').css('display', 'block');
-
-    newRoom.find('.children-ages').empty(); // Clear children ages
-    newRoom.find('.adults input').val('2'); // Reset adults count to 2
-    newRoom.removeAttr('id'); // Ensure the cloned room has no id
-    $('#rooms-container').append(newRoom); // Append the new room to the rooms-container
+    if (roomCount < 4) { // Check if roomCount is less than 7
+        roomCount++;
+        addRoom();
+    }
 });
 
 
-  $(document).on('click', '.remove-room', function () {
-      $(this).closest('.room').remove();
-      roomCount--;
+function addRoom() {
+  var newRoom = $('#room-template').first().clone().show();
+  newRoom.find('.room-title').text('Room ' + roomCount);
+  
+  newRoom.find('.remove-room').css('display', 'block'); // Show remove button only for new room
+
+  newRoom.find('.children-ages').empty(); // Clear children ages
+  newRoom.find('.adults input').val('2'); // Reset adults count to 2
+  newRoom.removeAttr('id'); // Ensure the cloned room has no id
+  $('#rooms-container').append(newRoom); // Append the new room to the rooms-container
+}
+
+
+// Remove room functionality
+$(document).on('click', '.remove-room', function () {
+  $(this).closest('.room').remove(); // Remove the closest room element
+  roomCount--; // Decrement the room count
+});
+
+
+$(document).ready(function () {
+  var childrenLimit = 6; // Maximum number of children allowed
+  updateAddChildButton();
+
+  $(document).on('click', '.add-child', function (event) {
+    var dropdown = $(this).siblings('.add-child-dropdown');
+    if (!dropdown.is(':visible')) {
+        $('.add-child-dropdown.active').removeClass('active').hide(); // Hide all active dropdowns
+        dropdown.addClass('active').show(); // Show the clicked dropdown
+    } else {
+        dropdown.removeClass('active').hide(); // Hide the clicked dropdown if it's already visible
+    }
+    event.stopPropagation(); // Prevent the click event from bubbling up and closing the dropdown immediately
+});
+
+
+  // $(document).on('click', '.option', function () {
+  //   console.log('option')
+  //     if ($('.children-ages').children().length < childrenLimit) {
+  //       console.log('option2')
+  //         var selectedOption = $(this).text();
+  //         var childrenDiv = $(this).closest('.add-child-dropdown').siblings('.children-ages');
+  //         var childAgeInput = $(`<div class="child-input" style="min-width:max-content">${selectedOption} years</div>`);
+  //         var removeChildButton = $('<button class="remove-child">x</button>');
+  //         childrenDiv.append($('<span>').append(childAgeInput).append(removeChildButton));
+  //         updateAddChildButton();
+  //         $('.add-child-dropdown').hide();
+  //     }
+  // });
+$(document).on('click', '.option', function () {
+    console.log('option');
+    if ($('.children-ages').children().length < childrenLimit) {
+        console.log('option2');
+        var selectedOption = $(this).text();
+        var childrenDiv = $(this).closest('.children').find('.children-ages'); // Find children-ages within the closest .children container
+        var childAgeInput = $(`<div class="child-input" style="min-width:max-content">${selectedOption} years</div>`);
+        var removeChildButton = $('<button class="remove-child">x</button>');
+        
+        // Append the child div and remove button directly to children-ages
+        childrenDiv.append(childAgeInput);
+        childAgeInput.append(removeChildButton);
+        
+        updateAddChildButton();
+        $('.add-child-dropdown').hide();
+    }
+});
+
+
+  $(document).on('click', '.remove-child', function () {
+      $(this).closest('div').remove();
+      updateAddChildButton();
   });
 
-  $(document).on('click', '.add-child', function () {
-      var childrenDiv = $(this).siblings('.children-ages');
-      var childAgeInput = $('<input type="text" placeholder="Age">');
-      var removeChildButton = $('<button class="remove-child">x</button>');
-      childrenDiv.append($('<span>').append(childAgeInput).append(removeChildButton));
-  });
-//   $(document).on('change', '.add-child', function () {
-//     var childrenDiv = $(this).siblings('.children-ages');
-//     var selectedValue = $(this).val(); // Get the value of the selected option
-//     if (selectedValue !== '') {
-//         var newDiv = $('<div>').text(selectedValue); // Create a new div with the selected value
-//         var childAgeInput = $('<input type="text" placeholder="Age">');
-//         var removeChildButton = $('<button class="remove-child">x</button>');
-//         newDiv.append(childAgeInput).append(removeChildButton); // Append input and button to the new div
-//         childrenDiv.append(newDiv); // Append the new div to the children-ages container
-//     }
-// });
+  // Hide the dropdown when clicking away
+  $(document).on('click', function (event) {
+    if (!$(event.target).closest('.add-child').length && !$(event.target).closest('.add-child-dropdown').length) {
+        $('.add-child-dropdown.active').hide(); // Hide only the active dropdown
+    }
+});
+
+
+  function updateAddChildButton() {
+    console.log('option3')
+      if ($('.children-ages').children().length >= childrenLimit) {
+          $('.add-child').prop('disabled', true);
+          console.log('option4')
+      } else {
+          $('.add-child').prop('disabled', false);
+          console.log('option5')
+      }
+  }
+});
+
+
 
 
   $(document).on('click', '.remove-child', function () {
@@ -70,7 +136,11 @@
 
   $(document).on('click', '.plus', function () {
       var input = $(this).siblings('input');
-      input.val(parseInt(input.val(), 10) + 1);
+      if (parseInt(input.val(), 10) < 6) { // Prevent going below 1 adult
+        
+        input.val(parseInt(input.val(), 10) + 1);
+    }
+      
   });
 
   $(document).on('click', '.minus', function () {
@@ -87,7 +157,7 @@
 
       $('#rooms-container .room').each(function () {
           totalAdults += parseInt($(this).find('.adults input').val(), 10);
-          totalChildren += $(this).find('.children-ages input').length;
+          totalChildren += $(this).find('.children-ages .child-input').length;
       });
 
       var outputData = "Total: " + totalRooms + " rooms, " + totalAdults + " adults, " + totalChildren + " children";
@@ -96,12 +166,31 @@
   });
 
    // Event handler for clicking on the output div
-   $('#output').click(function () {
-      $('.filter-booking').toggle(); // Show the rooms container again
-  });
+//    $('#output').click(function () {
+//       $('.filter-booking').toggle(); // Show the rooms container again
+//   });
 
 
+//   $(document).on('click', function(event) {
+//     // Check if the clicked element is not #output or its children
+//     if (!$(event.target).closest('#output').length) {
+//         // If not, hide .filter-booking
+//         $('.filter-booking').hide();
+//     }
+// });
+$(document).on('click', function(event) {
+  // Check if the clicked element is not .filter-booking or its children
+  if (!$(event.target).closest('.filter-booking').length && !$(event.target).is('#output')&& !$(event.target).closest('.remove-room').length&& !$(event.target).closest('.remove-child').length) {
+      // If not, hide .filter-booking
+      $('.filter-booking').hide();
+  }
+});
 
+$('#output').click(function (event) {
+  // Stop propagation to prevent document click event from firing
+  event.stopPropagation();
+  $('.filter-booking').toggle(); // Show or hide the filter-booking container
+});
 
 
  // ---------Responsive-navbar-active-animation-----------
@@ -1309,15 +1398,15 @@ $(document).ready(function () {
           }
         }
 
-        if ($filterBook.css("display") === "block") {
-          // Check if the click is outside both the filter-booking element and the filterButton
-          if (
-              !$filterBook.is(event.target) && $filterBook.has(event.target).length === 0 &&
-              !$filterButton.is(event.target) && $filterButton.has(event.target).length === 0
-          ) {
-              $filterBook.hide();
-          }
-      }
+      //   if ($filterBook.css("display") === "block") {
+      //     // Check if the click is outside both the filter-booking element and the filterButton
+      //     if (
+      //         !$filterBook.is(event.target) && $filterBook.has(event.target).length === 0 &&
+      //         !$filterButton.is(event.target) && $filterButton.has(event.target).length === 0
+      //     ) {
+      //         $filterBook.hide();
+      //     }
+      // }
 
       });
 

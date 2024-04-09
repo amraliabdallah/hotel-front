@@ -60,6 +60,44 @@
             transform: rotate(360deg);
         }
         } 
+        .add-child-dropdown {
+            display: none; /* Initially hide the options */
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 5px 0;
+            color:#000;
+            width:50%;
+            top:30px;
+            list-style-type: none !important;
+            margin: 0;
+            padding: 0;
+            z-index: 30;
+        }
+
+        .add-child-dropdown  li {
+            padding: 5px 10px;
+            cursor: pointer;
+            min-width: max-content;
+        }
+        
+        .add-child-dropdown  li:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .child-input{
+            background-color: #C2C2C2;
+            border: 1px solid #C2C2C2;
+            border-radius: 4px;
+            padding: 3px 4px;
+            display: flex;
+            align-items: center;
+            gap:2px;
+            margin: 2px;
+            color: #000;
+        }
+        
 </style>
 </head>
 <body> 
@@ -265,8 +303,8 @@
     </div>
 </div>
 <!-- Popup Statements End-->
-<div class="hero-section" style="">
-    <div class="hero-section-container" style=" ">
+<div class="hero-section" >
+    <div class="hero-section-container" >
         <div class="container">
             <div class="row">
                 
@@ -284,7 +322,7 @@
                                     <input type="text" class="form-control" id="searchHotel" style="background:#EBEBEB;border: 1px solid #FF5364;border-radius: 10px;" placeholder="Enter City Destination / Hotel name">
                                     <div id="dropdownContainer" class="position-absolute text-black  z-3   rounded-3 p-3 " style="width: 90%;top:85px;background:#EBEBEB">
                                         <div class="w-100 d-flex justify-content-center align-items-center " style="min-height: 200px;">
-      <span  style="  width: 48px;
+                                        <span  style="  width: 48px;
                                         height: 48px;
                                         border: 5px solid #304D92;
                                         border-bottom-color: transparent;
@@ -373,7 +411,10 @@
                                     <label for="" style="font-weight: 600;font-size: 18px; margin-bottom: 10px;display: flex;align-items: center;"><i class="fa-solid fa-bed"></i> <span style="margin: 0 5px;">Room & Guests</span> </label>
                                     <div id="output" class="output-room" style="background:#EBEBEB;border: 1px solid #FF5364;border-radius: 10px;">Total: 1 rooms, 2 adults, 0 children</div>
                                     <div class="filter-booking">
-                                        <div id="rooms-container">
+                                        <div id="rooms-container" style="
+                                        
+                                       
+                                    ">
                                             <!-- Room template that will be cloned for each new room -->
                                             <div class="room" id="room-template">
                                                 <div class="room-header">
@@ -385,14 +426,33 @@
                                                         <label>Adults</label>
                                                         <div class="d-flex">
                                                             <button style="height: 24px;" class="minus">-</button>
-                                                            <input style="background:#C2C2C2;text-align: center;padding: 2px;height: 24px;"  type="text" value="2" readonly class="form-control">
+                                                            <input style="background:#C2C2C2;text-align: center;padding: 2px;height: 24px;"  type="text" value="2" max="12" readonly class="form-control">
                                                             <button style="height: 24px;" class="plus">+</button>
                                                         </div>
                                                     </div>
                                                     <div class="children">
                                                         <label>Children</label>
-                                                        <div class="children-ages"></div>
-                                                        <button class="add-child" >Add a child <i class="fa-solid fa-plus"></i></button>
+                                                        <div class="children-ages" style="gap:4px"></div>
+                                                        <div class="position-relative w-100">
+                                                            <button class="add-child" >Add a child <i class="fa-solid fa-plus"></i></button>
+                                                            <ul name="" class="add-child-dropdown" id="">
+                                                                
+                                                                <li class="option" value="1">1</li>
+                                                                <li class="option" value="2">2</li>
+                                                                <li class="option" value="3">3</li>
+                                                                <li class="option" value="4">4</li>
+                                                                <li class="option" value="5">5</li> 
+                                                                <li class="option" value="6">6</li>
+                                                                <li class="option" value="7">7</li>
+                                                                <li class="option" value="8">8</li>
+                                                                <li class="option" value="9">9</li>  
+                                                                <li class="option" value="10">10</li>
+                                                                <li class="option" value="11">11</li>
+                                                                <li class="option" value="12">12</li>
+                                                                
+                                                            </ul>
+                                                        </div>
+                                                   
                                                     </div>
                                                 </div>
                                             </div>
