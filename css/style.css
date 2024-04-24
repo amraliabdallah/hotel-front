@@ -13719,3 +13719,46 @@ border: 0;font-size: 20px;
   font-weight: 600 !important;
   margin-bottom: 6px !important;
 }
+
+.cent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cif{
+  display: flex;
+  align-items: center;
+}
+.primary-btn{
+  color: white;
+  background-color: #2C5CD3;
+  border-radius: 8.06px !important;
+}
+.primary-btn:hover{
+  color: white;
+  background-color: #2C5CD3;
+  border-radius: 8.06px !important;
+}
+.outline-btn{
+  border:1.5px solid #2C5CD3 !important;
+  border-radius: 8.06px !important;
+}
+.outline-btn{
+  border:1.5px solid #2C5CD3 !important;
+  border-radius: 8.06px !important;
+}
+.outline-btn:hover{
+  color: white !important;
+  background-color: #2C5CD3;
+  border-radius: 8.06px !important;
+}
+
+.btn-icon{
+  background-color: #F40B0B !important;
+  color: white !important;
+  border-radius:500px !important;
+  border:1px solid #fff !important;
+  aspect-ratio: 1 !important;
+  width: 24px !important;
+padding: 0 !important;
+}

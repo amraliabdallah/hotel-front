@@ -9233,6 +9233,128 @@ select {
 }
 
 
+
+
+
+
+.summary-box-list-booking {
+
+  /* border: 1px solid #ccc; */
+
+  padding: 20px;
+  border-radius: 6px;
+
+
+  transition: all 0.3s ease-in-out;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.summary-box-list-booking h4 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #2C5CD3;
+  text-align: left;
+  color: #5E6D77;
+  font-weight: 600;
+}
+
+.summary-box-list-booking h4 i {
+  color: #2C5CD3;
+
+}
+
+.summary-box-list-booking ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.summary-box-list-booking li{
+  display: flex;
+
+  justify-content: center;
+  font-size: 19.77px;
+  padding:0 20px;
+  color: #000;
+  font-weight: 400;
+  width:15% !important;
+  overflow-x: hidden;
+  min-width: max-content;
+}
+
+
+.summary-box-list-booking li i {
+  margin-right: 10px;
+  color: #2C5CD3 !important;
+}
+
+.summary-box-list-booking li:not(:first-child) i {
+  font-size: 18px;
+
+}
+
+
+
+.buttons-cashier{
+  width: 20%;
+  min-width: fit-content;
+}
+.info-cashier{
+  width: 20%;
+
+}
+@media (min-width: 768px) {
+  .summary-box-list-booking li:not(:first-child :last-child)  {
+    font-size: 18px;
+    border-right: 1px solid #00000050 ;
+  }
+  .summary-box-list-booking li:nth-child(1)  {
+    border-right: 1px solid #000 ;
+  width:20% !important;
+  }
+  .summary-box-list-booking li:nth-child(2)  {
+    border-right: 1px solid #000 ;
+  
+  }
+}
+.message-dialog{
+  width: 800px !important;
+}
+.name-message-client{
+  font-size:20px
+}
+.name-message-button{
+  font-size:18px
+}
+.time-list{
+  font-size:14px;
+}
+@media (max-width: 996px) {
+  .buttons-cashier{
+    width: 40%;
+    min-width: fit-content;
+  }
+  .info-cashier{
+    width: 100%;
+
+  }
+  .message-dialog{
+    width: 90%!important;
+  }
+  .name-message-client{
+    font-size:12px
+  }
+  .time-list{
+    font-size:10px;
+  }
+  .name-message-button{
+    font-size:14px
+  }
+}
+
 .fotorama {
   margin-bottom: 20px;
 
